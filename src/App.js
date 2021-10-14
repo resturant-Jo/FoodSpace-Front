@@ -1,5 +1,6 @@
 
-
+// import React, { useContext } from 'react';
+// import ToDo from './components/todo/todo';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header/Header';
 import '@blueprintjs/core/lib/css/blueprint.css'
@@ -14,6 +15,7 @@ import Footer from './components/footer/Footer';
 
 
 
+// import SettingsContext from './context/context';
 function App() {
   return (
     <>
