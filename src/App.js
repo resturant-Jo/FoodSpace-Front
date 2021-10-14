@@ -1,6 +1,5 @@
 // import React, { useContext } from 'react';
 // import ToDo from './components/todo/todo';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import SettingsForm from './context/settingForm'
 // import Header from './components/header/Header';
@@ -11,8 +10,6 @@ import Login from './components/login/login';
 import Auth from './components/login/auth';
 import LoginProvider from './context/loginContext';
 // import SettingsContext from './context/context';
-
-
 function App() {
   return (
     <>

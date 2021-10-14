@@ -2,7 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import LoginProvider from './context/loginContext';
 import App from './App';
-// import ProgressMobileStepper from "./components/cart/index"
+import ProgressMobileStepper from "./components/cart/index"
+import Copyright from './components/cart/checkout';
+
 class Main extends React.Component {
   render() {
     return(
@@ -10,7 +12,9 @@ class Main extends React.Component {
 <LoginProvider>
 
       <App />
-      {/* <ProgressMobileStepper/> */}
+      <ProgressMobileStepper/>
+      <Copyright/>
+      
 </LoginProvider>
 
       ) 

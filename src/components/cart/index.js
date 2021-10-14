@@ -16,7 +16,6 @@ export default function ProgressMobileStepper() {
   const handleBack = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
-
   return (
       <>
     <MobileStepper
