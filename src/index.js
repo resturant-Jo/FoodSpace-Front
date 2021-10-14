@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import LoginProvider from './context/loginContext';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import ProgressMobileStepper from "./components/cart/index"
-import Copyright from './components/cart/checkout';
+// import ProgressMobileStepper from "./components/cart/index"
+// import Copyright from './components/cart/checkout';
 class Main extends React.Component {
   render() {
     return(
@@ -12,8 +12,8 @@ class Main extends React.Component {
 <LoginProvider>
 
       <App />
-      <ProgressMobileStepper/>
-      <Copyright/>
+      {/* <ProgressMobileStepper/>
+      <Copyright/> */}
       
 </LoginProvider>
 
