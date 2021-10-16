@@ -4,7 +4,7 @@ import LoginProvider from './context/loginContext';
 import App from './App';
 import ProgressMobileStepper from "./components/cart/index"
 import Copyright from './components/cart/checkout';
-
+import * as serviceWorker from './serviceWorker';
 class Main extends React.Component {
   render() {
     return(
@@ -19,7 +19,13 @@ class Main extends React.Component {
 
       ) 
   }
+  
 }
 
 const rootElement = document.getElementById('root');
 ReactDOM.render(<Main />, rootElement);
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();

@@ -4,13 +4,9 @@ import { Card, Elevation, H2, InputGroup, Button } from '@blueprintjs/core';
 import { LoginContext } from "../../context/loginContext";
 
 
-export default function Login(props) {
+export default function Signup(props) {
 
-    //login
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
 
-    //signup
     const [userName, setUserName] = useState('');
     const [firstname, setFirstname] = useState('');
     const [lastname, setLastname] = useState('');
@@ -23,15 +19,8 @@ export default function Login(props) {
     const [passWord, setPassWord] = useState('');
     const [role, setRole] = useState('');
 
-   
-    const [singupDisplay, setSingupDisplay] = useState(true);
-
     const context = useContext(LoginContext);
 
-    const handleLoginSubmit = (event) => {
-        event.preventDefault();
-        context.login(username, password)
-    };
 
     const handleSignupSubmit = (event) => {
         event.preventDefault();
@@ -40,32 +29,6 @@ export default function Login(props) {
 
     return (
         <>
-        { singupDisplay ?
-            <When condition={!context.loggedIn}>
-                <Card className="cardLogin" interactive elevation={Elevation.FOUR}>
-                    <H2>Login</H2>
-                    <form onSubmit={handleLoginSubmit}>
-                        <label>
-                            <span>Username</span>
-                            <InputGroup onChange={(e) => setUsername(e.target.value)} placeholder="username" type="text" name="username" />
-                        </label>
-
-                        <label>
-                            <span>Password</span>
-                            <InputGroup onChange={(e) => setPassword(e.target.value)} placeholder="password" type="password" name="password" />
-                        </label>
-
-                        <label>
-                            <Button type="submit">Login</Button>
-                        </label>
-
-                        <label>
-                            <Button type="button" onClick={() => setSingupDisplay(false)}>Signup</Button>
-                        </label>
-                    </form>
-                </Card>
-            </When>
-                :
                 <Card className="cardLogin" interactive elevation={Elevation.FOUR}>
                 <H2>Signup</H2>
                 <form onSubmit={handleSignupSubmit}>
@@ -142,11 +105,11 @@ export default function Login(props) {
                     </label>
 
                     <label>
-                        <Button type="button" onClick={() => setSingupDisplay(true)}>Signin</Button>
+                        <Button type="button" >Signin</Button>
                     </label>
                 </form>
             </Card>
-        }
+        
         </>
     );
 }
