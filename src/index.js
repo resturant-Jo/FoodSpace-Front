@@ -12,8 +12,8 @@ class Main extends React.Component {
 <LoginProvider>
 
       <App />
-      {/* <ProgressMobileStepper/>
-      <Copyright/> */}
+      {/* <ProgressMobileStepper/> */}
+      {/* <Copyright/>  */}
       
 </LoginProvider>
 

@@ -80,7 +80,7 @@ function Restaurants() {
           }
         try {
           console.log(obj);
-          const res = await superagent.post(`http://localhost:3001/v4/food`)
+          const res = await superagent.post(`https://spacefood.herokuapp.com/v4/food`)
           .send(obj)
           .set('Authorization', 'Bearer ' + loginContext.token)
           console.log(res);
@@ -108,7 +108,7 @@ function Restaurants() {
           }
         try {
           console.log(obj);
-          const res = await superagent.post(`http://localhost:3001/v4/restuarant`)
+          const res = await superagent.post(`https://spacefood.herokuapp.com/v4/restuarant`)
           .send(obj)
           .set('Authorization', 'Bearer ' + loginContext.token)
           console.log(res);
@@ -123,7 +123,7 @@ function Restaurants() {
         let obj={
 
         }
-        await axios.post(`http://localhost:3001/v2/cart`)
+        await axios.post(`https://spacefood.herokuapp.com/v2/cart`)
         .then(res=>{
           console.log(res);
           setCart(res.data)
@@ -133,7 +133,7 @@ function Restaurants() {
       }
     
     useEffect(()=>{
-        axios.get(`http://localhost:3001/v4/food`)
+        axios.get(`https://spacefood.herokuapp.com/v4/food`)
         .then(res=>{
             console.log(res);
             setFood(res.data)
@@ -144,7 +144,7 @@ function Restaurants() {
         })
     },[])
     useEffect(()=>{
-        axios.get(`http://localhost:3001/v4/restuarant`)
+        axios.get(`https://spacefood.herokuapp.com/v4/restuarant`)
         .then(res=>{
             console.log(res);
             setRestuarant(res.data)
