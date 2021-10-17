@@ -6,6 +6,7 @@ import img2 from './food.jpg'
 import img3 from './food2.jpg'
 import { Button, Alignment } from "@blueprintjs/core";
 import { Link } from 'react-router-dom';
+import Contactus from "../contactus/Contactus";
 const Home = () => {
   return (
     <>
@@ -13,8 +14,11 @@ const Home = () => {
       </h2>
       <section className="sec1">
         <img className='logoSec' src={img}></img>
+            <p  id="spacefood" className="parg"> SPACE FOOD</p>
+            <hr/>
+            <hr/>
         <p className="parg">
-          SPACE FOOD is a leading online food delivery marketplace, connected restaurants in JORDAN.
+          is a leading online food delivery marketplace, connected restaurants in JORDAN.
           To Visit Our Resturants :point_right:   <Link to='/restaurants'>
             <Button className="bp4-minimal" text="Restaurants" />
           </Link>
@@ -39,6 +43,11 @@ const Home = () => {
             Every Flavor Welcome
           </h2>
           From your neighborhood sushi spot to the burger and fries you crave, choose from over 300,000 local and national favorites across Jordan.        </p>
+      </section>
+      <section>
+
+      <h3 style={{color:"#1479", textAlign:"center"}}> Contact us</h3>
+      <Contactus/>
       </section>
     </>
   );

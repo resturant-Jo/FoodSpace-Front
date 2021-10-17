@@ -58,6 +58,11 @@ body{
     margin-left: 133px;
     margin-top: 106px;
     position: absolute;
+    font-family: 'Gluten', cursive;
+ }
+ #spacefood{
+    font-family: 'Faster One', cursive;
+    font-size: 40px;
  }
  .sec2{
     background-color: wheat;
