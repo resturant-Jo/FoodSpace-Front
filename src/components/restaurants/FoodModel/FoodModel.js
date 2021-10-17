@@ -66,6 +66,9 @@ function FoodModel(props) {
             <Button variant="secondary" onClick={() => props.handleAddToCart(props.foodModel.id)}>
               Add to cart
             </Button>
+            <Button variant="secondary" onClick={() => props.handleAddTofav(props.foodModel.id)}>
+              Add to fav
+            </Button>
           </Modal.Footer>
 
         </Modal.Body>

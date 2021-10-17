@@ -15,6 +15,13 @@ export default function AddRestaurantsForm({ handleSubmit, handleChange }) {
             id="text-input"
             placeholder="Restuarant Name"
           />
+         <lable>Image </lable>
+         <InputGroup
+            onChange={handleChange}
+            name="image"
+            id="text-input"
+            placeholder="Restuarant Image"
+          />
           <label>Food Type</label>
           <InputGroup
             onChange={handleChange}
@@ -38,14 +45,7 @@ export default function AddRestaurantsForm({ handleSubmit, handleChange }) {
             id="text-input"
             placeholder="Description"
           />
-          <lable>UserId </lable>
-          <InputGroup
-            onChange={handleChange}
-            name="userId"
-            type="number"
-            id="text-input"
-            placeholder="UserId"
-          />
+
 
           {/* <Auth capability="create"> */}
 <div >

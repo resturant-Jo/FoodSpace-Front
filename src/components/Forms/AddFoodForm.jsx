@@ -39,13 +39,13 @@ export default function AddFoodForm({ handleSubmit, handleChange }) {
             type="number"
             placeholder="Price"
           />
-          <lable>RestuarantID </lable>
+          <lable>Restuarant Name </lable>
           <InputGroup
             onChange={handleChange}
-            name="restuarantId"
+            name="restuarantName"
             id="text-input"
-            type="number"
-            placeholder="restuarantId"
+            type="text"
+            placeholder="restuarant Name"
           />
  {/* <InputGroup onChange={handleChange} placeholder="restuarantId" type="number" name="restuarantId" /> */}
 

@@ -15,89 +15,117 @@ import { LoginContext } from '../../context/loginContext';
 import "./Restaurants.css"
 import { FoodStyle } from './FoodStyle';
 import FoodModel from './FoodModel/FoodModel';
+import RestuarantModel from './FoodModel/RestuarantModel';
 
 function Restaurants() {
 
   const loginContext = useContext(LoginContext)
 
   const [food, setFood] = useState([]);
+  const [fav, setFav] = useState([]);
   const [foodArray, setFoodArray] = useState([]);
   const [foodModel, setFoodModel] = useState({});
+  const [restuarantModel, setRestuarantModel] = useState({});
   const [restuarant, setRestuarant] = useState([]);
-  const [cart, setCart] = useState([]);
+  // const [cart, setCart] = useState([]);
   const [show, setShow] = useState(false);
   const { handleChange, handleSubmit } = useForm(addFood, addRestuarant);
   const { handleChange2, handleSubmit2 } = useForm2(addRestuarant);
 
-  function handleShow() {
-    setShow(true)
-  }
-  function handleClose() {
-    setShow(false)
-  }
 
-  function handleModel(index) {
 
-    setFood([...food, index]);
-    console.log("index >>>>>>>>>", index);
-    console.log("index >>>>>>>>>", food[index]);
-    setFoodModel(food[index])
-    setShow(true)
-    console.log("loginContext >>>>>>>>>>>>>>  ", loginContext);
-
-  }
-
-  let settings = {
-    dots: true,
-    lazyLoad: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    initialSlide: 0,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-        },
+/////////////////////////////////////// FUNCTION FOR CSS THE SLIDES /////////////////////////////
+let settings = {
+  dots: true,
+  lazyLoad: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  initialSlide: 0,
+  // autoplay: true,
+  // autoplaySpeed: 2000,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true,
       },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        initialSlide: 2,
       },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
       },
-    ],
-  };
+    },
+  ],
+};
+  ////////////////////////////////////// END OF FUNCTION FOR CSS THE SLIDES //////////////////////
+
+    ////////////////////////////// START FUNCTIONS TO HANDLE THE MODEL ///////////////////////
+    function handleShow() {
+      setShow(true)
+    }
+    function handleClose() {
+      setShow(false)
+    }
+  
+    function handleFoodModel(index) {
+  
+      setFood([...food, index]);
+      console.log("index >>>>>>>>>", index);
+      console.log("index >>>>>>>>>", food[index]);
+      setFoodModel(food[index])
+      setShow(true)
+      console.log("loginContext >>>>>>>>>>>>>>  ", loginContext);
+  
+    }
+    function handleRestuarantModel(index) {
+  
+      setRestuarant([...restuarant, index]);
+      console.log("index >>>>>>>>>", index);
+      console.log("index >>>>>>>>>", restuarant[index]);
+      setRestuarantModel(restuarant[index])
+      setShow(true)
+      console.log("loginContext >>>>>>>>>>>>>>  ", loginContext);
+  
+    }
+  ////////////////////////////////////// END OF THE FUNCTIONS TO HANDLE THE MODEL /////////////////////////
+
+  ////////////////////////////////////// START OF ADD FOOD FUNCTION ////////////////////////
   async function addFood(item) {
     console.log(food);
     // item.id = uuid();
     item.complete = false;
 
-
+   
     console.log(loginContext.token);
+    console.log("restuarantName >>>>>>>>> ",item.restuarantName);
+    // eslint-disable-next-line eqeqeq
+    console.log("restuarant.name >>>>>>>>>>>> ",restuarant.filter(items=>{return item.restuarantName==items.name}));
+
+ // eslint-disable-next-line eqeqeq
+ let restName=restuarant.filter(items=>{return item.restuarantName==items.name})
+ console.log(restName[0].id);
 
     let obj = {
       name: item.name,
       image: item.image,
       description: item.description,
       price: item.price,
-      restuarantId: item.restuarantId,
+      restuarantId: restName[0].id,
     }
     try {
       console.log(obj);
@@ -111,6 +139,9 @@ function Restaurants() {
     }
     setFood([...food, item]);
   }
+  //////////////////////////////////////// END OF ADD TO FOOD FUNCTION //////////////////////////////////
+
+  /////////////////////////////////////// START OF ADD RESTUARANT FUNCTION //////////////////////////////
 
   async function addRestuarant(item) {
     console.log(restuarant);
@@ -122,10 +153,11 @@ function Restaurants() {
 
     let obj = {
       name: item.name,
+      image: item.image,
       foodType: item.foodType,
       location: item.location,
       description: item.description,
-      userId: item.userId,
+      userId: loginContext.user.userId,
     }
     try {
       console.log(obj);
@@ -140,6 +172,24 @@ function Restaurants() {
     setRestuarant([...restuarant, item]);
   }
 
+  ////////////////////////////// END OF ADD RESTUARANT FUNCTION //////////////////////////
+const handleAddToFav = async()=>{
+  let obj ={
+    foodId:foodModel.id,
+    userId:loginContext.user.userId
+  }
+  try {
+    console.log(obj);
+    const res = await superagent.post(`http://localhost:3001/v1/fav`)
+      .send(obj)
+      .set('Authorization', 'Bearer ' + loginContext.token)
+    console.log(res);
+    console.log(restuarant);
+  } catch (error) {
+    alert('Invalid data');
+  }
+  setFav([...fav]);
+}
   /////////////////////////////// ADD TO CART Function /////////////////////
 
   const handleAddToCart = async () => {
@@ -153,6 +203,7 @@ function Restaurants() {
       console.log('userCart: ', userCart);
       
 
+      // eslint-disable-next-line eqeqeq
       if (userCart.body && userCart.body.length != 0) {
         userCartItems = await superagent.get(`http://localhost:3001/v2/cart/items/${userCart.body.id}`)
           .set('Authorization', 'Bearer ' + loginContext.token);
@@ -186,9 +237,10 @@ function Restaurants() {
         food: foodCart,
         userId: loginContext.user.userId,
       }
+      // eslint-disable-next-line eqeqeq
       if(cartId != -1){
         console.log("Put ", cartId);
-        const res = await superagent.put(`http://localhost:3001/v2/cart/${cartId}`)
+         await superagent.put(`http://localhost:3001/v2/cart/${cartId}`)
         .send(obj)
         .set('Authorization', 'Bearer ' + loginContext.token)
       }else{
@@ -205,11 +257,13 @@ function Restaurants() {
       alert('Invalid data ' + error);
     }
   }
+//////////////////////////////////////// END OF CART FUNCTION ////////////////////////////////////////
 
+////////////////////////////////////// START OF DELETE FOOD FUNCTION ////////////////////////////////////
   async function deleteFood(id) {
     console.log(id);
     try {
-      const res = await superagent.delete(`http://localhost:3001/v4/food/${id}`)
+       await superagent.delete(`http://localhost:3001/v4/food/${id}`)
         .set('Authorization', 'Bearer ' + loginContext.token);
 
         const getFood = await superagent.get(`http://localhost:3001/v4/food/`)
@@ -227,6 +281,33 @@ function Restaurants() {
     }
 
   }
+  //////////////////////////////////////// END OF DELETE FOOD FUNCTION //////////////////////////////////
+
+  ///////////////////////////////////// START OF DELETE RESTUARANT FUNCTION ////////////////////////////////
+  async function deleteRestuarant(id) {
+    console.log(id);
+    try {
+       await superagent.delete(`http://localhost:3001/v4/restuarant/${id}`)
+        .set('Authorization', 'Bearer ' + loginContext.token);
+
+        const getRestuarant = await superagent.get(`http://localhost:3001/v4/restuarant/`)
+        .set('Authorization', 'Bearer ' + loginContext.token);  
+      const items = restuarant.filter(item => item.id !== id);
+      setFood(getRestuarant.body);
+      setShow(false)
+      console.log("RESTUARANT id>>>>>>>", id);
+      console.log("RESTUARANT items.id >>>>>>", items.id);
+      console.log("RESTUARANTs items>>>>", items);
+      console.log("RESTUARANTs>>>>>", getRestuarant.body);
+
+    } catch (error) {
+      alert('Invalid delete');
+    }
+
+  }
+  ////////////////////////////////////// END OF DELETE RESTUARANT FUNCTION /////////////////////
+
+  //////////////////////////////////////// START OF useEFFECT FUNCTIONS /////////////////////////
 
   useEffect(() => {
     axios.get(`http://localhost:3001/v4/food`)
@@ -250,18 +331,26 @@ function Restaurants() {
         console.log(error);
       })
   }, [])
+
+  console.log(loginContext);
+
+  ///////////////////////////////// END OF useEFFECT FUNDTIONS /////////////////////////////////////////
+
+
   return (
     <div>
-      <AddFoodForm handleChange={handleChange}
-        handleSubmit={handleSubmit} />
-      <br />
       <AddRestuarantsForm handleChange={handleChange2}
         handleSubmit={handleSubmit2} />
-      <FoodStyle>
+      <br />
+      <AddFoodForm handleChange={handleChange}
+        handleSubmit={handleSubmit} />
         <h2> this is resturant page </h2>
-        {restuarant.map(restuarant => {
+        <FoodStyle>
+        {restuarant.map((restuarant,idx) => {
           return (
-            <><h2 key={restuarant.id}>{restuarant.name}</h2>
+            <><h2 key={restuarant.name}>{restuarant.name}</h2>
+            <img  alt="img" key={restuarant.image} src={restuarant.image}/>
+            {/* <Button key={restuarant.id} onClick={() => deleteRestuarant(restuarant.id)}>Delete Restuarant</Button> */}
 
               <Slider {...settings} style={{ margin: "30px" }}>
                 {food.map((food, index) => {
@@ -276,7 +365,7 @@ function Restaurants() {
                         <Card.Img
                           variant="top"
                           className="card-image"
-                          onClick={() => handleModel(index)}
+                          onClick={() => handleFoodModel(index)}
                           src={food.image} />
                         <div className="details">
                           <h2>{food.name}</h2>
@@ -290,11 +379,15 @@ function Restaurants() {
             </>
           )
         })}
-      </FoodStyle>
+        </FoodStyle>
       <FoodModel
-        food={food} handleAddToCart={handleAddToCart} deleteFood={deleteFood} foodModel={foodModel} show={show} handleShow={handleShow} handleClose={handleClose} handleModel={handleModel}
+        food={food} handleAddToCart={handleAddToCart} deleteFood={deleteFood} foodModel={foodModel} show={show} handleShow={handleShow} handleClose={handleClose} handleFoodModel={handleFoodModel} handleAddToFav={handleAddToFav}
 
       />
+      {/* <RestuarantModel
+        restuarant={restuarant}  deleteRestuarant={deleteRestuarant} restuarantModel={restuarantModel} show={show} handleShow={handleShow} handleClose={handleClose} handleRestuarantModel={handleRestuarantModel}
+
+      /> */}
     </div>
   )
 }
