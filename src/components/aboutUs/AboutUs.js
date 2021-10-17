@@ -1,160 +1,111 @@
-import React from "react";
-import Card from "react-bootstrap/Card";
-
-function AboutUs() {
-    return (
-        <>
-            <div className="headershow">
-
-                <h1> About Us </h1>
-
-            </div>
-            <section>
-                <div>
-                    <h1 className="textteam">Our Team</h1>
-                    <div className="cardgroup">
-                        <br />
-                        <br />
-                        <br />
-
-                        <Card className="card1">
-                            <Card.Img
-                                variant="top"
-                                src="https://ca.slack-edge.com/TNGRRLUMA-U01TXG8SVC2-d1de7bc78351-512"
-                                className="images1"
-                            />
-                            <Card.Body>
-                                <Card.Title>Mahmoud Khader</Card.Title>
-                                <Card.Text>Full Stack Develpoer</Card.Text>
-                                <p>Civil Engineer</p>
-                                <a href="https://www.linkedin.com/in/mahmoud-khader-432964131/">
-                                    <img
-                                        className="smallimg"
-                                        src="https://play-lh.googleusercontent.com/kMofEFLjobZy_bCuaiDogzBcUT-dz3BBbOrIEjJ-hqOabjK8ieuevGe6wlTD15QzOqw "
-                                        alt="LinkedIn"
-                                    />
-                                </a>
-                                <a href="https://github.com/Mahmoud-Khader">
-                                    <img
-                                        className="smallimg"
-                                        src=" https://www.howtogeek.com/wp-content/uploads/2019/12/github-logo.jpg?height=200p&trim=2,2,2,2"
-                                        alt="GitHub"
-                                    />
-                                </a>
-                            </Card.Body>
-                        </Card>
-
-                        <Card className="card1">
-                            <Card.Img
-                                variant="top"
-                                src="https://ca.slack-edge.com/TNGRRLUMA-U01TXMV6X5Z-023ff6873743-512"
-                                className="images"
-                            />
-                            <Card.Body>
-                                <Card.Title>Suad Tlafha</Card.Title>
-                                <Card.Text>Full Stack Develpoer</Card.Text>
-                                <p> engineer</p>
-                                <a href="linkedIn link">
-                                    <img
-                                        className="smallimg"
-                                        src="   https://play-lh.googleusercontent.com/kMofEFLjobZy_bCuaiDogzBcUT-dz3BBbOrIEjJ-hqOabjK8ieuevGe6wlTD15QzOqw "
-                                        alt="LinkedIn"
-                                    />
-                                </a>
-                                <a href="https://github.com/suadtalafha">
-                                    <img
-                                        className="smallimg"
-                                        src=" https://www.howtogeek.com/wp-content/uploads/2019/12/github-logo.jpg?height=200p&trim=2,2,2,2"
-                                        alt="GitHub"
-                                    />
-                                </a>
-                            </Card.Body>
-                        </Card>
-
-                        <Card className="card1">
-                            <Card.Img
-                                variant="top"
-                                src="https://ca.slack-edge.com/TNGRRLUMA-U01UMADSQ00-f7e6bee3276f-512"
-                                className="images1"
-                            />
-                            <Card.Body>
-                                <Card.Title>Saleem Diab</Card.Title>
-                                <Card.Text>Full Stack Develpoer</Card.Text>
-                                <p>Civil Engineer</p>
-                                <a href="LinkedIn link">
-                                    <img
-                                        className="smallimg"
-                                        src="  https://play-lh.googleusercontent.com/kMofEFLjobZy_bCuaiDogzBcUT-dz3BBbOrIEjJ-hqOabjK8ieuevGe6wlTD15QzOqw "
-                                        alt="LinkedIn"
-                                    />
-                                </a>
-                                <a href="https://github.com/saleem-ux">
-                                    <img
-                                        className="smallimg"
-                                        src=" https://www.howtogeek.com/wp-content/uploads/2019/12/github-logo.jpg?height=200p&trim=2,2,2,2"
-                                        alt="GitHub"
-                                    />
-                                </a>
-                            </Card.Body>
-                        </Card>
-                        <Card className="card1">
-                            <Card.Img
-                                variant="top"
-                                src="https://ca.slack-edge.com/TNGRRLUMA-U01UM9UMG64-680c041878c8-512"
-                                className="images"
-                            />
-                            <Card.Body>
-                                <Card.Title> Dena Kofahi</Card.Title>
-                                <Card.Text>Full Stack Develpoer</Card.Text>
-                                <p>your Background</p>
-                                <a href="linked in link">
-                                    <img
-                                        className="smallimg"
-                                        src="   https://play-lh.googleusercontent.com/kMofEFLjobZy_bCuaiDogzBcUT-dz3BBbOrIEjJ-hqOabjK8ieuevGe6wlTD15QzOqw "
-                                        alt="LinkedIn"
-                                    />
-                                </a>
-                                <a href="https://github.com/Denakof">
-                                    <img
-                                        className="smallimg"
-                                        src=" https://www.howtogeek.com/wp-content/uploads/2019/12/github-logo.jpg?height=200p&trim=2,2,2,2"
-                                        alt="GitHub"
-                                    />
-                                </a>
-                            </Card.Body>
-                        </Card>
-                        <Card className="card1">
-                            <Card.Img
-                                variant="top"
-                                src="https://ca.slack-edge.com/TNGRRLUMA-U01QQMGRCJK-6def7491c471-512"
-                                className="images"
-                            />
-                            <Card.Body>
-                                <Card.Title> Osama Baker</Card.Title>
-                                <Card.Text>Full Stack Develpoer</Card.Text>
-                                <p>Your Background</p>
-                                <a href="linkedin link">
-                                    <img
-                                        className="smallimg"
-                                        src="   https://play-lh.googleusercontent.com/kMofEFLjobZy_bCuaiDogzBcUT-dz3BBbOrIEjJ-hqOabjK8ieuevGe6wlTD15QzOqw "
-                                        alt="LinkedIn"
-                                    />
-                                </a>
-                                <a href="https://github.com/OsamaBaker">
-                                    <img
-                                        className="smallimg"
-                                        src=" https://www.howtogeek.com/wp-content/uploads/2019/12/github-logo.jpg?height=200p&trim=2,2,2,2"
-                                        alt="GitHub"
-                                    />
-                                </a>
-                            </Card.Body>
-                        </Card>
+import React, { Component } from 'react';
+// import { Card } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { Container, Nav, Navbar } from "react-bootstrap";
+import './AboutUs.css';
+// import {
+//     FaFacebookSquare,
+//     FaInstagramSquare,
+//     FaTwitterSquare,
+//     FaGithubSquare,
+//     FaLinkedin
+// } from "react-icons/fa";
+// import saleem from '../img/saleem.jpg';
+// import dena from '../img/dena.jpg';
+// import mahmoud from '../img/mahmoud.jpg';
+// import suad from '../img/suad.jpg';
+import img from './img3.png'
+class AboutUs extends Component {
+    render() {
+        return (
+            <>
+                <img alt="img" src={img}></img>
+                <section id="team" class="team_member section-padding">
+    <div class="container">            
+        <div class="section-title text-center">
+            <h1>Meet our Team</h1>
+        </div>              
+        <div class="row text-center">
+            <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
+                <div class="our-team">
+                    <div class="team_img">
+                        <img alt="img" src="https://avatars.githubusercontent.com/u/82364465?v=4" alt="team-image"></img>
+                        <ul class="social">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="team-content">
+                        <h3 class="title">Mahmoud Khader</h3>
+                        <h3>Team Leader</h3>
+                        <span class="post">Civil Engineer & Full Stack Developer</span>
                     </div>
                 </div>
-            </section>
-
-        </>
-    );
+            </div>                                                  
+            <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s" data-wow-offset="0">
+                <div class="our-team">
+                    <div class="team_img">
+                        <img alt='img' src="https://ca.slack-edge.com/TNGRRLUMA-U01TXMV6X5Z-023ff6873743-512" alt="team-image"></img>
+                        <ul class="social">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="team-content">
+                        <h3 class="title">Suad Talafha</h3>
+                        <h3>Team Member</h3>
+                        <span class="post">Renewable Energy Engineer & Full Stack Developer </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s" data-wow-offset="0">
+                <div class="our-team">
+                    <div class="team_img">
+                        <img alt='img' src="https://avatars.githubusercontent.com/u/82366428?v=4" alt="team-image"></img>
+                        <ul class="social">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="team-content">
+                        <h3 class="title">Saleem Diab</h3>
+                        <h3>Team Member</h3>
+                        <span class="post">Civil Engineer & Full stack Developer</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s" data-wow-offset="0">
+                <div class="our-team">
+                    <div class="team_img">
+                        <img alt='img' src="https://avatars.githubusercontent.com/u/82310640?v=4" alt="team-image"></img>
+                        <ul class="social">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="team-content">
+                        <h3 class="title">Dina Kofahi</h3>
+                        <h3>Team Member</h3>
+                        <span class="post">Bussniss Adminstaration & Full stack Developer </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+            </div>
+        </div>
+    </div>  
+</section>
+            </>
+        )
+    }
 }
-
-export default AboutUs;
+export default AboutUs

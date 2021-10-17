@@ -15,6 +15,8 @@ import Restaurants from './components/restaurants/Restaurants';
 import { LoginContext } from './context/loginContext';
 import { useContext } from 'react';
 import Signup from './components/login/signup';
+import Cart from './components/cart/cart';
+import Checkout from './components/cart/checkout';
 
 
 function App() {
@@ -40,10 +42,16 @@ function App() {
             <Route path="/signup">
               <Signup />
             </Route>
+            <Route path="/cart">
+              <Cart />
+            </Route>
+            <Route path="/checkout">
+              <Checkout />
+            </Route>
 
           
           </Switch>
-        {/* <Footer /> */}
+        <Footer />
         </BrowserRouter>
 
     </>

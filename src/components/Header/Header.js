@@ -1,3 +1,4 @@
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import React, { Component } from "react";
 import cookie from "react-cookies";
 import { LoginContext } from "../../context/loginContext";
@@ -111,6 +112,9 @@ class Header extends Component {
                       <Link to="/login"></Link>
                     </Nav.Link>
                   )}
+                  <Link to="/cart">
+            <ShoppingCartIcon />
+          </Link>
                 </Nav>
               </Navbar.Collapse>
             </Container>
