@@ -20,11 +20,21 @@ class AboutUs extends Component {
     render() {
         return (
             <>
-                <img alt="img" src={img}></img>
+<div class="title12">
+ <h2>About<br/>Us</h2>
+</div>            <section> 
+                <p className="whoweare">
+                We are an online food ordering service that helps customers find restaurants in their area, filter by cuisine, browse menus and place their orders with an option of online payment or cash on delivery.
+<hr/>
+                Our main aim is to become and remain the market leader in the MENA region by diversifying our services portfolio and providing best-in-class customer experience.
+
+                </p>
+                {/* <img alt="img" src={img}></img> */}
+            </section>
                 <section id="team" class="team_member section-padding">
     <div class="container">            
         <div class="section-title text-center">
-            <h1>Meet our Team</h1>
+            <h1  >Meet our Team</h1>
         </div>              
         <div class="row text-center">
             <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
@@ -41,7 +51,7 @@ class AboutUs extends Component {
                     <div class="team-content">
                         <h3 class="title">Mahmoud Khader</h3>
                         <h3>Team Leader</h3>
-                        <span class="post">Civil Engineer & Full Stack Developer</span>
+                        <span class="post">Civil Engineer&Full-Stack Developer</span>
                     </div>
                 </div>
             </div>                                                  
@@ -59,7 +69,7 @@ class AboutUs extends Component {
                     <div class="team-content">
                         <h3 class="title">Suad Talafha</h3>
                         <h3>Team Member</h3>
-                        <span class="post">Renewable Energy Engineer & Full Stack Developer </span>
+                        <span class="post">Renewable Energy Engineer&Full-Stack Developer </span>
                     </div>
                 </div>
             </div>
@@ -77,7 +87,7 @@ class AboutUs extends Component {
                     <div class="team-content">
                         <h3 class="title">Saleem Diab</h3>
                         <h3>Team Member</h3>
-                        <span class="post">Civil Engineer & Full stack Developer</span>
+                        <span class="post">Civil Engineer&Full-stack Developer</span>
                     </div>
                 </div>
             </div>
@@ -93,9 +103,9 @@ class AboutUs extends Component {
                         </ul>
                     </div>
                     <div class="team-content">
-                        <h3 class="title">Dina Kofahi</h3>
+                        <h3 class="title">Dena Kofahi</h3>
                         <h3>Team Member</h3>
-                        <span class="post">Bussniss Adminstaration & Full stack Developer </span>
+                        <span class="post">Business Adminstaration&Full-stack Developer </span>
                     </div>
                 </div>
             </div>

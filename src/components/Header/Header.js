@@ -66,18 +66,13 @@ class Header extends Component {
             <Container>
               <Navbar.Brand href="/">
                 
-                <img
-                  src="https://avatars.githubusercontent.com/u/90194344?s=400&u=4af0645b923aae23a60c99fc7b554f4968ed3371&v=4"
-                  alt="logo home"
-                  style={{ width: "10%" }}
-                  className="o2art-logo"
-                />
-                
+              <p style={{}}> SPACE FOOD</p>
+
               </Navbar.Brand>
               <Navbar.Toggle aria-controls="responsive-navbar-nav" />
               <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="me-auto"></Nav>
-                <Nav>
+                <Nav className="me-auto">
                   <Nav.Link href="/">
                     Home
                     <Link to="/"></Link>
@@ -112,9 +107,9 @@ class Header extends Component {
                       <Link to="/login"></Link>
                     </Nav.Link>
                   )}
-                  <Link to="/cart">
+                  <Nav.Link href="/cart">
             <ShoppingCartIcon />
-          </Link>
+          </Nav.Link>
                 </Nav>
               </Navbar.Collapse>
             </Container>

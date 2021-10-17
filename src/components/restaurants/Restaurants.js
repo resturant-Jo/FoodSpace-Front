@@ -339,6 +339,10 @@ const handleAddToFav = async()=>{
 
   return (
     <div>
+      <div class="title22">
+ <h1>restaurants&<br/>food</h1>
+
+</div>
       <AddRestuarantsForm handleChange={handleChange2}
         handleSubmit={handleSubmit2} />
       <br />

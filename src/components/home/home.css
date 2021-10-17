@@ -1,5 +1,7 @@
 body{
     overflow-x: hidden;
+    
+
 }
 .video{
     /* position: absolute; */
@@ -58,7 +60,7 @@ body{
     margin-left: 133px;
     margin-top: 106px;
     position: absolute;
-    font-family: 'Gluten', cursive;
+    font-family: 'IM Fell English SC', serif;
  }
  #spacefood{
     font-family: 'Faster One', cursive;
@@ -82,13 +84,14 @@ body{
 }
     .parg2{
            float: left;
-    color: #D45941;
+    color: #7a5750;
     width: 300px;
     margin-left: 118px;
     line-height: 44px;
-    font-size: 21px;
+    font-size: 25px;
     margin-top: 40px;
     font-weight: 400;
+    font-family: 'IM Fell English SC', serif;
     }
     .img3{
         width: 710px;
@@ -97,11 +100,83 @@ body{
     }
     .parg3{
         float: right;
- color: #D45941;
+ color: #928f8f;
  width: 300px;
  margin-right: 118px;
  line-height: 44px;
- font-size: 21px;
+ font-size: 25px;
  margin-top: 40px;
  font-weight: 400;
+ font-family: 'IM Fell English SC', serif;
  }
+ /* animation */
+@keyframes headerAnimation {
+  0% {
+    background-image: url("https://media.gq-magazine.co.uk/photos/5f8ef1b158687997c42f3e8c/master/w_1920,h_1280,c_limit/HEALTHYFOODDELIVERY_FFF-244.jpg");
+    background-size: cover;
+  }
+  50% {
+    background-image: url("https://wallpaper.dog/large/10814052.png");
+    background-size: cover;
+  }
+  100% {
+    background-image: url("https://media.gq-magazine.co.uk/photos/5f8ef1b158687997c42f3e8c/master/w_1920,h_1280,c_limit/HEALTHYFOODDELIVERY_FFF-244.jpg");
+    background-size: cover;
+  }
+}
+.image1 {
+  clear: both;
+  position: relative;
+  width: 100%;
+  height: 300px;
+  animation: headerAnimation ease-in 30s infinite;
+}
+.text1 {
+  text-align: center;
+  position: relative;
+  top: 400px;
+  left: 350px;
+  font-size: 80px;
+  font-family: "Reggae One", cursive;
+  color: rgb(255, 255, 255);
+}
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+/* //////////////////////////////NavBar/////////////////// */
+.navbar-brand {
+  font-family: "Codystar", cursive !important;
+  font-weight: bolder;
+  font-size: 25px !important;
+}
+.navbar {
+  padding: 0 20px;
+  height: 45px;
+  /* background-color: black; */
+}
+.me-auto,
+.nav-link {
+  color: white !important;
+  padding-right: 25px !important;
+}
+.contactus{
+    background-image: url(https://wallpaperaccess.com/full/271726.jpg);
+    background-size: cover;
+
+    /* height:1000px ;
+    
+    width: 1500px; */
+}
+.contactus h3 {
+    color: #ffffff;
+    background-size: cover;
+    font-family: 'IM Fell English SC', serif;   /* color: transparent; */
+    /* -moz-background-clip: text;
+    -webkit-background-clip: text; */
+    text-transform: uppercase;
+    font-size: 50px;
+    line-height: 1.5;
+    margin: 10px 0;
+    text-align: center;
+  }

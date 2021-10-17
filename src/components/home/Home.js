@@ -19,7 +19,7 @@ const Home = () => {
             <hr/>
         <p className="parg">
           is a leading online food delivery marketplace, connected restaurants in JORDAN.
-          To Visit Our Resturants :point_right:   <Link to='/restaurants'>
+          To Visit Our Resturants <Link to='/restaurants'>
             <Button className="bp4-minimal" text="Restaurants" />
           </Link>
         </p>
@@ -44,9 +44,23 @@ const Home = () => {
           </h2>
           From your neighborhood sushi spot to the burger and fries you crave, choose from over 300,000 local and national favorites across Jordan.        </p>
       </section>
-      <section>
+      <hr/>  <hr/>
+      <div class="image1"></div>
 
-      <h3 style={{color:"#1479", textAlign:"center"}}> Contact us</h3>
+      <section className="sec2">
+        <img className="img1" src="https://image.cnbcfm.com/api/v1/image/106436941-1583942201563gettyimages-748332225.jpeg?v=1583942245">
+        </img>
+        <p className="parg2">
+          <h2>
+            It’s all here.
+            All in one app.
+          </h2>
+          Discover local, on-demand delivery or Pickup from restaurants, nearby grocery and convenience stores, and more.
+        </p>
+      </section>
+      <section className="contactus">
+
+      <h3 > Contact us</h3>
       <Contactus/>
       </section>
     </>

@@ -3,8 +3,8 @@ import { useHistory } from "react-router-dom";
 
 import "./cart.css";
 
-function cart() {
-    // let history = useHistory();
+function Cart() {
+    let history = useHistory();
   return (
     <div>
    <div class="container px-3 my-5 clearfix">
@@ -109,8 +109,8 @@ function cart() {
             </div>
         
             <div class="float-right">
-              <button type="button" class="btn btn-lg btn-default md-btn-flat mt-2 mr-3">Back to shopping</button>
-              <button  type="button" class="btn btn-lg btn-primary mt-2">Checkout</button>
+              <button onClick={()=>{history.push("/restaurants")}} type="button" class="btn btn-lg btn-default md-btn-flat mt-2 mr-3">Back to shopping</button>
+              <button onClick={()=>{history.push("/checkout")}} type="button" class="btn btn-lg btn-primary mt-2">Checkout</button>
             </div>
         
           </div>
@@ -120,4 +120,4 @@ function cart() {
   );
 }
 
-export default cart;
+export default Cart;
