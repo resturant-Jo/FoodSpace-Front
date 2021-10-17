@@ -6,7 +6,7 @@ import jwt from 'jsonwebtoken';
 import cookie from 'react-cookies';
 
 export const LoginContext = React.createContext();
-const API = 'https://spacefood.herokuapp.com';
+const API = 'http://localhost:3001';
 
 export default function LoginProvider(props) {
 
@@ -16,27 +16,26 @@ export default function LoginProvider(props) {
     const [token, setToken] = useState(null);
 
     useEffect(() => {
-      const cookieToken = cookie.load('token');
-      JWToken(cookieToken);
-      setToken(cookieToken)
-  }, []);
+        const cookieToken = cookie.load('token');
+        JWToken(cookieToken);
+        setToken(cookieToken)
+        console.log(cookieToken);
+    }, []);
 
     const login = async (username, password) => {
 
         try {
             const encodedUser = base64.encode(`${username}:${password}`);
-           
-
             const response = await superagent.post(`${API}/signin`)
                 .set('authorization', `Basic ${encodedUser}`);
-    console.log(response.body);
+            console.log("response.body: ", response.body);
             JWToken(response.body.token);
         } catch (error) {
             alert('Invalid username or password');
         }
     }
 
-    const signup = async (userName, firstname, lastname, email, gender,age,  adress,profilePicture, phone,passWord, role) => {
+    const signup = async (userName, firstname, lastname, email, gender, age, adress, profilePicture, phone, passWord, role) => {
         try {
             let obj = {
                 username: userName,
@@ -51,20 +50,20 @@ export default function LoginProvider(props) {
                 password: passWord,
                 role: role
             }
-        console.log(obj);
-          const response = await superagent.post(`${API}/signup`, obj);
-          console.log(response.body);
-          JWToken(response.body.token);
+            console.log(obj);
+            const response = await superagent.post(`${API}/signup`, obj);
+            console.log(response.body);
+            JWToken(response.body.token);
         } catch (error) {
-          alert(error.message)
+            alert(error.message)
         }
-      };
+    };
 
     const JWToken = (token) => {
         if (token) {
+            console.log('token: ', token)
             const user = jwt.decode(token);
             handleLogin(true, user);
-
             cookie.save('token', token)
         } else {
             handleLogin(false, {});
@@ -81,10 +80,10 @@ export default function LoginProvider(props) {
         cookie.remove('token');
     }
 
-   
+
 
     const can = (capability) => {
-    //   console.log(user);
+        //   console.log(user);
         return user?.capabilities?.includes(capability);
     };
 
