@@ -109,8 +109,8 @@ function Cart() {
             </div>
         
             <div class="float-right">
-              <button onClick={()=>{history.push("/restaurants")}} type="button" class="btn btn-lg btn-default md-btn-flat mt-2 mr-3">Back to shopping</button>
-              <button onClick={()=>{history.push("/checkout")}} type="button" class="btn btn-lg btn-primary mt-2">Checkout</button>
+              <button onClick={()=>{history.push("/restaurants")}} style={{color:"white",backgroundColor:"#e63946"}} type="button" class="btn btn-lg btn-default md-btn-flat mt-2 mr-3">Back to shopping</button>
+              <button onClick={()=>{history.push("/checkout")}} type="button" style={{color:"white",backgroundColor:"#582"}} class="btn btn-lg btn-primary mt-2">Checkout</button>
             </div>
         
           </div>

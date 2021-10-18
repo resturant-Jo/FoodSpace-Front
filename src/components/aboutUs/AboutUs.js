@@ -31,10 +31,10 @@ class AboutUs extends Component {
                 </p>
                 {/* <img alt="img" src={img}></img> */}
             </section>
-                <section id="team" class="team_member section-padding">
-    <div class="container">            
+                <section id="team" class="team_member section-padding" id="meetourteam" >
+    <div class="container" >            
         <div class="section-title text-center">
-            <h1  >Meet our Team</h1>
+            <h1 >Meet our Team</h1>
         </div>              
         <div class="row text-center">
             <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">

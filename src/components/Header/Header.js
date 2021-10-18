@@ -3,9 +3,10 @@ import React, { Component } from "react";
 import cookie from "react-cookies";
 import { LoginContext } from "../../context/loginContext";
 import { Navbar, Container, Nav } from "react-bootstrap";
-import "./Header.css";
 
 import { Link, BrowserRouter } from "react-router-dom";
+import "./Header.css";
+
 class Header extends Component {
   constructor(props) {
     super(props);
@@ -48,26 +49,25 @@ class Header extends Component {
           style={{
             backgroundColor:
               this.state.status === "top"
-                ? "rgba(255, 255, 255, 0.0)"
-                : "#76C6FF",
-            color: this.state.status === "top" ? "black" : "white",
+                ? "#ffffff"
+                : "#f5c518",
+            color: this.state.status === "top" ? "black" : "black",
             boxShadow:
               this.state.status === "top"
                 ? "0 8px 4px rgba(0, 0, 0, 0.0)"
                 : "0 3px 2px rgba(0, 0, 0, 0.1)",
-            transition: "1s",
+            transition: "3s",
             textShadow:
               this.state.status === "top"
-                ? "0 0 1px #003cff, 0 0 1px #003cff"
+                ? "0 0 1px #fff, 0 0 1px #fff"
                 : "0 0 1px #FFF, 0 0 1px #FFF",
           }}
         >
           <BrowserRouter>
             <Container>
               <Navbar.Brand href="/">
-                
-              <p style={{}}> SPACE FOOD</p>
-
+                {/* liquid spacefood */}
+<p style={{}}> SPACE FOOD</p>
               </Navbar.Brand>
               <Navbar.Toggle aria-controls="responsive-navbar-nav" />
               <Navbar.Collapse id="responsive-navbar-nav">
@@ -81,9 +81,9 @@ class Header extends Component {
                     restaurants
                     <Link to="/restaurants"></Link>
                   </Nav.Link>
-                  <Nav.Link href="/aboutus">
+                  <Nav.Link href="/aboutus#meetourteam">
                     About-Us
-                    <Link to="/aboutus"></Link>
+                    <Link to="/aboutus#meetourteam"></Link>
                   </Nav.Link>
                   {this.token ? (
                     <>
