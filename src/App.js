@@ -15,36 +15,41 @@ import Restaurants from './components/restaurants/Restaurants';
 import { LoginContext } from './context/loginContext';
 import { useContext } from 'react';
 import Signup from './components/login/signup';
-
+import Profile from './components/profile/user/user'
 
 function App() {
   const context = useContext(LoginContext)
   return (
     <>
-        <BrowserRouter>
+      <BrowserRouter>
         <Header />
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/restaurants">
-              <Restaurants />
-            </Route>
-            <Route path="/aboutus">
-              <AboutUs/>
-            </Route>
-            <Route path="/login">
-              <Login />
-            </Route>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/restaurants">
+            <Restaurants />
+          </Route>
+          <Route path="/aboutus">
+            <AboutUs />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
 
-            <Route path="/signup">
-              <Signup />
-            </Route>
+          <Route path="/signup">
+            <Signup />
+          </Route>
 
-          
-          </Switch>
+          <Route path="/profile">
+            <Profile />
+          </Route>
+
+
+
+        </Switch>
         {/* <Footer /> */}
-        </BrowserRouter>
+      </BrowserRouter>
 
     </>
   );
