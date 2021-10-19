@@ -32,7 +32,11 @@ export default function Login(props) {
   const context = useContext(LoginContext);
   const handleLoginSubmit = (event) => {
     event.preventDefault();
-    context.login(username, password);
+    
+   context.login(username, password).then((res)=>{
+
+     if (res) history.push("/")
+   });
   };
   const handleSignupSubmit = (event) => {
     event.preventDefault();
@@ -107,6 +111,7 @@ export default function Login(props) {
                               color: "white",
                               backgroundColor: "#e63946",
                             }}
+                            // onClick={()=>{history.push("./signin")}}
                             type="submit"
                             class="btn btn-primary px-4"
                           >

@@ -29,9 +29,11 @@ export default function LoginProvider(props) {
             const response = await superagent.post(`${API}/signin`)
                 .set('authorization', `Basic ${encodedUser}`);
             console.log("response.body: ", response.body);
-            JWToken(response.body.token);
+             return JWToken(response.body.token);
+        
         } catch (error) {
             alert('Invalid username or password');
+            return false
         }
     }
 
@@ -65,6 +67,7 @@ export default function LoginProvider(props) {
             const user = jwt.decode(token);
             handleLogin(true, user);
             cookie.save('token', token)
+            return true
         } else {
             handleLogin(false, {});
         }

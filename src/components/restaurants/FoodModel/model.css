@@ -28,7 +28,7 @@
   }
   .p-modal {
     padding: 8px;
-    color: #12304e;
+    color: #6ab128;
   }
   
   /* #d57932 logo */
@@ -52,20 +52,20 @@
   
   .btn-secondary,
   .btn {
-    color: black;
-    background-color: #d57932;
+    color: rgb(255, 255, 255);
+    background-color: #f3be5d;
     border: none;
     font-weight: 700;
   }
   .btn:hover {
-    color: #d57932;
-    background-color: #201e23;
-    border-color: #d57932;
+    color: #ffffff;
+    background-color: #eb822d;
+    border-color: #f0812c;
   }
   
   .nav-tabs .nav-item.show .nav-link,
   .nav-tabs .nav-link.active {
-    color: #d57932;
+    color: #ffffff;
     background-color: #d0d0d0;
-    border-color: #dee2e6 #dee2e6 #fff;
+    border-color: #ffffff #dee2e6 #fff;
   }

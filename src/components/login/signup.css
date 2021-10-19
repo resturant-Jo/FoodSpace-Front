@@ -7,7 +7,7 @@ body {
     width: 406px;
     max-width: 406px;
     margin: 0 auto;
-    background-color: black;
+    background-color: rgba( 255,255,255,0.4 );
 }
 #signup {
     padding: 0px 25px 25px;
@@ -20,6 +20,20 @@ body {
     display: table;
     position: static;
     background-color: rgba(255, 255, 255, 0);
+}
+.select-signin{
+    background: #F5F5F5;
+    font-size: 0.8rem;
+    border-radius: 3px;
+    border: none;
+    padding: 13px 10px;
+    color: rgb(177, 175, 175);
+    width: 330px;
+    /* margin-bottom: 20px; */
+    box-shadow: inset 0px 2px 3px rgb(0 0 0 / 10%);
+    clear: both;
+    margin: 0 auto 15px;
+    display: block;
 }
 #signup .header {
     margin-bottom: 20px;

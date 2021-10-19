@@ -7,9 +7,13 @@ import img3 from './food2.jpg'
 import { Button, Alignment } from "@blueprintjs/core";
 import { Link } from 'react-router-dom';
 import Contactus from "../contactus/Contactus";
+// import Story from "../story/Story";
 const Home = () => {
   return (
     <>
+ {/* <iframe src="https://drive.google.com/file/d/1gTvVlPQKt7h5wQUU7BNhTRQfTMErQDt7/preview" frameBorder="none" width="100%" height="680" allow="autoplay"></iframe>
+
+     */}
       <h2 className="h2">  Space Food For You Any Time !!
       </h2>
       <section className="sec1">

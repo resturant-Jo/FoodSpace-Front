@@ -18,6 +18,7 @@ import Signup from './components/login/Signup';
 import Cart from './components/cart/cart';
 import Checkout from './components/cart/checkout';
 import Orders from './components/Order/Orders';
+import Card from "./components/card/Card"
 
 
 function App() {
@@ -51,6 +52,7 @@ function App() {
             <Route path="/orders">
               <Orders />
             </Route>
+            
 
           
           </Switch>
