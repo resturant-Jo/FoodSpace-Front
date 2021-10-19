@@ -14,17 +14,21 @@ import Footer from './components/footer/Footer';
 import Restaurants from './components/restaurants/Restaurants';
 import { LoginContext } from './context/loginContext';
 import { useContext } from 'react';
+
 import Signup from './components/login/Signup';
 import Cart from './components/cart/cart';
 import Checkout from './components/cart/checkout';
 import Orders from './components/Order/Orders';
 
 
+import Profile from './components/profile/user/user'
+
+
 function App() {
   const context = useContext(LoginContext)
   return (
     <>
-        <BrowserRouter>
+      <BrowserRouter>
         <Header />
           <Switch>
             <Route exact path="/">

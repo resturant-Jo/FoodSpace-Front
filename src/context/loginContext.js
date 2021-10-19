@@ -4,26 +4,20 @@ import base64 from 'base-64';
 import superagent from "superagent";
 import jwt from 'jsonwebtoken';
 import cookie from 'react-cookies';
-
 export const LoginContext = React.createContext();
 const API = 'http://localhost:3001';
-
 export default function LoginProvider(props) {
-
     const [loggedIn, setLoggedIn] = useState(false);
     const [user, setUser] = useState({});
     const [isUpdated, setIsUpdated] = useState(false);
     const [token, setToken] = useState(null);
-
     useEffect(() => {
         const cookieToken = cookie.load('token');
         JWToken(cookieToken);
         setToken(cookieToken)
         console.log(cookieToken);
     }, []);
-
     const login = async (username, password) => {
-
         try {
             const encodedUser = base64.encode(`${username}:${password}`);
             const response = await superagent.post(`${API}/signin`)
@@ -34,7 +28,6 @@ export default function LoginProvider(props) {
             alert('Invalid username or password');
         }
     }
-
     const signup = async (userName, firstname, lastname, email, gender, age, adress, profilePicture, phone, passWord, role) => {
         try {
             let obj = {
@@ -58,7 +51,6 @@ export default function LoginProvider(props) {
             alert(error.message)
         }
     };
-
     const JWToken = (token) => {
         if (token) {
             console.log('token: ', token)
@@ -69,12 +61,10 @@ export default function LoginProvider(props) {
             handleLogin(false, {});
         }
     }
-
     const handleLogin = (loggedIn, user) => {
         setLoggedIn(loggedIn);
         setUser(user);
     }
-
     const logout = () => {
         handleLogin(false, {});
         cookie.remove('token');
@@ -86,7 +76,6 @@ export default function LoginProvider(props) {
         //   console.log(user);
         return user?.capabilities?.includes(capability);
     };
-
     const state = {
         loggedIn,
         signup,
@@ -98,11 +87,9 @@ export default function LoginProvider(props) {
         setIsUpdated,
         isUpdated
     }
-
     return (
         <LoginContext.Provider value={state}>
             {props.children}
         </LoginContext.Provider>
     )
-
 };
