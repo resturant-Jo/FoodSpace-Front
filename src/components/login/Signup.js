@@ -38,13 +38,21 @@ export default function Login() {
     </div>
     <div class="sep"></div>
     <div class="inputs">
-        <input onChange={(e) => setEmail(e.target.value)} name="email" type="email" placeholder="e-mail" autofocus />
-        <input onChange={(e) => setPassword(e.target.value)}  type="password" placeholder="Password" />
-        <input onChange={(e) => setFirstname(e.target.value)} placeholder="firstName" type="text" name="firstname" /><br/>
-        <input onChange={(e) => setLastname(e.target.value)} placeholder="lastname" type="text" name="lastname" />
-        <input onChange={(e) => setAdress(e.target.value)} placeholder="address" type="text" name="adress" />
-        <input onChange={(e) => setPhone(e.target.value)} placeholder="phone" type="number" name="phone" />
-        <input onChange={(e) => setRole(e.target.value)} placeholder="role = [admin,user,manager,driver]" type="text" name="username" />
+        <input onChange={(e) => setEmail(e.target.value)} name="email" type="email" placeholder="e-mail" autofocus  required/>
+        <input onChange={(e) => setPassword(e.target.value)}  type="password" placeholder="Password" required />
+        <input onChange={(e) => setFirstname(e.target.value)} placeholder="firstName" type="text" name="firstname" required /><br/>
+        <input onChange={(e) => setLastname(e.target.value)} placeholder="lastname" type="text" name="lastname" required />
+        <input onChange={(e) => setAdress(e.target.value)} placeholder="address" type="text" name="adress" required />
+        <input onChange={(e) => setPhone(e.target.value)} placeholder="phone" type="number" name="phone" required/>
+        {/* <input onChange={(e) => setRole(e.target.value)} placeholder="role = [admin,user,manager,driver]" type="text" name="username" /> */}
+        <select  type="text" placeholder="Role" name="role" className="select-signin"  onChange={(e) => setRole(e.target.value)}required >
+                      <option placeholder="Role" value="user" name="role" >
+                        User
+                      </option>
+                      <option value="driver" placeholder="Role" name="role" >
+                        Driver
+                      </option>
+                    </select>
            <button type="submit"  style={{color:"white",backgroundColor:"#e63946"}}  class="btnSignup">Signup</button>
     </div>
 </form>

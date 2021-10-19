@@ -16,6 +16,7 @@ import "./Restaurants.css"
 import { FoodStyle } from './FoodStyle';
 import FoodModel from './FoodModel/FoodModel';
 import RestuarantModel from './FoodModel/RestuarantModel';
+import Auth from '../login/auth';
 
 function Restaurants() {
 
@@ -43,8 +44,8 @@ let settings = {
   slidesToShow: 4,
   slidesToScroll: 4,
   initialSlide: 0,
-  // autoplay: true,
-  // autoplaySpeed: 2000,
+  autoplay: true,
+  autoplaySpeed: 2000,
   responsive: [
     {
       breakpoint: 1024,
@@ -343,20 +344,29 @@ const handleAddToFav = async()=>{
  <h1>restaurants&<br/>food</h1>
 
 </div>
+<Auth capability="delete">
       <AddRestuarantsForm handleChange={handleChange2}
         handleSubmit={handleSubmit2} />
       <br />
       <AddFoodForm handleChange={handleChange}
         handleSubmit={handleSubmit} />
+        </Auth>
         <h2> this is resturant page </h2>
         <FoodStyle>
         {restuarant.map((restuarant,idx) => {
           return (
-            <><h2 key={restuarant.name}>{restuarant.name}</h2>
+            <>
+            <h2 key={restuarant.name}>{restuarant.name}</h2>
             <img  alt="img" key={restuarant.image} src={restuarant.image}/>
-            {/* <Button key={restuarant.id} onClick={() => deleteRestuarant(restuarant.id)}>Delete Restuarant</Button> */}
+            <Auth capability="delete">
 
-              <Slider {...settings} style={{ margin: "30px" }}>
+            <Button key={restuarant.id} onClick={() => deleteRestuarant(restuarant.id)}>Delete Restuarant</Button>
+            </Auth>
+            <h3 key={restuarant.description}>{restuarant.description}</h3>
+            <h3 key={restuarant.location}>{restuarant.location}</h3>
+            <h3 key={restuarant.foodType}>{restuarant.foodType}</h3>
+
+              {/* <Slider {...settings} style={{ margin: "30px" }}> */}
                 {food.map((food, index) => {
 
                   return (
@@ -379,7 +389,7 @@ const handleAddToFav = async()=>{
                   );
                 })}
 
-              </Slider>
+              {/* </Slider> */}
             </>
           )
         })}
