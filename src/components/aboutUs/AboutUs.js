@@ -20,7 +20,12 @@ class AboutUs extends Component {
     render() {
         return (
             <>
+                  <div class="image3">
+
+
+                  </div>
 <div class="title12">
+
  <h2>About<br/>Us</h2>
 </div>            <section> 
                 <p className="whoweare">
@@ -34,7 +39,7 @@ class AboutUs extends Component {
                 <section id="team" class="team_member section-padding" id="meetourteam" >
     <div class="container" >            
         <div class="section-title text-center">
-            <h1 >Meet our Team</h1>
+            <h1 className="blink" >Meet our Team</h1>
         </div>              
         <div class="row text-center">
             <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
@@ -51,7 +56,7 @@ class AboutUs extends Component {
                     <div class="team-content">
                         <h3 class="title">Mahmoud Khader</h3>
                         <h3>Team Leader</h3>
-                        <span class="post">Civil Engineer&Full-Stack Developer</span>
+                        <span class="post">Civil Engineer& <br/>Full-Stack Developer</span>
                     </div>
                 </div>
             </div>                                                  
@@ -87,7 +92,7 @@ class AboutUs extends Component {
                     <div class="team-content">
                         <h3 class="title">Saleem Diab</h3>
                         <h3>Team Member</h3>
-                        <span class="post">Civil Engineer&Full-stack Developer</span>
+                        <span class="post">Civil Engineer& <br/>Full-stack Developer</span>
                     </div>
                 </div>
             </div>

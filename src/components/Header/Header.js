@@ -49,14 +49,14 @@ class Header extends Component {
           style={{
             backgroundColor:
               this.state.status === "top"
-                ? "#ffffff"
-                : "#f5c518",
+                ? "rgba(0, 0, 0, 0.)"
+                : "wheat",
             color: this.state.status === "top" ? "black" : "black",
             boxShadow:
               this.state.status === "top"
                 ? "0 8px 4px rgba(0, 0, 0, 0.0)"
                 : "0 3px 2px rgba(0, 0, 0, 0.1)",
-            transition: "3s",
+            transition: "4s",
             textShadow:
               this.state.status === "top"
                 ? "0 0 1px #fff, 0 0 1px #fff"
@@ -67,16 +67,16 @@ class Header extends Component {
             <Container>
               <Navbar.Brand href="/">
                 {/* liquid spacefood */}
-<p style={{}}> SPACE FOOD</p>
+<p className="foood" style={{}}> SPACE FOOD</p>
               </Navbar.Brand>
               <Navbar.Toggle aria-controls="responsive-navbar-nav" />
               <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="me-auto"></Nav>
-                <Nav className="me-auto">
-                  <Nav.Link href="/">
+                <Nav  className="me-2">
+                  {/* <Nav.Link href="/">
                     Home
                     <Link to="/"></Link>
-                  </Nav.Link>
+                  </Nav.Link> */}
                   <Nav.Link href="/restaurants">
                     restaurants
                     <Link to="/restaurants"></Link>
@@ -107,7 +107,7 @@ class Header extends Component {
                       <Link to="/login"></Link>
                     </Nav.Link>
                   )}
-                  <Nav.Link href="/cart">
+                  <Nav.Link className="carticon" href="/cart">
             <ShoppingCartIcon />
           </Nav.Link>
                 </Nav>

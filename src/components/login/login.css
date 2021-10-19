@@ -87,7 +87,9 @@ h2 {
 }
 .bigCount {
   width: 100%;
-  margin-top: 30px;
+  height: 600px;
+  padding-top: 30px;
+  margin-bottom: -20px;
 }
 .col-md-8 {
   flex: 0 0 auto;
@@ -130,3 +132,6 @@ h2 {
 *:after {
   box-sizing: inherit;
 } 
+.bigCount{
+  background-color: rgb(243, 236, 236);
+}

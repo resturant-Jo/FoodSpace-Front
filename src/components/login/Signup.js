@@ -34,7 +34,7 @@ export default function Login() {
 <form id="signup">
     <div class="header">
         <h3>Sign Up</h3>
-        <p>You want to fill out this form</p>
+        <p>Create an account</p>
     </div>
     <div class="sep"></div>
     <div class="inputs">
@@ -45,7 +45,7 @@ export default function Login() {
         <input onChange={(e) => setAdress(e.target.value)} placeholder="address" type="text" name="adress" />
         <input onChange={(e) => setPhone(e.target.value)} placeholder="phone" type="number" name="phone" />
         <input onChange={(e) => setRole(e.target.value)} placeholder="role = [admin,user,manager,driver]" type="text" name="username" />
-           <button type="submit" class="btnSignup">Signup</button>
+           <button type="submit"  style={{color:"white",backgroundColor:"#e63946"}}  class="btnSignup">Signup</button>
     </div>
 </form>
 </div>

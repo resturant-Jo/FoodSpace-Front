@@ -1,14 +1,13 @@
 body {
     background-image: url(http://kreativo.se/backlogin.jpg);
     font-family: "Helvetica Neue", Helvetica, Arial;
-    padding-top: 20px;
-    
+    padding-top: 20px;  
 }
 .container1 {
     width: 406px;
     max-width: 406px;
     margin: 0 auto;
-    background-color: white;
+    background-color: black;
 }
 #signup {
     padding: 0px 25px 25px;
@@ -32,20 +31,26 @@ input{
     border: none;
     padding: 13px 10px;
     width: 330px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     box-shadow: inset 0px 2px 3px rgb(0 0 0 / 10%);
     clear: both;
+    margin: 0 auto 15px;
+    display: block;
 }
 #signup .header h3 {
-    color: #333333;
+    color: #ffffff;
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
+    text-align: center;
+margin-top: 20px;
+
 }
 #signup .header p {
-    color: #8F8F8F;
-    font-size: 14px;
+    color: #cccccc;
+    font-size: 12px;
     font-weight: 300;
+    text-align: center;
 }
 #signup .sep {
     height: 1px;
@@ -150,16 +155,20 @@ input:-moz-placeholder {
         #B9C5DD);
 }
 .btnSignup{
-    color: #FF8D00;
-    width: 328px;
+    width: 220px;
     background-color: #FFF4CD;
     font-size: 28px;
     border-radius: 14px;
     font-family: ui-serif;
+    display: block;
+    margin-left:auto ;
+    margin-right: auto;
 }
 .signupbody{
-    background-image: url(https://assets.gqindia.com/photos/60f932bbbc55a78132763da9/master/pass/Hundo%20Pizza.jpg) 
-    
-    ;
+    background-image: url(https://assets.gqindia.com/photos/60f932bbbc55a78132763da9/master/pass/Hundo%20Pizza.jpg);
     background-size: cover;
+    padding-top: 20px;
+    margin-bottom: -50px;
+    height: 750px;
+  
 }

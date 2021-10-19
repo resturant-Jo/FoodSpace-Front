@@ -36,15 +36,17 @@ const Home = () => {
         </p>
       </section>
       <section className="sec3">
-        <img className="img3" src={img3}>
+        <img className="img3" src="https://media.istockphoto.com/photos/pan-fried-duck-picture-id1081422898?k=20&m=1081422898&s=612x612&w=0&h=YkfQqtV3nN1gB_HaehyvjcTEye7w9FBPkG-PIKdDzPo=">
         </img>
+
         <p className="parg3">
           <h2>
             Every Flavor Welcome
           </h2>
           From your neighborhood sushi spot to the burger and fries you crave, choose from over 300,000 local and national favorites across Jordan.        </p>
+          <br style={{clear:"both"}}/>
       </section>
-      <hr/>  <hr/>
+
       <div class="image1"></div>
 
       <section className="sec2">
