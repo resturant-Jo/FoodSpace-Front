@@ -85,10 +85,7 @@ class Header extends Component {
                     About-Us
                     <Link to="/aboutus#meetourteam"></Link>
                   </Nav.Link>
-                  <Nav.Link href="/orders">
-                    Orders
-                    <Link to="/orders"></Link>
-                  </Nav.Link>
+
                   {this.token ? (
                     <>
                       <Nav.Link href="/profile">

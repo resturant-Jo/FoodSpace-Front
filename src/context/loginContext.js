@@ -24,6 +24,7 @@ export default function LoginProvider(props) {
                 .set('authorization', `Basic ${encodedUser}`);
             console.log("response.body: ", response.body);
             JWToken(response.body.token);
+            cookie.save('user',response.body.user)
         } catch (error) {
             alert('Invalid username or password');
         }

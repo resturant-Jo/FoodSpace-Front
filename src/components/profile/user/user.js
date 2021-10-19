@@ -6,7 +6,9 @@ import superagent from 'superagent';
 import { Button, Modal, Table, Form } from 'react-bootstrap';
 import cookie from 'react-cookies';
 
-function Users() {
+export const ProfileContext = React.createContext();
+
+function Users(props) {
 
     const loginContext = useContext(LoginContext)
     const [user, setUser] = useState([]);
@@ -41,40 +43,44 @@ function Users() {
     // )
     // console.log(accessToken);
 
-    useEffect(async () => {
+    useEffect( async () => {
         // get information personal
         try {
-            const res = await superagent.get(`http://localhost:3001/profile`)
+          await   superagent.get(`http://localhost:3001/profile`)
                 .set('Authorization', `Bearer ${loginContext.token}`)
+                .then(res=>{
+
+                    console.log(res);
+                    setUser(res.body);
+                    // cookie.save('user',res.body)
+                })
             // const itemProfile = res.body.filter(item => { return item.id === userId });
-            console.log(res);
-            setUser(res.body);
             // console.log(itemProfile);
         } catch (error) {
             console.log(error);
         }
-    }, [loginContext])
+    }, [loginContext.token])
     console.log(user);
 
 
     async function updateAccount(event) {
         event.preventDefault();
         let obj = {
-            username: username,
-            firstname: firstname,
-            lastname: lastname,
-            email: email,
-            gender: gender,
-            age: age,
-            adress: adress,
-            profilePicture: profilePicture,
-            password: password,
-            role: role,
-            phone: phone,
+            username: username || user.username,
+            firstname: firstname || user.firstname,
+            lastname: lastname || user.lastname,
+            email: email || user.email,
+            gender: gender || user.gender,
+            age: age || user.age,
+            adress: adress || user.adress,
+            profilePicture: profilePicture || user.profilePicture,
+            password: password ,
+            // role: role || user.role,
+            phone: phone || user.phone,
         }
         try {
             console.log(obj);
-            const res = await axios.put(`http://localhost:3001/updateaccount`)
+            const res = await superagent.put(`http://localhost:3001/updateaccount`)
                 .set('Authorization', 'Bearer ' + loginContext.token)
                 .send(obj)
                 // .then(async (res) => {
@@ -103,12 +109,22 @@ function Users() {
         }
 
     }
+    let state={
+        user,
+        setUser,
+        userId
+    }
 
 
     // console.log(user.username);
     return (
         <>
-            <h2>Profile page</h2>
+         
+      <ProfileContext.Provider value={state}>
+        {props.children}
+      </ProfileContext.Provider>
+    
+            {/* <h2>Profile page</h2>
             <Table striped bordered hover variant="dark">
                 <tbody>
                     <tr>
@@ -204,13 +220,13 @@ function Users() {
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Password</Form.Label>
-                            <Form.Control onChange={(e) => setPassword(e.target.value)} placeholder="password" type="text" name="password" defaultValue={user.password} />
+                            <Form.Control onChange={(e) => setPassword(e.target.value)} placeholder="Enter New Password" type="text" name="password"  />
                         </Form.Group>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                        {/* <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Role</Form.Label>
                             <Form.Control onChange={(e) => setRole(e.target.value)} placeholder="role" type="text" name="role" defaultValue={user.role} />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                        </Form.Group> */}
+                        {/* <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Phone</Form.Label>
                             <Form.Control onChange={(e) => setPhone(e.target.value)} placeholder="phone" type="text" name="phone" defaultValue={user.phone} />
                         </Form.Group>
@@ -223,11 +239,11 @@ function Users() {
                     <Button variant="secondary" onClick={handleClose}>
                         Close
                     </Button>
-                    <Button variant="primary" onClick={updateAccount} onClick>
+                    <Button variant="primary" onClick={updateAccount} >
                         Save Changes
                     </Button>
                 </Modal.Footer>
-            </Modal>
+            </Modal> */} 
         </>
     )
 

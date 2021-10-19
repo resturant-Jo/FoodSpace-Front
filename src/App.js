@@ -21,11 +21,13 @@ import Checkout from './components/cart/checkout';
 import Orders from './components/Order/Orders';
 
 
-import Profile from './components/profile/user/user'
-
+import DriverPage from './components/profile/driver/DriverPage'
+import ClientProfile from './components/profile/client/ClientProfile';
+import cookie from 'react-cookies'
+import AdminProfile from './components/profile/admin/AdminProfile';
 
 function App() {
-  const context = useContext(LoginContext)
+  const userData=cookie.load('user')
   return (
     <>
       <BrowserRouter>
@@ -52,8 +54,14 @@ function App() {
             <Route path="/checkout">
               <Checkout />
             </Route>
-            <Route path="/orders">
-              <Orders />
+
+
+            <Route path="/profile">
+              {userData.role === 'driver' ? <DriverPage />:''}
+              {userData.role === 'user' ? <ClientProfile/>:''}
+              {userData.role === 'admin' ? <AdminProfile/>:''}
+              
+            
             </Route>
 
           
