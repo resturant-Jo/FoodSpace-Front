@@ -90,6 +90,10 @@ class Header extends Component {
                     About-Us
                     <Link to="/aboutus"></Link>
                   </Nav.Link>
+                  <Nav.Link href="/orders">
+                    Orders
+                    <Link to="/orders"></Link>
+                  </Nav.Link>
                   {this.token ? (
                     <>
                       <Nav.Link href="/profile">
@@ -112,9 +116,11 @@ class Header extends Component {
                       <Link to="/login"></Link>
                     </Nav.Link>
                   )}
+                  <Nav.Link  href="/cart">
                   <Link to="/cart">
             <ShoppingCartIcon />
           </Link>
+          </Nav.Link>
                 </Nav>
               </Navbar.Collapse>
             </Container>

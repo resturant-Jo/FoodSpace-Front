@@ -17,6 +17,7 @@ import { useContext } from 'react';
 import Signup from './components/login/signup';
 import Cart from './components/cart/cart';
 import Checkout from './components/cart/checkout';
+import Orders from './components/Order/Orders';
 
 
 function App() {
@@ -47,6 +48,9 @@ function App() {
             </Route>
             <Route path="/checkout">
               <Checkout />
+            </Route>
+            <Route path="/orders">
+              <Orders />
             </Route>
 
           
