@@ -16,15 +16,15 @@ const userId=loginContext.user.userId
   useEffect(() => {
     const userId=loginContext.user.userId
     console.log('userId >>>>>>>>>> ',userId);
-    superagent.get(`http://localhost:3001/v2/cart`)
+    superagent.get(`http://localhost:3001/v2/cart/${userId}`)
       .set('Authorization', 'Bearer ' + loginContext.token)
       .then(res => {
-        const filteredData=(res.body).filter(item=>{return item.userId === userId})
-        setCart(...filteredData)
-        // console.log(id);
-        console.log(filteredData);
-        // console.log(filteredData[0].cartData);
-        setCartData(filteredData[0].cartData)
+        // const filteredData=(res.body).filter(item=>{return item.userId === userId})
+        setCart(...res.body)
+        console.log("RES.BODY >>>>>>>>>>> ",res.body);
+        // console.log(filteredData);
+        console.log("CARTDATA >>>>>>>>>>>>> ",res.body[0].cartData);
+        setCartData(res.body[0].cartData)
         
 
       })
