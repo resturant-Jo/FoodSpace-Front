@@ -4,6 +4,9 @@ import Auth from '../login/auth';
 
 export default function AddFoodForm({ handleSubmit, handleChange }) {
   return (
+    <>
+   
+
     <Card className="mainItem" style={{backgroundColor:"#76c393"}}>
       <h3>Add New Food</h3>
       <form onSubmit={handleSubmit}>
@@ -51,11 +54,12 @@ export default function AddFoodForm({ handleSubmit, handleChange }) {
 
           {/* <Auth capability="create"> */}
 <div >
-          <Button style={{backgroundColor:"gray"}} className='button' type="submit">Add Food</Button>
+          <Button style={{backgroundColor:"grey"}} className='button' type="submit">Add Food</Button>
           </div>
           {/* </Auth> */}
         </FormGroup>
       </form>
     </Card>
+    </>
   );
 }

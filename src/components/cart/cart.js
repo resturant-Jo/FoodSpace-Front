@@ -6,7 +6,8 @@ import { LoginContext } from '../../context/loginContext';
 import "./cart.css";
 
 function Cart() {
-  // let history = useHistory();
+
+  let history = useHistory();
   const loginContext = useContext(LoginContext)
 const userId=loginContext.user.userId
   const [cart, setCart] = useState([]);
@@ -47,6 +48,7 @@ console.log(userId);
   console.log(cart);
   console.log(cartData);
   console.log(loginContext);
+
 
   return (
 
@@ -125,8 +127,10 @@ console.log(userId);
             </div>
 
             <div class="float-right">
-              <button type="button" class="btn btn-lg btn-default md-btn-flat mt-2 mr-3">Back to shopping</button>
-              <button type="button" class="btn btn-lg btn-primary mt-2">Checkout</button>
+
+              <button onClick={()=>{history.push("/restaurants")}} style={{color:"white",backgroundColor:"#e63946"}} type="button" class="btn btn-lg btn-default md-btn-flat mt-2 mr-3">Back to shopping</button>
+              <button onClick={()=>{history.push("/checkout")}} type="button" style={{color:"white",backgroundColor:"#582"}} class="btn btn-lg btn-primary mt-2">Checkout</button>
+
             </div>
 
           </div>

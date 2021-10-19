@@ -19,7 +19,7 @@ const Home = () => {
             <hr/>
         <p className="parg">
           is a leading online food delivery marketplace, connected restaurants in JORDAN.
-          To Visit Our Resturants :point_right:   <Link to='/restaurants'>
+          To Visit Our Resturants <Link to='/restaurants'>
             <Button className="bp4-minimal" text="Restaurants" />
           </Link>
         </p>
@@ -36,17 +36,33 @@ const Home = () => {
         </p>
       </section>
       <section className="sec3">
-        <img className="img3" src={img3}>
+        <img className="img3" src="https://media.istockphoto.com/photos/pan-fried-duck-picture-id1081422898?k=20&m=1081422898&s=612x612&w=0&h=YkfQqtV3nN1gB_HaehyvjcTEye7w9FBPkG-PIKdDzPo=">
         </img>
+
         <p className="parg3">
           <h2>
             Every Flavor Welcome
           </h2>
           From your neighborhood sushi spot to the burger and fries you crave, choose from over 300,000 local and national favorites across Jordan.        </p>
+          <br style={{clear:"both"}}/>
       </section>
-      <section>
 
-      <h3 style={{color:"#1479", textAlign:"center"}}> Contact us</h3>
+      <div class="image1"></div>
+
+      <section className="sec2">
+        <img className="img1" src="https://image.cnbcfm.com/api/v1/image/106436941-1583942201563gettyimages-748332225.jpeg?v=1583942245">
+        </img>
+        <p className="parg2">
+          <h2>
+            It’s all here.
+            All in one app.
+          </h2>
+          Discover local, on-demand delivery or Pickup from restaurants, nearby grocery and convenience stores, and more.
+        </p>
+      </section>
+      <section className="contactus">
+
+      <h3 > Contact us</h3>
       <Contactus/>
       </section>
     </>

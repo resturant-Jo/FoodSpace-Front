@@ -3,9 +3,10 @@ import React, { Component } from "react";
 import cookie from "react-cookies";
 import { LoginContext } from "../../context/loginContext";
 import { Navbar, Container, Nav } from "react-bootstrap";
-import "./Header.css";
 
 import { Link, BrowserRouter } from "react-router-dom";
+import "./Header.css";
+
 class Header extends Component {
   constructor(props) {
     super(props);
@@ -48,47 +49,41 @@ class Header extends Component {
           style={{
             backgroundColor:
               this.state.status === "top"
-                ? "rgba(255, 255, 255, 0.0)"
-                : "#76C6FF",
-            color: this.state.status === "top" ? "black" : "white",
+                ? "rgba(0, 0, 0, 0.)"
+                : "wheat",
+            color: this.state.status === "top" ? "black" : "black",
             boxShadow:
               this.state.status === "top"
                 ? "0 8px 4px rgba(0, 0, 0, 0.0)"
                 : "0 3px 2px rgba(0, 0, 0, 0.1)",
-            transition: "1s",
+            transition: "4s",
             textShadow:
               this.state.status === "top"
-                ? "0 0 1px #003cff, 0 0 1px #003cff"
+                ? "0 0 1px #fff, 0 0 1px #fff"
                 : "0 0 1px #FFF, 0 0 1px #FFF",
           }}
         >
           <BrowserRouter>
             <Container>
               <Navbar.Brand href="/">
-                
-                <img
-                  src="https://avatars.githubusercontent.com/u/90194344?s=400&u=4af0645b923aae23a60c99fc7b554f4968ed3371&v=4"
-                  alt="logo home"
-                  style={{ width: "10%" }}
-                  className="o2art-logo"
-                />
-                
+                {/* liquid spacefood */}
+<p className="foood" style={{}}> SPACE FOOD</p>
               </Navbar.Brand>
               <Navbar.Toggle aria-controls="responsive-navbar-nav" />
               <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="me-auto"></Nav>
-                <Nav>
-                  <Nav.Link href="/">
+                <Nav  className="me-2">
+                  {/* <Nav.Link href="/">
                     Home
                     <Link to="/"></Link>
-                  </Nav.Link>
+                  </Nav.Link> */}
                   <Nav.Link href="/restaurants">
                     restaurants
                     <Link to="/restaurants"></Link>
                   </Nav.Link>
-                  <Nav.Link href="/aboutus">
+                  <Nav.Link href="/aboutus#meetourteam">
                     About-Us
-                    <Link to="/aboutus"></Link>
+                    <Link to="/aboutus#meetourteam"></Link>
                   </Nav.Link>
                   <Nav.Link href="/orders">
                     Orders
@@ -116,10 +111,8 @@ class Header extends Component {
                       <Link to="/login"></Link>
                     </Nav.Link>
                   )}
-                  <Nav.Link  href="/cart">
-                  <Link to="/cart">
+                  <Nav.Link className="carticon" href="/cart">
             <ShoppingCartIcon />
-          </Link>
           </Nav.Link>
                 </Nav>
               </Navbar.Collapse>

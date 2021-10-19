@@ -52,10 +52,13 @@ function Footer() {
 				</div>
 				<hr/>
 			</div>	
+			
+<a href="https://www.shift4shop.com/credit-card-logos.html"><img alt="Credit Card Logos" title="Credit Card Logos" src="https://www.shift4shop.com/images/credit-card-logos/cc-sm-4.png" width="198" height="28" border="0" /></a>
+
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
 					{/* <p><u><a href="https://www.bootdey.com/">bootdey.com</a></u> </p> */}
-					<p class="h6">&copy All right Reversed.<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank">SpaceFood</a></p>
+					<p class="h6">  All right Reversed.&copy;<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank">SpaceFood </a></p>
 				</div>
 			</div>	
 		</div>

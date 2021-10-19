@@ -1,122 +1,248 @@
-body{margin-top:20px;}
-.team_member {
-    background: rgba(199,201,209,.09);
-    padding-bottom: 50px;
-    overflow: hidden;
+body {
+  margin-top: 20px;
+  
 }
-.single_team_content{
-padding:45px;
-margin-top:60px;
+.whoweare {
+  font-size: 30px;
+  font-weight: 60;
+  line-height: 60px;
+}
+.team_member {
+  background: rgba(199, 201, 209, 0.09);
+  padding-bottom: 50px;
+  overflow: hidden;
+}
+.single_team_content {
+  padding: 45px;
+  margin-top: 60px;
 }
 .single_team_content h1 {
-    font-size: 50px;
-    font-weight: 600;
-    line-height: 60px;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 60px;
 }
-.single_team_content p{}
+.single_team_content p {
+}
 .our-team {
-    margin-bottom: 30px;
-    box-shadow: 0 10px 40px -10px rgba(0,64,128,.09);
+  margin-bottom: 20px;
+  box-shadow: 0 10px 40px -10px rgba(0, 64, 128, 0.09);
+  color: rgb(19, 11, 1);
+  font-family: "IM Fell English SC", serif;
+
+  font-size: smaller;
 }
-.our-team .team_img{
-    position: relative;
-    overflow: hidden;
+.our-team .team_img {
+  position: relative;
+  overflow: hidden;
 }
-.our-team .team_img:after{
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255,255,255,0.2);
-    position: absolute;
-    bottom: -100%;
-    left: 0;
-    transition: all 0.3s ease 0s;
+.our-team .team_img:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  transition: all 0.3s ease 0s;
 }
-.our-team:hover .team_img:after{
-    bottom: 0;
+.our-team:hover .team_img:after {
+  bottom: 0;
 }
-.our-team img{
-    width: 100%;
-    height: auto;
+.our-team img {
+  width: 100%;
+  height: auto;
 }
-.our-team .social{
-    padding: 0 0 18px 0;
-    margin: 0;
-    list-style: none;
-    position: absolute;
-    top: -100%;
-    right: 10px;
-    background: #FFAA17;
-    border-radius: 0 0 20px 20px;
-    z-index: 1;
-    transition: all 0.3s ease 0s;
+.our-team .social {
+  padding: 0 0 18px 0;
+  margin: 0;
+  list-style: none;
+  position: absolute;
+  top: -100%;
+  right: 10px;
+  background: #ffaa17;
+  border-radius: 0 0 20px 20px;
+  z-index: 1;
+  transition: all 0.3s ease 0s;
 }
-.our-team:hover .social{
-    top: 0;
+.our-team:hover .social {
+  top: 0;
 }
-.our-team .social li a{
-    display: block;
-    padding: 15px;
-    font-size: 15px;
-    color: #232434;
+.our-team .social li a {
+  display: block;
+  padding: 15px;
+  font-size: 15px;
+  color: #232434;
 }
-.our-team:hover .social li a:hover{
-    color: #fff;
+.our-team:hover .social li a:hover {
+  color: #fff;
 }
-.our-team .team-content{
-    padding: 20px 0;
-    background: #fff;
+.our-team .team-content {
+  padding: 20px 0;
+  background: #fff;
 }
-.our-team .title{
-    font-size: 18px;
-    font-weight: bold;
-    color: #FFAA17;
-    text-transform: capitalize;
-    margin: 0 0 20px;
-    position: relative;
+.our-team .title {
+  font-size: 20px;
+  font-family: "IM Fell English SC", serif;
+
+  font-weight: bold;
+  color: #ffaa17;
+  text-transform: capitalize;
+  margin: 0 0 20px;
+  position: relative;
 }
-.our-team .title:before{
-    content: "";
-    width: 25px;
-    height: 1px;
-    background: #FFAA17;
-    position: absolute;
-    bottom: -10px;
-    right: 50%;
-    margin-right: 9px;
-    transition-duration: 0.25s;
+.our-team .title:before {
+  content: "";
+  width: 25px;
+  height: 1px;
+  background: #ffaa17;
+  position: absolute;
+  bottom: -10px;
+  right: 50%;
+  margin-right: 9px;
+  transition-duration: 0.25s;
 }
-.our-team .title:after{
-    content: "";
-    width: 25px;
-    height: 1px;
-    background: #FFAA17;
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    margin-left: 9px;
-    transition-duration: 0.25s;
+.our-team .title:after {
+  content: "";
+  width: 25px;
+  height: 1px;
+  background: #ffaa17;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  margin-left: 9px;
+  transition-duration: 0.25s;
 }
 .our-team:hover .title:before,
-.our-team:hover .title:after{
-    width: 50px;
+.our-team:hover .title:after {
+  width: 50px;
 }
-.our-team .post{
-    display: inline-block;
-    font-size: 15px;
-    text-transform: capitalize;
+.our-team .post {
+  display: inline-block;
+  font-size: 15px;
+  text-transform: capitalize;
 }
-.our-team .post:before{
-    content: "";
-    display: block;
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: #FFAA17;
-    margin: 0 auto;
+.our-team .post:before {
+  content: "";
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #ffaa17;
+  margin: 0 auto;
+  position: relative;
+  top: -13px;
+}
+@media only screen and (max-width: 990px) {
+  .our-team {
+    margin-bottom: 30px;
+  }
+}
+/* who we are */
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+body {
+  background-color: #111;
+}
+.whoweare {
+  font-family: "IM Fell English SC", serif;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-size: 25px;
+}
+.title12 {
+  font-family: "Montserrat";
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  letter-spacing: 1px;
+  margin-top: -200px;
+  position: absolute;
+  right: 550px;
+  top: 300px;
+}
+
+.title12 h2 {
+  background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+  background-size: cover;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  font-size: 70px;
+  line-height: 1;
+  margin: 10px 0;
+}
+/* styling my button */
+
+.white-mode:hover {
+  background-color: #fff;
+  color: #122;
+}
+
+@keyframes blinkAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.blink {
+  animation-name: blinkAnimation;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 30s;
+  font-size: 70px;
+  color: rgb(177, 151, 7);
+  font-weight: bold;
+  position: absolute;
+  right: 360px;
+  margin-top: -120px;
+  font-family: "IM Fell English SC", serif;
+  color: #000000;
+}
+/* header signup/sign */
+@keyframes HeaderAnimation1 {
+    0% {
+      background-image: url(https://media.istockphoto.com/photos/close-up-of-beautiful-and-cheerful-young-asian-woman-receiving-home-picture-id1273477714?b=1&k=20&m=1273477714&s=170667a&w=0&h=Hd1aszqp-IXXVES2wdr8qS6pmB23ztuILsm9obeAry4=);
+      background-size: cover;
+    }
+    50% {
+      background-image: url(https://wallpaper.dog/large/5467206.jpg);
+      background-size: cover;
+    }
+    100% {
+      background-image: url(https://media.istockphoto.com/photos/close-up-of-beautiful-and-cheerful-young-asian-woman-receiving-home-picture-id1273477714?b=1&k=20&m=1273477714&s=170667a&w=0&h=Hd1aszqp-IXXVES2wdr8qS6pmB23ztuILsm9obeAry4=);
+      background-size: cover;
+    }
+  }
+  .image3 {
+    clear: both;
     position: relative;
-    top: -13px;
-}
-@media only screen and (max-width: 990px){
-    .our-team{ margin-bottom: 30px; }
-}
+    width: 100%;
+    height: 450px;
+    animation: HeaderAnimation1 ease-in 20s infinite;
+  }
+  .text1 {
+      text-align: center;
+      position: relative;
+      top: 400px;
+      left: 350px;
+      font-size: 80px;
+      font-family: "Reggae One", cursive;
+      color: rgb(255, 255, 255);
+    } *
+  :before,
+  *:after {
+    box-sizing: inherit;
+  } 
+  /* 
+  
+  */
+  

@@ -1,24 +1,31 @@
-.navbar-header{
-    border-radius: .2rem;
-  }
-  .navbar-header .login-btn:hover,.logout-btn:hover{
-      color: rgb(255, 255, 255);
-      background-color: rgba(105, 2, 54, 0.26);
-      text-shadow: 0 0 4px rgb(255, 255, 255);
-      font-weight: 600;
-    }
-  
-    .navbar-header a{
-      text-decoration: none;
-      margin: 1px;
-      /* text-shadow: 0 0 5px  rgb(0, 38, 255); */
-      /* font-weight: 400;
-      text-shadow: 0 0 1px #003cff, 0 0 1px #003cff; */
+.navbar-header {
+  border-radius: 0.2rem;
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+  font-family: "Oswald", sans-serif;
+}
+.navbar-header .login-btn:hover,
+.logout-btn:hover {
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 4px rgb(255, 255, 255);
+  font-weight: 600;
+}
+.navbar-header a {
+  text-decoration: none;
+  margin: 1px;
+  /* text-shadow: 0 0 5px  rgb(0, 38, 255); */
+  /* font-weight: 400;
+      text-shadow: 0 0 1px #003cff, 0 0 1px #003cff;
       transition: .5s;
     }
     .navbar-header a:hover{
       /* text-shadow: 0 0 4px rgb(0, 0, 0); */
-      border-radius: 20px;
-      background-color: rgba(214, 214, 218, 0.473);
-      font-weight: 400;
-    }
+  border-radius: 20px;
+  font-weight: 400;
+}
+.foood {
+  font-family: "Oswald", sans-serif;
+}
+/* .carticon{
+  float: left;
+} */
