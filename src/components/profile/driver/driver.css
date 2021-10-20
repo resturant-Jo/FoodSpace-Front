@@ -26,14 +26,14 @@
   text-align: center;
 }
 .profile-top-jopdriver h3{
-  color: rgb(14, 13, 13) !important;
+  color: white !important;
   margin-left: 15rem;
 }
 .profile-about-section{
   padding-bottom: 1rem;
 }
 .personal-section{
-  background-color: cornflowerblue;
+  background-color: orangered;
 }
 .btn {
 width: 9rem;
@@ -42,6 +42,10 @@ height: 4rem;
 .slider-card {
   width: 17rem;
   height: 15rem;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: #fff;
+  background-color: #DA291C;
 }
 .profile-top-section {
   height: 23rem;
@@ -141,4 +145,10 @@ text-align: center;
 }
 .edit-btn{
   margin-right:30rem ;
+}
+.personal-info-top{
+  height: 690px;
+  background-color: white;
+  color: black;
+  margin-top: -70px;
 }

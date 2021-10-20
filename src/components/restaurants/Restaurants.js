@@ -468,7 +468,7 @@ function Restaurants(props) {
                               Price:{food.price}.00
                             </Typography>
                           </CardContent>
-                          <CardActions>
+                          {/* <CardActions>
                             <Button
                               variant="secondary"
                               onClick={() =>
@@ -477,7 +477,7 @@ function Restaurants(props) {
                             >
                               Add to cart
                             </Button>{" "}
-                          </CardActions>
+                          </CardActions> */}
                         </Card>
                       </When>
                     );

@@ -99,13 +99,13 @@ function Cart() {
                 <input type="text" placeholder="ABC" class="form-control" /> */}
               </div>
               <div class="d-flex">
-                <div class="text-right mt-4 mr-5">
+                {/* <div class="text-right mt-4 mr-5">
                   <label class="text-muted font-weight-normal m-0"></label>
                   <div class="text-large"><strong>$20</strong></div>
-                </div>
+                </div> */}
                 <div class="text-right mt-4">
-                  <label class="text-muted font-weight-normal m-0">{`Total price ${cart.totalPrice}`}</label>
-                  <div class="text-large"><strong>$1164.65</strong></div>
+                  <label class="text-muted font-weight-normal m-0">{`Total price ${cart.totalPrice}`}</label >
+                  <div class="text-large"><strong></strong></div>
                 </div>
               </div>
             </div>

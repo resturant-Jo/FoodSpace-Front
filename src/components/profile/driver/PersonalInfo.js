@@ -1,6 +1,7 @@
 import { useEffect, useState, useContext } from "react";
 import axios from "axios";
 import cookie from "react-cookies";
+import "./driver.css"
 
 // import "./wrokerStyle/personalWorker.css";
 import {
@@ -291,6 +292,8 @@ function PersonalInfo() {
                 <Form.Control
                   type="password"
                   name="password"
+                  style={{marginLeft: "-4px",
+                    width: "396px"}}
                   onChange={handleChange}
                   defaultValue={userList.password}
                   disabled={edite}
@@ -357,7 +360,7 @@ function PersonalInfo() {
         </div>
 
       </section>
-      <Button variant="danger" className="delete-account-btn" onClick={handleDeleteAccount}>delete account</Button>
+      <Button style={{marginTop: "-161px"}} variant="danger" className="delete-account-btn" onClick={handleDeleteAccount}>delete account</Button>
     </>
   );
 }

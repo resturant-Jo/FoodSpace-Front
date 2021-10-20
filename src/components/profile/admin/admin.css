@@ -115,6 +115,7 @@ height: 4rem;
   margin: 1rem;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.39);
   border-radius: 20px;
+  background-image: url(https://images.unsplash.com/photo-1517167685284-96a27681ad75?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGFyayUyMGNvbG9yfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80);
   width: 11rem;
 }
 .profile-contant-right {
@@ -155,4 +156,12 @@ text-align: center;
 }
 .edit-btn{
   margin-right:30rem ;
+}
+.profile-top-section {
+  height: 23rem;
+  display: grid;
+  font-family: var(--Yaldevi);
+  font-weight: bolder;  background-image: url(https://images.squarespace-cdn.com/content/v1/5c5c3833840b161566b02a76/1573133725500-Y5PCN0V04I86HDAT8AT0/WBC_7095.jpg?format=2500w)
+
+  ;
 }

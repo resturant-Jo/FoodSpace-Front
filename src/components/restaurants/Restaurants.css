@@ -176,7 +176,9 @@ border-radius: 50%;
 #button123{
 margin-top: -140px;
 margin-left: 340px;
+font-size: 12px;
 }
 .tab-content{
  background-color: white;
+ width: 300px;
 }

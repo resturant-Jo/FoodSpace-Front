@@ -50,7 +50,7 @@ class Header extends Component {
             backgroundColor:
               this.state.status === "top"
                 ? "rgba(0, 0, 0, 0.5)"
-                : "#DA291C",
+                : "rgb(2 0 1)",
             height: "80px",
             color: this.state.status === "top" ? "black" : "black",
             boxShadow:

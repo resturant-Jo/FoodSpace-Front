@@ -17,10 +17,11 @@ const Home = () => {
       <section className="sec1">
         {/* <img className='logoSec' src={img}></img> */}
             {/* <p  id="spacefood" className="parg"> SPACE FOOD</p> */}
+          
            
         <p className="parg">
          A leading online food delivery marketplace, connected restaurants in Jordan.
-          To Visit Our Resturants <button style={{color:"white",backgroundColor:"#DA291C"}} className="btn" onClick={()=>{history.push("/restaurants")}}> Resturants</button>
+          To Visit Our Resturants <br></br> <button style={{color:"white",backgroundColor:" #DA291C",marginTop:"18px",marginLeft:"3px"}} className="btn" onClick={()=>{history.push("/restaurants")}}> Resturants</button>
         </p>
       </section>
       {/* <h2 className="h2">  Space Food For You Any Time !!
@@ -62,7 +63,7 @@ const Home = () => {
         <img className="img3" src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Nnx8fGVufDB8fHx8&w=1000&q=80">
         </img>
         <p className="parg3">
-          <h2 style={{color:"rgb(63, 12, 12)",fontFamily:"'IM Fell English SC', serif",marginBottom: "36px"}}>
+          <h2 style={{color:"rgb(63, 12, 12)",fontFamily:"'IM Fell English SC', serif",marginBottom: "36px",marginLeft: "-5px"}}>
             Every Flavor Welcome
           </h2>
           From your neighborhood sushi spot to the burger and fries you crave, choose from over 300,000 local and national favorites across Jordan.        </p>

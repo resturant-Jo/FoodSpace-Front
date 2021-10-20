@@ -18,8 +18,11 @@ body {
     -webkit-border-radius: 5px;
     border-radius: 5px;
     display: table;
+    margin-top: 114px;
     position: static;
-    background-color: rgba(255, 255, 255, 0);
+    /* background-color: rgba(255, 255, 255, 0); */
+    background-image:url(https://media.istockphoto.com/photos/delicious-meal-on-a-black-plate-top-view-copy-space-picture-id1165399909?k=20&m=1165399909&s=612x612&w=0&h=5g5C4BDoxaejlIr4r_8cV6jDYXzN8n1-JkIW3LgPUuA=) ;
+
 }
 .select-signin{
     background: #F5F5F5;
@@ -179,10 +182,11 @@ input:-moz-placeholder {
     margin-right: auto;
 }
 .signupbody{
-    background-image: url(https://assets.gqindia.com/photos/60f932bbbc55a78132763da9/master/pass/Hundo%20Pizza.jpg);
+    /* background-image: url(https://assets.gqindia.com/photos/60f932bbbc55a78132763da9/master/pass/Hundo%20Pizza.jpg); */
     background-size: cover;
     padding-top: 20px;
     margin-bottom: -50px;
-    height: 750px;
-  
+    height: 980px;
+    background-color: whitesmoke;
+    margin-top: -4px;
 }
