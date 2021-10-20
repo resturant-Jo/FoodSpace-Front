@@ -27,10 +27,8 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
 .foood {
-  margin-top: 10px;
-  font-family: 'Bowlby One SC', cursive;
-  letter-spacing: 1px;
-  font-size: 30px;
+  font-family: "Oswald", sans-serif;
+  color: #cdc6c6 ;
 }
 /* .carticon{
   float: left;

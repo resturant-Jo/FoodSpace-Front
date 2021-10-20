@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col, Tab, Nav, Card } from "react-bootstrap";
-// import ChartistGraph from "react-chartist";
-import "../driver/driver.css";
+import ChartistGraph from "react-chartist";
 import "./admin.css";
 // import images
 import PersonalAdmin from "./PersonalAdmin";
@@ -69,10 +68,10 @@ function AdminProfile(props) {
           </Row>
           <Row>
             <Col xs={6} className="profile-top-identity">
-              <div className="profile-top-name">
+              <div className="profile-top-nameadmin">
                 <h1>Admin</h1>
               </div>
-              <div className="profile-top-jop">
+              <div className="profile-top-jopadmin">
                 <h3>Admin</h3>
               </div>
             </Col>

@@ -395,7 +395,6 @@ function Restaurants(props) {
   console.log(loginContext);
 
   ///////////////////////////////// END OF useEFFECT FUNDTIONS /////////////////////////////////////////
-
   return (
     <div>
       <div class="image10" />
@@ -476,7 +475,6 @@ function Restaurants(props) {
                     </Card>
                   </div>
                 </div>
-
                 {/* <h2 key={restuarant.name}>{restuarant.name}</h2>
               <img alt="img" key={restuarant.image} src={restuarant.image} />
               <Auth capability="delete">
@@ -490,7 +488,6 @@ function Restaurants(props) {
                 {/* <h3 key={restuarant.description}>{restuarant.description}</h3>
               <h3 key={restuarant.location}>{restuarant.location}</h3>
               <h3 key={restuarant.foodType}>{restuarant.foodType}</h3> */}
-
                 <Slider {...settings} style={{ margin: "50px" }}>
                   {food
                     .filter(
@@ -561,7 +558,6 @@ function Restaurants(props) {
       />
       {/* <RestuarantModel
         restuarant={restuarant}  deleteRestuarant={deleteRestuarant} restuarantModel={restuarantModel} show={show} handleShow={handleShow} handleClose={handleClose} handleRestuarantModel={handleRestuarantModel}
-
       /> */}
       <Auth capability="delete">
         <AddRestuarantsForm

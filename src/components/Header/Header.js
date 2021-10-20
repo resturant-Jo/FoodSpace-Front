@@ -54,7 +54,8 @@ class Header extends Component {
             backgroundColor:
               this.state.status === "top"
                 ? "rgba(0, 0, 0, 0.5)"
-                : "#DA291C",
+                : "rgb(2 0 1)",
+            height: "80px",
             color: this.state.status === "top" ? "black" : "black",
             boxShadow:
               this.state.status === "top"
@@ -71,18 +72,18 @@ class Header extends Component {
             <Container>
               <Navbar.Brand href="/">
                 {/* liquid spacefood */}
-<p className="foood" style={{}}> SPACE FOOD</p>
+                <p className="foood" style={{}}> SPACE FOOD</p>
               </Navbar.Brand>
               <Navbar.Toggle aria-controls="responsive-navbar-nav" />
               <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="me-auto"></Nav>
-                <Nav  className="me-2">
+                <Nav className="me-2">
                   {/* <Nav.Link href="/">
                     Home
                     <Link to="/"></Link>
                   </Nav.Link> */}
                   <Nav.Link href="/restaurants">
-                    restaurants
+                    Restaurants
                     <Link to="/restaurants"></Link>
                   </Nav.Link>
                   <Nav.Link href="/aboutus#meetourteam">
@@ -117,8 +118,8 @@ class Header extends Component {
                     </Nav.Link>
                   )}
                   <Nav.Link className="carticon" href="/cart">
-            <ShoppingCartIcon />
-          </Nav.Link>
+                    <ShoppingCartIcon />
+                  </Nav.Link>
                 </Nav>
               </Navbar.Collapse>
             </Container>

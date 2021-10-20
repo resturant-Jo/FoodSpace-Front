@@ -19,7 +19,7 @@ export default function Login() {
   };
  
   return (
-    <>
+    <div class="one">
       <div class="image222"></div>
 
       {/* <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"> */}
@@ -27,7 +27,7 @@ export default function Login() {
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-md-8">
-              <div class="card-group mb-0">
+              <div class="card-group mb-0" style={{marginTop: "86px"}}>
                 <div class="card p-4">
                   <div class="card-body">
                     <h1>Login</h1>
@@ -101,7 +101,7 @@ export default function Login() {
                         onClick={() => {
                           history.push("/signup");
                         }}
-                        style={{ backgroundColor: "#582" }}
+                        style={{ backgroundColor: "#e63946" }}
                         type="button"
                         class="btn btn-primary active mt-3"
                       >
@@ -116,6 +116,6 @@ export default function Login() {
         </div>
       </div>
       <br />
-    </>
+    </div>
   );
 }

@@ -1,12 +1,25 @@
-@import url("https://fonts.googleapis.com/css2?family=Ephesis&family=Titillium+Web:wght@200&family=Yaldevi:wght@300&display=swap");
+.admin-section {
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+  }
+  
+  .admin-information-section .row:nth-child(1) {
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .chart-section{}
+
+  @import url("https://fonts.googleapis.com/css2?family=Ephesis&family=Titillium+Web:wght@200&family=Yaldevi:wght@300&display=swap");
+
+.profile-top-name{
+  margin-left: 13rem;
+}
 
 :root {
   --Ephesis: "Ephesis", cursive;
   --Titillium: "Titillium Web", sans-serif;
   --Yaldevi: "Yaldevi", sans-serif;
-}
-.profile-top-namedriver{
-  margin-left: 15rem;
 }
 .profile-top-section{
   background-color: #ffffff;
@@ -25,15 +38,15 @@
   height: 43rem;
   text-align: center;
 }
-.profile-top-jopdriver h3{
-  color: white !important;
-  margin-left: 15rem;
+.profile-top-jop h3{
+  color: rgb(14, 13, 13) !important;
+  margin-left: 0rem;
 }
 .profile-about-section{
   padding-bottom: 1rem;
 }
 .personal-section{
-  background-color: orangered;
+  background-color: cornflowerblue;
 }
 .btn {
 width: 9rem;
@@ -42,10 +55,6 @@ height: 4rem;
 .slider-card {
   width: 17rem;
   height: 15rem;
-}
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-  color: #fff;
-  background-color: #DA291C;
 }
 .profile-top-section {
   height: 23rem;
@@ -145,10 +154,4 @@ text-align: center;
 }
 .edit-btn{
   margin-right:30rem ;
-}
-.personal-info-top{
-  height: 690px;
-  background-color: white;
-  color: black;
-  margin-top: -70px;
 }

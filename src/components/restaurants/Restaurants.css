@@ -93,34 +93,32 @@ body {
 
   @import url('https://fonts.googleapis.com/css?family=Montserrat');
 /* body {
-  background-color: rgb(153, 3, 3);
+background-color: rgb(153, 3, 3);
 } */
-
 .title22 {
-  /* font-family: "Montserrat";
-  text-align: center;
-  color: #FFF;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 50vh;
-  letter-spacing: 1px; */
-  font-family: "Montserrat";
-  text-align: center;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 50vh;
-  letter-spacing: 1px;
-  margin-top: -200px;
-  position: absolute;
-  right: 350px;
-  top: 300px;
+/* font-family: "Montserrat";
+text-align: center;
+color: #FFF;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 50vh;
+letter-spacing: 1px; */
+font-family: "Montserrat";
+text-align: center;
+color: #fff;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 50vh;
+letter-spacing: 1px;
+margin-top: -200px;
+position: absolute;
+right: 350px;
+top: 300px;
 }
-
 .title22 h1 {
   background-image: url(https://thumbs.gfycat.com/DesertedEthicalBlackfootedferret-max-1mb.gif);
   background-size: cover;
@@ -134,18 +132,18 @@ body {
 }
 /* animation */
 @keyframes headerAnimation23 {
-  0% {
-    background-image: url(https://media-cldnry.s-nbcnews.com/image/upload/newscms/2020_25/1582425/restaurant-dress-code-mc-main1-200619.jpg);
-    background-size: cover;
-  }
-  50% {
-    background-image: url("https://crystalplazagroup.com/wp-content/uploads/2018/05/P40B-fine-dining-Michelin-chef.jpg");
-    background-size: cover;
-  }
-  100% {
-    background-image: url("https://media-cldnry.s-nbcnews.com/image/upload/newscms/2020_25/1582425/restaurant-dress-code-mc-main1-200619.jpg");
-    background-size: cover;
-  }
+0% {
+  background-image: url(https://media-cldnry.s-nbcnews.com/image/upload/newscms/2020_25/1582425/restaurant-dress-code-mc-main1-200619.jpg);
+  background-size: cover;
+}
+50% {
+  background-image: url("https://crystalplazagroup.com/wp-content/uploads/2018/05/P40B-fine-dining-Michelin-chef.jpg");
+  background-size: cover;
+}
+100% {
+  background-image: url("https://media-cldnry.s-nbcnews.com/image/upload/newscms/2020_25/1582425/restaurant-dress-code-mc-main1-200619.jpg");
+  background-size: cover;
+}
 }
 .image10 {
   clear: both;

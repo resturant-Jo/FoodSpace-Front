@@ -32,11 +32,11 @@ function FoodModel(props) {
             defaultActiveKey="Details"
             id="uncontrolled-tab-example"
             className="mb-3"
-            // style={{ color: "#201e23 " }}
+            // style={{ width: "565px" }}
             >
 
-            <Tab eventKey="Details" title="Details"  style={{width:"300px"}}>
-              <h2 className="movie-title">{props.foodModel.name}</h2>
+            <Tab eventKey="Details" title="Details"  style={{width:"500px"}}>
+              {/* <h2 className="movie-title">{props.foodModel.name}</h2> */}
               <Card.Img  src={props.foodModel.image}/>
               <ListGroup>
                 <ListGroupItem
@@ -55,18 +55,18 @@ function FoodModel(props) {
             className="footer-modal"
             style={{ borderTop: "0px solid #dee2e6" }}
             >
-            <Button variant="secondary" onClick={props.handleClose}>
+            <Button className="butModal" variant="secondary" onClick={props.handleClose}>
               Close
             </Button>
             <br/>
-            <Button variant="secondary" onClick={() => props.deleteFood(props.foodModel.id)}>
+            {/* <Button className="butModal" variant="secondary" onClick={() => props.deleteFood(props.foodModel.id)}>
               Delete
-            </Button>
+            </Button> */}
             <br/>
-            <Button  variant="secondary" onClick={() => props.handleAddToCart(props.foodModel.id)}>
+            <Button  className="butModal" variant="secondary" onClick={() => props.handleAddToCart(props.foodModel.id)}>
               Add to cart
             </Button>
-            <Button variant="secondary" onClick={() => props.handleAddToFav(props.foodModel.id)}>
+            <Button className="butModal" variant="secondary" onClick={() => props.handleAddToFav(props.foodModel.id)}>
               Add to fav
             </Button>
           </Modal.Footer>

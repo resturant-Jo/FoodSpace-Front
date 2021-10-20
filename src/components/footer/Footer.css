@@ -2,7 +2,7 @@
 * {
   font-family: Open Sans;
 }
-section {
+.section {
   width: 100%;
   display: inline-block;
   background: #333;
@@ -13,7 +13,7 @@ section {
   text-decoration: underline;
 }
 .footer-distributed{
-    background: #DA291C;
+    background: #cb2519;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
     box-sizing: border-box;
     width: 100%;
@@ -64,7 +64,7 @@ section {
     width: 35%;
 }
 .footer-distributed .footer-center i{
-    background-color:  #313131;
+    /* background-color:  #313131; */
     color: #FFFFFF;
     font-size: 25px;
     width: 38px;
@@ -134,7 +134,7 @@ section {
     width: 35px;
     height: 35px;
     cursor: pointer;
-    background-color:  #313131;
+    /* background-color:  #313131; */
     border-radius: 2px;
     font-size: 20px;
     color: #FFFFFF;
@@ -161,7 +161,7 @@ section {
     }
 }
 .footer-distributed .footer-links a:hover {
-   color: black;
+   color: rgb(0, 0, 0);
 }
 .footer-distributed .footer-center p a {
     color: white;

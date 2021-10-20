@@ -41,13 +41,15 @@ function Checkout() {
     <div class="purchase" >
         <br/>
         <br/>
-        <img class="image5"></img>
+        {/* <img class="image5"></img> */}
+        <div class="purchaseDiv">
       <section >
+
         <div class="row">
-          <div class="col-lg-8 mb-4">
-            <div class="card wish-list pb-1">
-              <div class="card-body">
-                <h5 class="mb-2">Billing details</h5>
+          <div  >
+            <div class="card1Pu">
+              <div class="leftcard">
+                <p class="mb-2">Billing details</p>
                 <div class="row">
                   <div class="col-lg-6">
                     <div class="md-form md-outline mb-0 mb-lg-4">
@@ -123,9 +125,9 @@ function Checkout() {
           </div>
           <div class="col-lg-4">
             <div class="card mb-4">
-              <div class="card-body">
+              <div class="rightPur" style={{ paddingRight: "26px",height:"300px"}}>
                 <h5 class="mb-3">The total amount of</h5>
-                <ul class="list-group list-group-flush">
+                <ul class="ul">
                   <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
                     Food Price
                     <span>{`${cart.totalPrice} JD`}</span>
@@ -150,7 +152,7 @@ function Checkout() {
                     </span>
                   </li>
                 </ul>
-                <button
+                <button style={{width:"331px",marginTop:"20px",marginLeft: "115px"}}
                 onClick={greenAlert}
                   type="button"
                   class="btn btn-primary btn-block waves-effect waves-light"
@@ -162,6 +164,7 @@ function Checkout() {
           </div>
         </div>
       </section>
+      </div>
     </div>
   );
 }

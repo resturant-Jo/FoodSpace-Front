@@ -15,14 +15,15 @@ class AboutUs extends Component {
 <div class="title12">
 
  <h2>About<br/>Us</h2>
-</div>            <section> 
+</div>      
+      {/* <section> 
                 <p className="whoweare">
                 We are an online food ordering service that helps customers find restaurants in their area, filter by cuisine, browse menus and place their orders with an option of online payment or cash on delivery.
 <hr/>
                 Our main aim is to become and remain the market leader in the MENA region by diversifying our services portfolio and providing best-in-class customer experience.
 
                 </p>
-            </section>
+            </section> */}
                 <section id="team" class="team_member section-padding" id="meetourteam" >
     <div class="container" >            
         <div class="section-title text-center">

@@ -30,8 +30,8 @@ export default function Login() {
         <div class="container1">
 <form   id="signup">
     <div class="header">
-        <h3 style={{color:"black"}}>Sign Up</h3>
-        <p style={{color:"black"}}>Create an account</p>
+        <h3 style={{color:"#e63946",fontSize:"50px"}}>Sign Up</h3>
+        <p style={{color:"#e63946",fontSize:"30px"}}>Create an account</p>
     </div>
     <div class="sep"></div>
     <div class="inputs">
