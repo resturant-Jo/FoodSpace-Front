@@ -381,7 +381,6 @@ function Restaurants(props) {
   console.log(loginContext);
 
   ///////////////////////////////// END OF useEFFECT FUNDTIONS /////////////////////////////////////////
- 
   return (
     <div>
       <div class="image10" />
@@ -400,13 +399,12 @@ function Restaurants(props) {
                 <div class="row">
                   <div class="resInfo">
                     <div class="col-sm-10" key={restuarant.name}>
-                      {restuarant.name}
+                      Name:{restuarant.name}
                     </div>
-                    <div class="col-sm-10">{restuarant.location}</div>
-                    <div class="col-sm-10">{restuarant.description}</div>
+                    <div class="col-sm-10">Location:{restuarant.location}</div>
+                    <div class="col-sm-10">Desription:{restuarant.description}</div>
                   </div>
                   <div class="resImg" s>
-                    
                       <img alt='img'
                         style={{ width: "250px", height: "250px" }}
                         key={restuarant.image}
@@ -414,10 +412,10 @@ function Restaurants(props) {
                         title="profile image"
                         class="img-circle img-responsive"
                       />
-                    
                   </div>
                   <Auth capability="delete">
                     <Button
+                    id="button123"
                       class="btn"
                       key={restuarant.id}
                       onClick={() => deleteRestuarant(restuarant.id)}
@@ -426,7 +424,6 @@ function Restaurants(props) {
                     </Button>
                   </Auth>
                 </div>
-
                 {/* <h2 key={restuarant.name}>{restuarant.name}</h2>
               <img alt="img" key={restuarant.image} src={restuarant.image} />
               <Auth capability="delete">
@@ -440,7 +437,6 @@ function Restaurants(props) {
                 {/* <h3 key={restuarant.description}>{restuarant.description}</h3>
               <h3 key={restuarant.location}>{restuarant.location}</h3>
               <h3 key={restuarant.foodType}>{restuarant.foodType}</h3> */}
-
                 <Slider {...settings} style={{ margin: "50px" }}>
                 {food.filter(foodItem => restuarant.id === foodItem.restuarantId).map((food, index) => {
                     return (
@@ -465,11 +461,11 @@ function Restaurants(props) {
                             >
                               {food.name}
                             </Typography>
-                            <Typography variant="body2" color="text.secondary">
+                            {/* <Typography variant="body2" color="text.secondary">
                               {food.description}
-                            </Typography>
+                            </Typography> */}
                             <Typography variant="body2" color="text.secondary">
-                              {food.price}
+                              Price:{food.price}.00
                             </Typography>
                           </CardContent>
                           <CardActions>
@@ -505,7 +501,6 @@ function Restaurants(props) {
       />
       {/* <RestuarantModel
         restuarant={restuarant}  deleteRestuarant={deleteRestuarant} restuarantModel={restuarantModel} show={show} handleShow={handleShow} handleClose={handleClose} handleRestuarantModel={handleRestuarantModel}
-
       /> */}
       <Auth capability="delete">
         <AddRestuarantsForm

@@ -8,9 +8,13 @@ body {
   line-height: 60px;
 }
 .team_member {
-  background: rgba(199, 201, 209, 0.09);
-  padding-bottom: 50px;
-  overflow: hidden;
+
+    background: rgba(199, 201, 209, 0.09);
+    padding-bottom: 50px;
+    overflow: hidden;
+    height: 515px;
+    margin-top: 146px;
+
 }
 .single_team_content {
   padding: 45px;
@@ -202,7 +206,7 @@ body {
   color: rgb(177, 151, 7);
   font-weight: bold;
   position: absolute;
-  right: 360px;
+  right: 467px;
   margin-top: -120px;
   font-family: "IM Fell English SC", serif;
   color: #000000;
@@ -214,7 +218,7 @@ body {
       background-size: cover;
     }
     50% {
-      background-image: url(https://wallpaper.dog/large/5467206.jpg);
+      background-image: url(https://miro.medium.com/max/1400/1*oArGDunPxVeMwiIS53bivQ.jpeg);
       background-size: cover;
     }
     100% {

@@ -62,9 +62,9 @@ function App() {
             </Route>
 {loginContext.token ?
             <Route path="/profile">
-              {loginContext.user.role === 'driver' ? <DriverPage />:''}
-              {loginContext.user.role === 'user' ? <ClientProfile/>:''}
-              {loginContext.user.role === 'admin' ? <AdminProfile/>:''}
+              {userData.role === 'driver' ? <DriverPage />:''}
+              {userData.role === 'user' ? <ClientProfile/>:''}
+              {userData.role === 'admin' ? <AdminProfile/>:''}
               {/* <DriverPage />
               <ClientProfile/>
             <AdminProfile/> */}

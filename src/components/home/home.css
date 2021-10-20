@@ -1,187 +1,187 @@
 body{
-    overflow-x: hidden;
-    
-
+  overflow-x: hidden;
 }
 .video{
-    /* position: absolute; */
-    display: block;
-    background: rgba(253, 246, 246, 0.4);
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    height: 760px;
-    filter:brightness(40%);
+  /* position: absolute; */
+  display: block;
+  background: rgba(253, 246, 246, 0.4);
+  top: 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 760px;
+  /* width: 100%; */
+  filter:brightness(40%);
 }
 .h2{
-    font-size: 81px;
-    /* margin-top: -110px; */
-    margin-top: -405px;
-    position: absolute;
-    color: white;
-    width: 501px;
-    margin-left: 76px;
-    font-family: ui-rounded;
+  font-size: 81px;
+  /* margin-top: -110px; */
+  margin-top: -405px;
+  position: absolute;
+  color: white;
+  width: 501px;
+  margin-left: 76px;
+  font-family: ui-rounded;
 }
 .sec1{
-    width: 100%;
-    background-color: white;
-    height: 375px;
-    border-bottom: 1px lightgray;
+  width: 100%;
+  background-color: white;
+  height: 375px;
+  border-bottom: 1px lightgray;
+  margin-top: 350px;
 }
 .logoSec{
-    float: right;
-    height: 242px;
-    margin-right: 144px;
-    margin-top: 28px;
+  float: right;
+  height: 242px;
+  margin-right: 144px;
+  margin-top: 28px;
 }
 .logoSec:hover{
-    animation: shake 0.5s;
-    /* When the animation is finished, start again */
-    animation-iteration-count:inherit;}
-    @keyframes shake {
-        0% { transform: translate(1px, 1px) rotate(0deg); }
-        10% { transform: translate(-1px, -2px) rotate(-1deg); }
-        20% { transform: translate(-3px, 0px) rotate(1deg); }
-        30% { transform: translate(3px, 2px) rotate(0deg); }
-        40% { transform: translate(1px, -1px) rotate(1deg); }
-        50% { transform: translate(-1px, 2px) rotate(-1deg); }
-        60% { transform: translate(-3px, 1px) rotate(0deg); }
-        70% { transform: translate(3px, 1px) rotate(-1deg); }
-        80% { transform: translate(-1px, -1px) rotate(1deg); }
-        90% { transform: translate(1px, 2px) rotate(0deg); }
-        100% { transform: translate(1px, -2px) rotate(-1deg); }
-      }
+  animation: shake 0.5s;
+  /* When the animation is finished, start again */
+  animation-iteration-count:inherit;}
+  @keyframes shake {
+      0% { transform: translate(1px, 1px) rotate(0deg); }
+      10% { transform: translate(-1px, -2px) rotate(-1deg); }
+      20% { transform: translate(-3px, 0px) rotate(1deg); }
+      30% { transform: translate(3px, 2px) rotate(0deg); }
+      40% { transform: translate(1px, -1px) rotate(1deg); }
+      50% { transform: translate(-1px, 2px) rotate(-1deg); }
+      60% { transform: translate(-3px, 1px) rotate(0deg); }
+      70% { transform: translate(3px, 1px) rotate(-1deg); }
+      80% { transform: translate(-1px, -1px) rotate(1deg); }
+      90% { transform: translate(1px, 2px) rotate(0deg); }
+      100% { transform: translate(1px, -2px) rotate(-1deg); }
+    }
 .parg{
-    width: 470px;
-    font-size: 28px;
-    color: #eea73b;
-    margin-left: 133px;
-    margin-top: 106px;
-    position: absolute;
-    font-family: 'IM Fell English SC', serif;
- }
- #spacefood{
-    font-family: 'Faster One', cursive;
-    font-size: 40px;
- }
- .sec2{
-    background-color: rgb(51, 41, 26);
-    height: 600px;
- }
- .sec3{
-    width: 100%;
-    background-color: #eea73b;
-    height: 470px;
-    /* margin-top: 30px; */
- }
- .img1{
-    width: 700px;
-    margin-left: 140px;
-    /* border-radius: 3%; */
-    margin-top: 20px;
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
- }
-    .parg2{
-           float: left;
-    color: white;
-    width: 300px;
-    margin-left: 118px;
-    line-height: 44px;
-    font-size: 20px;
-    margin-top: 40px;
-    font-weight: 400;
-    font-family: 'IM Fell English SC', serif;
-    }
-    .img3{
-        width: 550px;
-        margin-left: 140px;
-        /* border-radius: 3% */
-        box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-    }
-    .parg3{
-        float: right;
- color: #444141;
- width: 300px;
- margin-right: 118px;
- line-height: 22px;
- font-size: 20px;
- margin-top: 15px;
- font-weight: 4;
- color: rgb(255, 255, 255);
- font-family: 'IM Fell English SC', serif;
- }
- /* animation */
+  width: 410px;
+  font-size: 37px;
+  color: #FFFFFF;
+  margin-left: 133px;
+  margin-top: -72px;
+  position: absolute;
+  /* text-transform: lowercase; */
+  font-family:sans-serif;
+}
+#spacefood{
+  font-family: 'Faster One', cursive;
+  font-size: 40px;
+}
+.sec2{
+  background-color: #ffffffc5;
+  height: 500px;
+}
+.sec3{
+  width: 100%;
+  background-color: #ffffffc5;
+  height: 450px;
+  /* margin-top: 30px; */
+}
+.img1{
+  width: 700px;
+  margin-left: 140px;
+  /* border-radius: 3%; */
+  margin-top: 30px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+  .parg2{
+         float: left;
+  color: rgb(63, 12, 12);
+  width: 300px;
+  margin-left: 118px;
+  line-height: 30px;
+  font-size: 30px;
+  margin-top: 50px;
+  font-weight: 400;
+  font-family: 'IM Fell English SC', serif;
+  }
+  .img3{
+      width: 600px;
+      margin-left: -60px;
+      margin-top: 25px;
+      /* margin-top: 25px; */
+      /* border-radius: 3% */
+      box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  }
+  .parg3{
+      float: right;
+color: #444141;
+width: 300px;
+margin-right: 118px;
+margin-left: 118px;
+line-height: 30px;
+font-size: 30px;
+margin-top: 50px;
+font-weight: 400;
+font-family: 'IM Fell English SC', serif;
+}
+/* animation */
 @keyframes headerAnimation {
-  0% {
-    background-image: url("https://media.gq-magazine.co.uk/photos/5f8ef1b158687997c42f3e8c/master/w_1920,h_1280,c_limit/HEALTHYFOODDELIVERY_FFF-244.jpg");
-    background-size: cover;
-  }
-  50% {
-    background-image: url("https://wallpaper.dog/large/10814052.png");
-    background-size: cover;
-  }
-  100% {
-    background-image: url("https://media.gq-magazine.co.uk/photos/5f8ef1b158687997c42f3e8c/master/w_1920,h_1280,c_limit/HEALTHYFOODDELIVERY_FFF-244.jpg");
-    background-size: cover;
-  }
+0% {
+  background-image: url("https://media.gq-magazine.co.uk/photos/5f8ef1b158687997c42f3e8c/master/w_1920,h_1280,c_limit/HEALTHYFOODDELIVERY_FFF-244.jpg");
+  background-size: cover;
+}
+50% {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVZvxhpkKvF26c_C59eCsExg5Ab7H91kPpL2iFiSKjNierHQgfx2p51yTYPYQn6e0ByaQ&usqp=CAU");
+  background-size: cover;
+}
+100% {
+  background-image: url("https://media.gq-magazine.co.uk/photos/5f8ef1b158687997c42f3e8c/master/w_1920,h_1280,c_limit/HEALTHYFOODDELIVERY_FFF-244.jpg");
+  background-size: cover;
+}
 }
 .image1 {
-  clear: both;
-  position: relative;
-  width: 100%;
-  height: 300px;
-  animation: headerAnimation ease-in 30s infinite;
+clear: both;
+position: relative;
+width: 100%;
+height: 300px;
+animation: headerAnimation ease-in 30s infinite;
 }
 /* .text1 {
-  text-align: center;
-  position: relative;
-  top: 400px;
-  left: 350px;
-  font-size: 80px;
-  font-family: "Reggae One", cursive;
-  color: rgb(255, 255, 255);
+text-align: center;
+position: relative;
+top: 400px;
+left: 350px;
+font-size: 80px;
+font-family: "Reggae One", cursive;
+color: rgb(255, 255, 255);
 } */
 *:before,
 *:after {
-  box-sizing: inherit;
+box-sizing: inherit;
 }
 /* //////////////////////////////NavBar/////////////////// */
 .navbar-brand {
-  font-family: "Codystar", cursive !important;
-  font-weight: bolder;
-  font-size: 25px !important;
+font-family: "Codystar", cursive !important;
+font-weight: bolder;
+font-size: 25px !important;
 }
 .navbar {
-  padding: 0 20px;
-  height: 45px;
-  /* background-color: black; */
+padding: 0 20px;
+height: 45px;
+/* background-color: black; */
 }
 .me-auto,
 .nav-link {
-  color: white !important;
-  padding-right: 25px !important;
+color: white !important;
+padding-right: 25px !important;
 }
 .contactus{
-    background-image: url(https://wallpaperaccess.com/full/271726.jpg);
-    background-size: cover;
-
-    /* height:1000px ;
-    
-    width: 1500px; */
+  background-image: url(https://wallpaperaccess.com/full/271726.jpg);
+  background-size: cover;
+  /* height:1000px ;
+  width: 1500px; */
 }
 .contactus h3 {
-    color: #ffffff;
-    background-size: cover;
-    font-family: 'IM Fell English SC', serif;   /* color: transparent; */
-    /* -moz-background-clip: text;
-    -webkit-background-clip: text; */
-    text-transform: uppercase;
-    font-size: 50px;
-    line-height: 1.5;
-    margin: 10px 0;
-    text-align: center;
-  }
-
-
+  color: #FFFFFF;
+  background-size: cover;
+  font-family: 'IM Fell English SC', serif;   /* color: transparent; */
+  /* -moz-background-clip: text;
+  -webkit-background-clip: text; */
+  text-transform: uppercase;
+  font-size: 50px;
+  line-height: 1.5;
+  margin: 10px 0;
+  text-align: center;
+}
