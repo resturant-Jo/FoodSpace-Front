@@ -63,7 +63,7 @@ function FoodModel(props) {
               Delete
             </Button>
             <br/>
-            <Button variant="secondary" onClick={() => props.handleAddToCart(props.foodModel.id)}>
+            <Button  variant="secondary" onClick={() => props.handleAddToCart(props.foodModel.id)}>
               Add to cart
             </Button>
             <Button variant="secondary" onClick={() => props.handleAddToFav(props.foodModel.id)}>

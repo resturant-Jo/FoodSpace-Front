@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useEffect, useContext } from 'react'
 import { useHistory } from "react-router-dom";
 import superagent from 'superagent';
@@ -63,15 +64,18 @@ function Cart() {
                 <tbody>
                   {cartData.map((item, index) => {
                     return (
-                      <tr>
-                        <td class="p-4">
-                          <div class="media align-items-center">
-                            <img src={item.image} class="d-block ui-w-40 ui-bordered mr-4" alt="" />
-                            <div class="media-body">
-                              <a href="#" class="d-block text-dark">{item.name}</a>
-                              <small>
-                                <span class="text-muted">{item.description}</span>
-                                {/* <span class="ui-product-color ui-product-color-sm align-text-bottom" style={{ Background: "#E81E2C" }}></span> &nbsp;
+
+
+                          <tr key={index}>
+                            
+                            <td class="p-4">
+                              <div class="media align-items-center">
+                                <img src={item.image} class="d-block ui-w-40 ui-bordered mr-4" alt="" />
+                                <div key={index} class="media-body">
+                                  <a  href="#" class="d-block text-dark">{item.name}</a>
+                                  <small>
+                                    <span class="text-muted">{item.description}</span>
+                                    {/* <span class="ui-product-color ui-product-color-sm align-text-bottom" style={{ Background: "#e81e2c" }}></span> &nbsp;
                                     <span class="text-muted">Size: </span> EU 37 &nbsp;
                                     <span class="text-muted">Ships from: </span> China */}
                               </small>

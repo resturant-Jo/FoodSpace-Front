@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 // import  Alert from "@mui/icons-material";
 import React, { useState, useEffect, useContext } from 'react'
 import { useHistory } from "react-router-dom";
@@ -5,8 +6,10 @@ import superagent from 'superagent';
 import { LoginContext } from '../../context/loginContext';
 import './checkout.css'
 function Checkout() {
+  let history = useHistory();
     const greenAlert=()=>{
       alert("Succfuly Checked Out")
+      history.push("/")
     }
     const loginContext = useContext(LoginContext)
     const [cart, setCart] = useState([]);
@@ -17,6 +20,7 @@ function Checkout() {
       superagent.get(`http://localhost:3001/v2/cart`)
         .set('Authorization', 'Bearer ' + loginContext.token)
         .then(res => {
+          console.log(res.body);
           const filteredData=(res.body).filter(item=>{return item.userId === userId})
           setCart(...filteredData)
           // console.log(id);
@@ -29,6 +33,7 @@ function Checkout() {
         })
   console.log(userId);
     }, [loginContext])
+    
     console.log(cart);
     console.log(cartData);
     console.log(loginContext);

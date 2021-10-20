@@ -174,4 +174,26 @@ body {
       margin: -40px;
       margin-top: 10px;
   }
- 
+  @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+ .col-sm-10{
+   color: black;
+   font-family: monospace;
+ }
+ .resImg{
+  border-radius: 50%;
+
+ }
+ .resInfo{
+   margin-top: 40px;
+   margin-left: 250px;
+   margin-bottom: -90px;
+
+ }
+ #button123{
+  margin-top: -140px;
+  margin-left: 340px;
+ }
+ .tab-content{
+   background-color: white;
+ }

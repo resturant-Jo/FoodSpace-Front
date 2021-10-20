@@ -1,6 +1,6 @@
 import React from 'react';
-import { Card, Button, FormGroup, InputGroup } from '@blueprintjs/core';
-import Auth from '../login/auth';
+import { Card, FormGroup } from '@blueprintjs/core';
+// import Auth from '../login/auth';
 import './AddResturant.css'
 export default function AddRestaurantsForm({ handleSubmit, handleChange }) {
   return (

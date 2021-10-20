@@ -1,12 +1,13 @@
+/* eslint-disable no-script-url */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
 import './Footer.css'
-import{
-  FaFacebookSquare,
-  FaInstagramSquare,
-  FaTwitterSquare,
-  FaGithubSquare
-} from "react-icons/fa"
+// import{
+//   FaFacebookSquare,
+//   FaInstagramSquare,
+//   FaTwitterSquare,
+//   FaGithubSquare
+// } from "react-icons/fa"
 function Footer() {
   return (
     <div>

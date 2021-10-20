@@ -1,13 +1,4 @@
 import { useContext, useState } from "react";
-import { When } from "react-if";
-import {
-  Card,
-  Elevation,
-  H2,
-  InputGroup,
-  Button,
-  Label,
-} from "@blueprintjs/core";
 import { LoginContext } from "../../context/loginContext";
 import "./login.css";
 import { useHistory } from "react-router-dom";
@@ -15,20 +6,9 @@ export default function Login(props) {
   //login
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  //signup
-  const [userName, setUserName] = useState("");
-  const [firstname, setFirstname] = useState("");
-  const [lastname, setLastname] = useState("");
-  const [email, setEmail] = useState("");
-  const [gender, setGender] = useState("");
-  const [age, setAge] = useState("");
-  const [adress, setAdress] = useState("");
-  const [profilePicture, setProfilePicture] = useState("");
-  const [phone, setPhone] = useState("");
-  const [passWord, setPassWord] = useState("");
-  const [role, setRole] = useState("");
+ 
   let history = useHistory();
-  const [singupDisplay, setSingupDisplay] = useState(true);
+ 
   const context = useContext(LoginContext);
   const handleLoginSubmit = (event) => {
     event.preventDefault();
@@ -38,22 +18,7 @@ export default function Login(props) {
      if (res) history.push("/")
    });
   };
-  const handleSignupSubmit = (event) => {
-    event.preventDefault();
-    context.signup(
-      userName,
-      firstname,
-      lastname,
-      email,
-      gender,
-      age,
-      adress,
-      profilePicture,
-      phone,
-      passWord,
-      role
-    );
-  };
+ 
   return (
     <>
       <div class="image222"></div>
@@ -107,6 +72,9 @@ export default function Login(props) {
                       <div class="row">
                         <div class="col-6">
                           <button
+                          // onClick={() => {
+                          //   history.push("/");
+                          // }}
                             style={{
                               color: "white",
                               backgroundColor: "#e63946",

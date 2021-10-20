@@ -14,6 +14,7 @@ import Footer from './components/footer/Footer';
 import Restaurants from './components/restaurants/Restaurants';
 import { LoginContext } from './context/loginContext';
 import { useContext } from 'react';
+
 import Signup from './components/login/Signup';
 import Cart from './components/cart/cart';
 import Checkout from './components/cart/checkout';
@@ -21,11 +22,18 @@ import Orders from './components/Order/Orders';
 import Card from "./components/card/Card"
 
 
+import DriverPage from './components/profile/driver/DriverPage'
+import ClientProfile from './components/profile/client/ClientProfile';
+import cookie from 'react-cookies'
+import AdminProfile from './components/profile/admin/AdminProfile';
+
+
 function App() {
-  const context = useContext(LoginContext)
+  const userData=cookie.load('user')
+  const loginContext = useContext(LoginContext)
   return (
     <>
-        <BrowserRouter>
+      <BrowserRouter>
         <Header />
           <Switch>
             <Route exact path="/">
@@ -52,7 +60,22 @@ function App() {
             <Route path="/orders">
               <Orders />
             </Route>
-            
+{loginContext.token ?
+            <Route path="/profile">
+              {loginContext.user.role === 'driver' ? <DriverPage />:''}
+              {loginContext.user.role === 'user' ? <ClientProfile/>:''}
+              {loginContext.user.role === 'admin' ? <AdminProfile/>:''}
+              {/* <DriverPage />
+              <ClientProfile/>
+            <AdminProfile/> */}
+            </Route>
+            :
+            <Route path="/profile">
+             <DriverPage />
+              <ClientProfile/>
+            <AdminProfile/>
+            </Route>
+          }
 
           
           </Switch>
