@@ -76,13 +76,13 @@ console.log(userId);
                     return (
 
 
-                          <tr>
+                          <tr key={index}>
                             
                             <td class="p-4">
                               <div class="media align-items-center">
                                 <img src={item.image} class="d-block ui-w-40 ui-bordered mr-4" alt="" />
-                                <div class="media-body">
-                                  <a href="#" class="d-block text-dark">{item.name}</a>
+                                <div key={index} class="media-body">
+                                  <a  href="#" class="d-block text-dark">{item.name}</a>
                                   <small>
                                     <span class="text-muted">{item.description}</span>
                                     {/* <span class="ui-product-color ui-product-color-sm align-text-bottom" style={{ Background: "#e81e2c" }}></span> &nbsp;

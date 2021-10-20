@@ -26,8 +26,10 @@ import ClientProfile from './components/profile/client/ClientProfile';
 import cookie from 'react-cookies'
 import AdminProfile from './components/profile/admin/AdminProfile';
 
+
 function App() {
   const userData=cookie.load('user')
+  const loginContext = useContext(LoginContext)
   return (
     <>
       <BrowserRouter>
@@ -54,15 +56,25 @@ function App() {
             <Route path="/checkout">
               <Checkout />
             </Route>
-
-
+            <Route path="/orders">
+              <Orders />
+            </Route>
+{loginContext.token ?
             <Route path="/profile">
               {userData.role === 'driver' ? <DriverPage />:''}
               {userData.role === 'user' ? <ClientProfile/>:''}
               {userData.role === 'admin' ? <AdminProfile/>:''}
-              
-            
+              {/* <DriverPage />
+              <ClientProfile/>
+            <AdminProfile/> */}
             </Route>
+            :
+            <Route path="/profile">
+             <DriverPage />
+              <ClientProfile/>
+            <AdminProfile/>
+            </Route>
+          }
 
           
           </Switch>

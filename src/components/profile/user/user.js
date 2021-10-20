@@ -1,4 +1,3 @@
-/* eslint-disable array-callback-return */
 import React, { useState, useEffect, useContext } from 'react'
 import axios from 'axios'
 import { LoginContext } from '../../../context/loginContext';
@@ -179,7 +178,6 @@ function Users(props) {
             <Button variant="primary" onClick={() => { deleteAccount() }}>
                 Delete Account
             </Button>
-
             <Modal show={show} onHide={handleClose} animation={false}>
                 <Modal.Header closeButton>
                     <Modal.Title>Edit Account</Modal.Title>

@@ -86,11 +86,12 @@ function Restaurants() {
 
   function handleFoodModel(index) {
 
-    setFood([...food, index]);
-    console.log("index >>>>>>>>>", index);
-    console.log("index >>>>>>>>>", food[index]);
-    console.log("index >>>>>>>>>", food);
-    setFoodModel(food[index])
+    // setFood([...food, index]);
+    // console.log(" ...Food   index from model >>>>>>>>>", ...food);
+    console.log("index from model >>>>>>>>>", index);
+    // console.log("index[index] from model >>>>>>>>>", food[index]);
+    // console.log("Food From Model >>>>>>>>>", food);
+    setFoodModel(index);
     setShow(true)
     console.log("loginContext >>>>>>>>>>>>>>  ", loginContext);
 
@@ -140,6 +141,7 @@ function Restaurants() {
       alert('Invalid data');
     }
     setFood([...food, item]);
+    // alert('Food Added To cart')
   }
   //////////////////////////////////////// END OF ADD TO FOOD FUNCTION //////////////////////////////////
 
@@ -212,7 +214,7 @@ function Restaurants() {
         console.log('userCartItems: ', userCartItems.body);
         const itemInCart = userCartItems.body.filter(item => { return item.foodId === foodModel.id });
         console.log("itemInCart: ", itemInCart);
-        cartId = userCartItems.body[0].cartId;
+        cartId = userCart.body.id;
         userCartItems.body.map(food => {
           if (food.foodId === foodModel.id) {
             console.log("food.foodId ", food.foodId);
@@ -258,6 +260,7 @@ function Restaurants() {
     } catch (error) {
       alert('Invalid data ' + error);
     }
+    alert('Food Added To cart')
   }
   //////////////////////////////////////// END OF CART FUNCTION ////////////////////////////////////////
 
@@ -312,44 +315,35 @@ function Restaurants() {
   //////////////////////////////////////// START OF useEFFECT FUNCTIONS /////////////////////////
 
   useEffect(() => {
-    axios.get(`http://localhost:3001/v4/food`)
-      .then(res => {
-        console.log(res);
-        setFood(res.data)
+    // axios.get(`http://localhost:3001/v4/food`)
+    //   .then(res => {
+    //     console.log(res);
+    //     setFood(res.data)
 
-      })
+    //   }).get(`http://localhost:3001/v4/restuarant`)
+    //   .then(res => {
+    //     console.log(res);
+    //     setRestuarant(res.data)
+
+    //   })
+    axios.all([
+      axios.get('http://localhost:3001/v4/food'), 
+      axios.get('http://localhost:3001/v4/restuarant')
+    ])
+    .then(axios.spread((obj1, obj2) => {
+      // Both requests are now complete
+           setFood(obj1.data)
+            setRestuarant(obj2.data)
+      console.log(obj1.data);
+      console.log(obj2.data);
+    }))
+
       .catch(error => {
         console.log(error);
       })
+
   }, [])
-  useEffect(() => {
-    axios.get(`http://localhost:3001/v4/restuarant`)
-      .then(res => {
-        console.log(res);
-        setRestuarant(res.data)
-
-      })
-      .catch(error => {
-        console.log(error);
-      })
-  }, [])
-
-  useEffect(() => {
-    filtirngFood()
-
-  }, [food, restuarant])
-
-  function filtirngFood() {
-    const arr = [];
-    let obj = {};
-    for (let i = 0; i < restuarant.length; i++) {
-      arr.push(obj[i] = food.filter(item => item.restuarantId === i + 1))
-
-    }
-    setFiltierFood(arr)
-  }
-
-  console.log('filtierFood[0] >>>>>>>>>>>>> ', filtierFood);
+ 
   console.log(loginContext);
 
   ///////////////////////////////// END OF useEFFECT FUNDTIONS /////////////////////////////////////////
@@ -386,21 +380,23 @@ function Restaurants() {
               <FoodStyle>
                 <div className="slider-div" >
                   <Slider {...settings}>
-                    {filtierFood.length > 0 && filtierFood[idx].map((food, index) => {
+                    {/* {filtierFood.length > 0 && filtierFood[idx].map((food, index) => { */}
+                    {food.filter(foodItem => restuarant.id === foodItem.restuarantId).map((food, index) => {
+                      // console.log(food.id); 
                       //[0].image
                       return (
                         
                         <Col xs={3} >
                           {/* <When condition={restuarant.id === food.restuarantId}> */}
                           <Card
-                            key={index}
+                            key={food.id}
                             style={{ width: "18rem" }}
                             className="slider-card"
                           >
                             <Card.Img
                               variant="top"
                               className="card-image"
-                              onClick={() => handleFoodModel(index-1)}
+                              onClick={() => handleFoodModel(food)}
                               src={food.image} />
                             <div className="details">
                               <h2>{food.name}</h2>

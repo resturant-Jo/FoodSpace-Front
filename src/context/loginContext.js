@@ -25,6 +25,8 @@ export default function LoginProvider(props) {
             console.log("response.body: ", response.body);
             JWToken(response.body.token);
             cookie.save('user',response.body.user)
+            cookie.load('token', { path: '/' })
+            
         } catch (error) {
             alert('Invalid username or password');
         }
@@ -68,7 +70,9 @@ export default function LoginProvider(props) {
     }
     const logout = () => {
         handleLogin(false, {});
-        cookie.remove('token');
+        // cookie.remove('token');
+        cookie.remove('token', { path: '/' })
+    cookie.remove('user', { path: '/' })
     }
 
 
