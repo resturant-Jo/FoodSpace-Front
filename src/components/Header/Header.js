@@ -3,7 +3,8 @@ import React, { Component } from "react";
 import cookie from "react-cookies";
 import { LoginContext } from "../../context/loginContext";
 import { Navbar, Container, Nav } from "react-bootstrap";
-
+import { useContext, useState } from "react";
+import loggedIn from "../../context/loginContext"
 import { Link, BrowserRouter } from "react-router-dom";
 import "./Header.css";
 
@@ -22,6 +23,9 @@ class Header extends Component {
     await this.context.logout();
   }
   componentDidMount() {
+    // const context = useContext(LoginContext);
+    console.log(loggedIn);
+
     this.listener = document.addEventListener("scroll", (e) => {
       var scrolled = document.scrollingElement.scrollTop;
       if (scrolled >= 120) {

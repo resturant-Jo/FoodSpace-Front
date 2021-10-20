@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { LoginContext } from "../../context/loginContext";
 import "./login.css";
 import { useHistory } from "react-router-dom";
-export default function Login(props) {
+export default function Login() {
   //login
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -13,10 +13,9 @@ export default function Login(props) {
   const handleLoginSubmit = (event) => {
     event.preventDefault();
     
-   context.login(username, password).then((res)=>{
+   context.login(username, password).then((res) => (res ? history.push("/") : null));
+  // context.login(username, password).then((res) => alert(res));
 
-     if (res) history.push("/")
-   });
   };
  
   return (

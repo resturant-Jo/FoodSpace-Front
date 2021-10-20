@@ -28,8 +28,8 @@ export default function LoginProvider(props) {
             const response = await superagent.post(`${API}/signin`)
                 .set('authorization', `Basic ${encodedUser}`);
             console.log("response.body: ", response.body);
-            JWToken(response.body.token);
             cookie.save('user',response.body.user)
+             return JWToken(response.body.token);
             // history.push("/")
             
         } catch (error) {
