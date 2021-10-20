@@ -49,7 +49,7 @@ class Header extends Component {
           style={{
             backgroundColor:
               this.state.status === "top"
-                ? "rgba(0, 0, 0, 0.)"
+                ? "rgba(0, 0, 0, 0.5)"
                 : "wheat",
             color: this.state.status === "top" ? "black" : "black",
             boxShadow:
@@ -85,10 +85,10 @@ class Header extends Component {
                     About-Us
                     <Link to="/aboutus#meetourteam"></Link>
                   </Nav.Link>
-                  <Nav.Link href="/orders">
+                  {/* <Nav.Link href="/orders">
                     Orders
                     <Link to="/orders"></Link>
-                  </Nav.Link>
+                  </Nav.Link> */}
 
                   {this.token ? (
                     <>

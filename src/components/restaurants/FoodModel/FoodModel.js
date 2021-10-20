@@ -26,7 +26,7 @@ function FoodModel(props) {
   className="main-modal"
   >
 
-        <Modal.Body className="body-modal" style={{ padding: "0rem" }}>
+        <Modal.Body className="body-modal" >
 
           <Tabs
             defaultActiveKey="Details"
@@ -35,9 +35,9 @@ function FoodModel(props) {
             // style={{ color: "#201e23 " }}
             >
 
-            <Tab eventKey="Details" title="Details" className="tap">
-              <Card.Img src={props.foodModel.image}/>
+            <Tab eventKey="Details" title="Details"  style={{width:"300px"}}>
               <h2 className="movie-title">{props.foodModel.name}</h2>
+              <Card.Img  src={props.foodModel.image}/>
               <ListGroup>
                 <ListGroupItem
                   style={{ color: "#201e23 ", backgroundColor: "#d0d0d0 " }}

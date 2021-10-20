@@ -1,15 +1,21 @@
-import React, { Component } from "react";
+/* eslint-disable jsx-a11y/alt-text */
 // import video11 from "./video.mp4"
 import './home.css'
 import img from './space2.png'
 import img2 from './food.jpg'
-import img3 from './food2.jpg'
-import { Button, Alignment } from "@blueprintjs/core";
+// import img3 from './food2.jpg'
+import { Button } from "@blueprintjs/core";
 import { Link } from 'react-router-dom';
 import Contactus from "../contactus/Contactus";
+// import Story from "../story/Story";
+import final from "./final.mp4"
 const Home = () => {
   return (
     <>
+ {/* <iframe src="https://drive.google.com/file/d/1gTvVlPQKt7h5wQUU7BNhTRQfTMErQDt7/preview" frameBorder="none" width="100%" height="680" allow="autoplay"></iframe>
+
+     */}
+     <video class="video" src={final} autoPlay loop></video>
       <h2 className="h2">  Space Food For You Any Time !!
       </h2>
       <section className="sec1">

@@ -1,0 +1,38 @@
+body {
+    margin-top: -16px;
+    background: #eee;
+}
+@keyframes HeaderAnimation3 {
+    0% {
+      background-image: url(https://www.invoicera.com/blog/wp-content/uploads/2017/02/purchase-order-management-best-practicesmn.jpg);
+      background-size: cover;
+    }
+    50% {
+      background-image: url(https://g.foolcdn.com/editorial/images/488566/man-holding-a-bunch-of-100-dollar-bills_gettyimages-810584478.jpg);
+      background-size: cover;
+    }
+    100% {
+      background-image: url(https://www.invoicera.com/blog/wp-content/uploads/2017/02/purchase-order-management-best-practicesmn.jpg);
+      background-size: cover;
+    }
+  }
+  .image5{
+    clear: both;
+    position: relative;
+    width: 100%;
+    height: 380px;
+    animation: HeaderAnimation3 ease-in 20s infinite;
+  }
+  .text1 {
+      text-align: center;
+      position: relative;
+      top: 400px;
+      left: 350px;
+      font-size: 80px;
+      font-family: "Reggae One", cursive;
+      color: rgb(255, 255, 255);
+    } *
+  :before,
+  *:after {
+    box-sizing: inherit;
+  }

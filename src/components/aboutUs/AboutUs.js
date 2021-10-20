@@ -1,21 +1,9 @@
+/* eslint-disable react/jsx-no-duplicate-props */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react';
-// import { Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { Container, Nav, Navbar } from "react-bootstrap";
 import './AboutUs.css';
-// import {
-//     FaFacebookSquare,
-//     FaInstagramSquare,
-//     FaTwitterSquare,
-//     FaGithubSquare,
-//     FaLinkedin
-// } from "react-icons/fa";
-// import saleem from '../img/saleem.jpg';
-// import dena from '../img/dena.jpg';
-// import mahmoud from '../img/mahmoud.jpg';
-// import suad from '../img/suad.jpg';
-import img from './img3.png'
+
 class AboutUs extends Component {
     render() {
         return (
@@ -34,7 +22,6 @@ class AboutUs extends Component {
                 Our main aim is to become and remain the market leader in the MENA region by diversifying our services portfolio and providing best-in-class customer experience.
 
                 </p>
-                {/* <img alt="img" src={img}></img> */}
             </section>
                 <section id="team" class="team_member section-padding" id="meetourteam" >
     <div class="container" >            
@@ -47,7 +34,7 @@ class AboutUs extends Component {
                     <div class="team_img">
                         <img alt="img" src="https://avatars.githubusercontent.com/u/82364465?v=4" alt="team-image"></img>
                         <ul class="social">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a  href="#"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                             <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                             <li><a href="#"><i class="fa fa-instagram"></i></a></li>

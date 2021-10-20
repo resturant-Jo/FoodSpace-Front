@@ -1,7 +1,5 @@
 import { useContext, useState } from "react";
-import { Card, Elevation, H2, InputGroup, Button } from '@blueprintjs/core';
 import { LoginContext } from "../../context/loginContext";
-import { When } from "react-if";
 import './signup.css'
 export default function Login() {
   const context = useContext(LoginContext);
@@ -33,8 +31,8 @@ export default function Login() {
         <div class="container1">
 <form id="signup">
     <div class="header">
-        <h3>Sign Up</h3>
-        <p>Create an account</p>
+        <h3 style={{color:"black"}}>Sign Up</h3>
+        <p style={{color:"black"}}>Create an account</p>
     </div>
     <div class="sep"></div>
     <div class="inputs">

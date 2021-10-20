@@ -1,12 +1,13 @@
+/* eslint-disable no-script-url */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
 import './Footer.css'
-import{
-  FaFacebookSquare,
-  FaInstagramSquare,
-  FaTwitterSquare,
-  FaGithubSquare
-} from "react-icons/fa"
+// import{
+//   FaFacebookSquare,
+//   FaInstagramSquare,
+//   FaTwitterSquare,
+//   FaGithubSquare
+// } from "react-icons/fa"
 function Footer() {
   return (
     <div>
@@ -47,7 +48,7 @@ function Footer() {
 						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
 						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
 						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
-						<li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
+						<li class="list-inline-item"><a href="javascript:void();" target="_blank" rel="noreferrer"><i class="fa fa-envelope"></i></a></li>
 					</ul>
 				</div>
 				<hr/>
@@ -58,7 +59,7 @@ function Footer() {
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
 					{/* <p><u><a href="https://www.bootdey.com/">bootdey.com</a></u> </p> */}
-					<p class="h6">  All right Reversed.&copy;<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank">SpaceFood </a></p>
+					<p class="h6">  All right Reversed.&copy;<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank" rel="noreferrer">SpaceFood </a></p>
 				</div>
 			</div>	
 		</div>

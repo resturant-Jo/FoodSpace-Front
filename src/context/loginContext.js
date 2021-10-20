@@ -4,6 +4,9 @@ import base64 from 'base-64';
 import superagent from "superagent";
 import jwt from 'jsonwebtoken';
 import cookie from 'react-cookies';
+// import { useHistory } from "react-router-dom";
+
+
 export const LoginContext = React.createContext();
 const API = 'http://localhost:3001';
 export default function LoginProvider(props) {
@@ -11,6 +14,8 @@ export default function LoginProvider(props) {
     const [user, setUser] = useState({});
     const [isUpdated, setIsUpdated] = useState(false);
     const [token, setToken] = useState(null);
+
+    // let history = useHistory();
     useEffect(() => {
         const cookieToken = cookie.load('token');
         JWToken(cookieToken);
@@ -25,10 +30,11 @@ export default function LoginProvider(props) {
             console.log("response.body: ", response.body);
             JWToken(response.body.token);
             cookie.save('user',response.body.user)
-            cookie.load('token', { path: '/' })
+            // history.push("/")
             
         } catch (error) {
             alert('Invalid username or password');
+            return false
         }
     }
     const signup = async (userName, firstname, lastname, email, gender, age, adress, profilePicture, phone, passWord, role) => {
@@ -60,6 +66,7 @@ export default function LoginProvider(props) {
             const user = jwt.decode(token);
             handleLogin(true, user);
             cookie.save('token', token)
+            return true
         } else {
             handleLogin(false, {});
         }

@@ -18,10 +18,7 @@ function Orders() {
       .then(res => {
         setOrders(res.body)
         // console.log(id);
-        console.log(res.body);
-
-
-
+        console.log('RES BODY >>>>>>>>> ',res.body);
       })
       .catch(error => {
         console.log(error);

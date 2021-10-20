@@ -15,41 +15,19 @@ export default function Login(props) {
   //login
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  //signup
-  const [userName, setUserName] = useState("");
-  const [firstname, setFirstname] = useState("");
-  const [lastname, setLastname] = useState("");
-  const [email, setEmail] = useState("");
-  const [gender, setGender] = useState("");
-  const [age, setAge] = useState("");
-  const [adress, setAdress] = useState("");
-  const [profilePicture, setProfilePicture] = useState("");
-  const [phone, setPhone] = useState("");
-  const [passWord, setPassWord] = useState("");
-  const [role, setRole] = useState("");
+ 
   let history = useHistory();
-  const [singupDisplay, setSingupDisplay] = useState(true);
+ 
   const context = useContext(LoginContext);
   const handleLoginSubmit = (event) => {
     event.preventDefault();
-    context.login(username, password);
+    
+   context.login(username, password).then((res)=>{
+
+     if (res) history.push("/")
+   });
   };
-  const handleSignupSubmit = (event) => {
-    event.preventDefault();
-    context.signup(
-      userName,
-      firstname,
-      lastname,
-      email,
-      gender,
-      age,
-      adress,
-      profilePicture,
-      phone,
-      passWord,
-      role
-    );
-  };
+ 
   return (
     <>
       <div class="image222"></div>
@@ -107,6 +85,7 @@ export default function Login(props) {
                               color: "white",
                               backgroundColor: "#e63946",
                             }}
+                            // onClick={()=>{history.push("./signin")}}
                             type="submit"
                             class="btn btn-primary px-4"
                           >
