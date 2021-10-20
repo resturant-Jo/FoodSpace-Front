@@ -7,7 +7,7 @@ import img3 from './food2.jpg'
 import { Button, Alignment } from "@blueprintjs/core";
 import { Link } from 'react-router-dom';
 import Contactus from "../contactus/Contactus";
-import final from "./final.mp4"
+// import final from "./final.mp4"
 import { useHistory } from "react-router-dom";
 
 const Home = () => {
@@ -16,7 +16,7 @@ const Home = () => {
   return (
     <>
     
-    <video loop autoPlay  class="video" src={final} type="video/mp4" ></video>
+    {/* <video loop autoPlay  class="video" src={final} type="video/mp4" ></video> */}
   
     
       <section className="sec1">
