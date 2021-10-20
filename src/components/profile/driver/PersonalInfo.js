@@ -25,7 +25,7 @@ function PersonalInfo() {
   const Api = "http://localhost:3001";
 
   const [show, setShow] = useState(false);
-  const context =useContext(ProfileContext)
+  const context = useContext(ProfileContext)
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -56,20 +56,20 @@ function PersonalInfo() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
 
     const reqBody = {
-        username: values.username || context.user.username,
-        firstname: values.firstname || context.user.firstname,
-        lastname: values.lastname || context.user.lastname,
-        email: values.email || context.user.email,
-        gender: values.gender || context.user.gender,
-        age: values.age || context.user.age,
-        adress: values.adress || context.user.adress,
-        profilePicture: values.profilePicture || context.user.profilePicture,
-        password: values.password ,
-        role: values.role || context.user.role,
-        phone: values.phone || context.user.phone,
+      username: values.username || context.user.username,
+      firstname: values.firstname || context.user.firstname,
+      lastname: values.lastname || context.user.lastname,
+      email: values.email || context.user.email,
+      gender: values.gender || context.user.gender,
+      age: values.age || context.user.age,
+      adress: values.adress || context.user.adress,
+      profilePicture: values.profilePicture || context.user.profilePicture,
+      password: values.password,
+      role: values.role || context.user.role,
+      phone: values.phone || context.user.phone,
     };
     await axios
       .put(`${Api}/updateaccount`, reqBody, {
@@ -126,77 +126,77 @@ function PersonalInfo() {
     let reqBody = {
       profilePicture: pathImges,
     };
-   
-      let res = await axios.put(`${Api}/updateaccount`, reqBody, {
-        headers: {
-          authorization: `Bearer ${token}`,
-        },
-      });
-      setShow(false);
-      setWorkerList(res.data);
-      context.setUserData(res.data);
-      Swal.fire({
-        position: "center",
-        icon: "success",
-        title: "Your Image has been Changed",
-        showConfirmButton: false,
-        timer: 1500,
-      });
 
-      console.log(res);
-    
+    let res = await axios.put(`${Api}/updateaccount`, reqBody, {
+      headers: {
+        authorization: `Bearer ${token}`,
+      },
+    });
+    setShow(false);
+    setWorkerList(res.data);
+    context.setUserData(res.data);
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Your Image has been Changed",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+
+    console.log(res);
+
     e.target.reset();
   };
 
   //  ===================== delete account ================ 
-   // :::::::::: delete account ::::::::::
-   const handleDeleteAccount = async () => {
+  // :::::::::: delete account ::::::::::
+  const handleDeleteAccount = async () => {
 
     const swalWithBootstrapButtons = Swal.mixin({
-        customClass: {
-          confirmButton: 'btn btn-success',
-          cancelButton: 'btn btn-danger'
-        },
-        buttonsStyling: false
-      })
-      
-      swalWithBootstrapButtons.fire({
-        title: 'Are you sure?',
-        text: "You won't be able to revert this!",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonText: 'Yes, delete it!',
-        cancelButtonText: 'No, cancel!',
-        reverseButtons: true
-      }).then(async(result) => {
-        if (result.isConfirmed) {
-            let res = await axios.delete(`${Api}/deleteaccount`, {
-                headers: {
-                    authorization: `Bearer ${token}`,
-                },
-            });
-            
-          swalWithBootstrapButtons.fire(
-            'Deleted!',
-            'Your file has been deleted.',
-            'success'
-          )
-          
-          cookie.remove('token', { path: '/' })
-          cookie.remove('user', { path: '/' })
-        } else if (
-          /* Read more about handling dismissals below */
-          result.dismiss === Swal.DismissReason.cancel
-        ) {
-          swalWithBootstrapButtons.fire(
-            'Cancelled',
-            'Your imaginary file is safe :)',
-            'error'
-          )
-        }
-      })
-   
-};
+      customClass: {
+        confirmButton: 'btn btn-success',
+        cancelButton: 'btn btn-danger'
+      },
+      buttonsStyling: false
+    })
+
+    swalWithBootstrapButtons.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, delete it!',
+      cancelButtonText: 'No, cancel!',
+      reverseButtons: true
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        let res = await axios.delete(`${Api}/deleteaccount`, {
+          headers: {
+            authorization: `Bearer ${token}`,
+          },
+        });
+
+        swalWithBootstrapButtons.fire(
+          'Deleted!',
+          'Your file has been deleted.',
+          'success'
+        )
+
+        cookie.remove('token', { path: '/' })
+        cookie.remove('user', { path: '/' })
+      } else if (
+        /* Read more about handling dismissals below */
+        result.dismiss === Swal.DismissReason.cancel
+      ) {
+        swalWithBootstrapButtons.fire(
+          'Cancelled',
+          'Your imaginary file is safe :)',
+          'error'
+        )
+      }
+    })
+
+  };
 
   return (
     <>
@@ -207,7 +207,7 @@ function PersonalInfo() {
             <Col xs={1}>
               <div className="personal-info-img">
                 {workerList.profilePicture &&
-                workerList.profilePicture.includes("upload") ? (
+                  workerList.profilePicture.includes("upload") ? (
                   <img
                     src={`${Api}/${workerList.profilePicture}`}
                     alt={workerList.id}
@@ -218,15 +218,15 @@ function PersonalInfo() {
               </div>
             </Col>
             <Col >
-              <button
+              {/* <button
                 variant="primary"
                 className="personal-change-imgbtn"
                 onClick={handleShow}
               >
                 Change
-              </button>
+              </button> */}
               {/* ================ modal ============== */}
-              <div>
+              {/* <div>
                 <Modal show={show} onHide={handleClose}>
                   <Modal.Header closeButton>
                     <Modal.Title>Change Profile Picture</Modal.Title>
@@ -247,7 +247,7 @@ function PersonalInfo() {
                     </div>
                   </Modal.Body>
                 </Modal>
-              </div>
+              </div> */}
             </Col>
           </Row>
         </Container>
@@ -271,7 +271,7 @@ function PersonalInfo() {
                   type="text"
                   name="firstName"
                   onChange={handleChange}
-                  defaultValue={userList.firstName}
+                  defaultValue={userList.firstname}
                   disabled={edite}
                 />
               </Col>
@@ -281,12 +281,11 @@ function PersonalInfo() {
                   type="text"
                   name="lastName"
                   onChange={handleChange}
-                  defaultValue={userList.lastName}
+                  defaultValue={userList.lastname}
                   disabled={edite}
                 />
               </Col>
             </Row>
-            <Row className="mb-3">
               <Col>
                 <Form.Label>Password</Form.Label>
                 <Form.Control
@@ -294,16 +293,6 @@ function PersonalInfo() {
                   name="password"
                   onChange={handleChange}
                   defaultValue={userList.password}
-                  disabled={edite}
-                />
-              </Col>
-              <Col>
-                <Form.Label>Phone</Form.Label>
-                <Form.Control
-                  type="text"
-                  name="phone"
-                  onChange={handleChange}
-                  defaultValue={userList.phone}
                   disabled={edite}
                 />
               </Col>
@@ -317,26 +306,34 @@ function PersonalInfo() {
                   disabled={edite}
                 />
               </Col>
-            </Row>
-            <Row className="mb-3">
               <Col>
                 <Form.Label>Location</Form.Label>
                 <Form.Control
                   type="text"
                   name="location"
                   onChange={handleChange}
-                  defaultValue={userList.location}
+                  defaultValue={userList.adress}
                   disabled={edite}
                 />
               </Col>
               <Col></Col>
               <Col></Col>
-            </Row>
+            <Col>
+                  <Form.Label>Phone</Form.Label>
+                  <Form.Control
+                    type="text"
+                    name="phone"
+                    onChange={handleChange}
+                    defaultValue={userList.phone}
+                    disabled={edite}
+                  />
+                </Col>
+
             {!edite && (
               <Row className="mb-3">
                 <Col md={5}></Col>
                 <Col md={5}>
-                  <Button type="submit" variant="success">
+                  <Button type="submit" variant="success" >
                     {" "}
                     Save
                   </Button>
@@ -349,9 +346,9 @@ function PersonalInfo() {
             <Row className="mb-3">
               <Col md={5}></Col>
               <Col md={5}>
-                <Button type="button" variant="warning" onClick={openForm}>
+                <Button type="button" variant="warning" className="edit-btn" onClick={openForm}>
                   {" "}
-                  Update
+                  Edit Profile
                 </Button>
               </Col>
               <Col md={2}></Col>
@@ -360,7 +357,7 @@ function PersonalInfo() {
         </div>
 
       </section>
-      <Button variant="danger" onClick={handleDeleteAccount}>delete account</Button>
+      <Button variant="danger" className="delete-account-btn" onClick={handleDeleteAccount}>delete account</Button>
     </>
   );
 }
