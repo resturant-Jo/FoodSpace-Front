@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
-import "../driver/driver.css";
+import "./client.css";
 import PersonalInfo from "../driver/PersonalInfo";
 import cookie from "react-cookies"
 import FavFood from "../driver/FavFood";;

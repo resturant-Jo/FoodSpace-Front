@@ -66,11 +66,11 @@ function DriverPage() {
           </Row>
           <Row>
             <Col xs={6} className="profile-top-identity">
-            <div className="profile-top-name">
+            <div className="profile-top-namedriver">
                 <h1>{userData.firstname} {userData.lastname}</h1>
                 {/* <h1>mahmoud</h1> */}
               </div>
-              <div className="profile-top-jop">
+              <div className="profile-top-jopdriver">
                 <h3>{userData.role}</h3>
                 {/* <h3>Hello</h3> */}
               </div>
