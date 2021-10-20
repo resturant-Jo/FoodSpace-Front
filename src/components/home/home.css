@@ -3,15 +3,18 @@ body{
     
 
 }
+
 .video{
     /* position: absolute; */
     display: block;
     background: rgba(253, 246, 246, 0.4);
     top: 0;
+    position: absolute;
     right: 0;
     bottom: 0;
     left: 0;
     height: 760px;
+    /* width: 100%; */
     filter:brightness(40%);
 }
 .h2{
@@ -29,6 +32,7 @@ body{
     background-color: white;
     height: 375px;
     border-bottom: 1px lightgray;
+    margin-top: 350px;
 }
 .logoSec{
     float: right;
@@ -56,10 +60,11 @@ body{
 .parg{
     width: 470px;
     font-size: 28px;
-    color: #eea73b;
+    color: #ffffff;
     margin-left: 133px;
     margin-top: 106px;
     position: absolute;
+    text-transform: lowercase;
     font-family: 'IM Fell English SC', serif;
  }
  #spacefood{
@@ -67,36 +72,39 @@ body{
     font-size: 40px;
  }
  .sec2{
-    background-color: rgb(51, 41, 26);
-    height: 600px;
+    background-color: #ffffffc5;
+    height: 500px;
  }
  .sec3{
     width: 100%;
-    background-color: #eea73b;
-    height: 470px;
+    background-color: #ffffffc5;
+    height: 450px;
     /* margin-top: 30px; */
  }
  .img1{
     width: 700px;
     margin-left: 140px;
     /* border-radius: 3%; */
-    margin-top: 20px;
+    margin-top: 30px;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
  }
     .parg2{
            float: left;
-    color: white;
+    color: rgb(63, 12, 12);
     width: 300px;
     margin-left: 118px;
-    line-height: 44px;
+    line-height: 30px;
     font-size: 20px;
-    margin-top: 40px;
+    margin-top: 50px;
     font-weight: 400;
     font-family: 'IM Fell English SC', serif;
     }
     .img3{
-        width: 550px;
-        margin-left: 140px;
+        width: 600px;
+        margin-left: -60px;
+        margin-top: 25px;
+        /* margin-top: 25px; */
+
         /* border-radius: 3% */
         box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     }
@@ -107,9 +115,9 @@ body{
  margin-right: 118px;
  line-height: 22px;
  font-size: 20px;
- margin-top: 15px;
+ margin-top: 50px;
  font-weight: 4;
- color: rgb(255, 255, 255);
+ color: rgb(63, 12, 12);
  font-family: 'IM Fell English SC', serif;
  }
  /* animation */
@@ -119,7 +127,7 @@ body{
     background-size: cover;
   }
   50% {
-    background-image: url("https://wallpaper.dog/large/10814052.png");
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVZvxhpkKvF26c_C59eCsExg5Ab7H91kPpL2iFiSKjNierHQgfx2p51yTYPYQn6e0ByaQ&usqp=CAU");
     background-size: cover;
   }
   100% {

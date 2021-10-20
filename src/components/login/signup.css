@@ -170,7 +170,7 @@ input:-moz-placeholder {
 }
 .btnSignup{
     width: 220px;
-    background-color: #FFF4CD;
+    background-color: #DA291C;
     font-size: 28px;
     border-radius: 14px;
     font-family: ui-serif;
@@ -182,7 +182,7 @@ input:-moz-placeholder {
     background-image: url(https://assets.gqindia.com/photos/60f932bbbc55a78132763da9/master/pass/Hundo%20Pizza.jpg);
     background-size: cover;
     padding-top: 20px;
-    margin-bottom: -50px;
+    margin-bottom: -10px;
     height: 750px;
   
 }
