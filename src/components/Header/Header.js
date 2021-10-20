@@ -49,7 +49,7 @@ class Header extends Component {
           style={{
             backgroundColor:
               this.state.status === "top"
-                ? "rgba(0, 0, 0, 0.)"
+                ? "rgba(0, 0, 0, 0.5)"
                 : "wheat",
             color: this.state.status === "top" ? "black" : "black",
             boxShadow:

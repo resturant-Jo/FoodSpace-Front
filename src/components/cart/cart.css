@@ -6,11 +6,9 @@ body{
     width: 40px !important;
     height: auto;
 }
-
 .card{
     box-shadow: 0 1px 15px 1px rgba(52,40,104,.08);    
 }
-
 .ui-product-color {
     display: inline-block;
     overflow: hidden;
@@ -21,4 +19,53 @@ body{
     -webkit-box-shadow: 0 0 0 1px rgba(0,0,0,0.15) inset;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.425) inset;
     vertical-align: middle;
+}
+@keyframes HeaderAnimation2 {
+    0% {
+      background-image: url(https://p0.pikist.com/photos/301/845/supermarket-cart-shopping-grocery-trolley-retail-food-buy-store.jpg);
+      background-size: cover;
+    }
+    50% {
+      background-image: url(https://www.adweek.com/wp-content/uploads/2020/05/cart-sanitizer-PAGE-20220.jpg);
+      background-size: cover;
+    }
+    100% {
+      background-image: url(https://p0.pikist.com/photos/301/845/supermarket-cart-shopping-grocery-trolley-retail-food-buy-store.jpg);
+      background-size: cover;
+    }
+  }
+  .image4 {
+    clear: both;
+    position: relative;
+    width: 100%;
+    height: 380px;
+    animation: HeaderAnimation2 ease-in 20s infinite;
+  }
+  .text1 {
+      text-align: center;
+      position: relative;
+      top: 400px;
+      left: 350px;
+      font-size: 80px;
+      font-family: "Reggae One", cursive;
+      color: rgb(255, 255, 255);
+    } *
+  :before,
+  *:after {
+    box-sizing: inherit;
+  }
+.card-header:first-child {
+    border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+    /* background-color: blanchedalmond; */
+    height: 98px;
+}
+.shopping {
+    margin-top: 20px;
+    color: #5F413D;
+    font-weight: 700;
+    font-family: -webkit-body;
+}
+.carCont{
+    background-color:white;
+    height: 900px;
 }
