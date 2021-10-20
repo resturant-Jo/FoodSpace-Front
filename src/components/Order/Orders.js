@@ -55,12 +55,13 @@ function Orders() {
 
           <>
             <When condition={ele.status}>
-              <Card interactive={true} elevation={Elevation.TWO}>
-                <h5><a href="#">{ele.username}</a></h5>
-                <h3 style={{ color: "black" }}>{` Total Price ${ele.totalPrice} JD`}</h3>
+              <Card interactive={true} elevation={Elevation.TWO} style={{ display:"inline-block" }}>
+                <br/>
+                <h4>{ele.username}</h4>
+                <h5 style={{ color: "black" }}>{` Total Price ${ele.totalPrice} JD`}</h5>
                 <img alt='' src={ele.profilePicture} />
                 <p>{ele.userId}</p>
-                <Button onClick={() => reciveOrder(ele.id)}>Submit</Button>
+                <Button onClick={() => reciveOrder(ele.id)}>Recive Order</Button>
               </Card>
             </When>
           </>

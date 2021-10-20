@@ -35,7 +35,7 @@ function FavFood() {
             
             <Card
                         key={index}
-                        style={{ width: "18rem" }}
+                        style={{ width: "18rem",display:"inline-block" }}
                         className="slider-card"
                       >
                         <Card.Img

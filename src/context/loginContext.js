@@ -21,6 +21,7 @@ export default function LoginProvider(props) {
         JWToken(cookieToken);
         setToken(cookieToken)
         console.log(cookieToken);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
     const login = async (username, password) => {
         try {
@@ -28,8 +29,9 @@ export default function LoginProvider(props) {
             const response = await superagent.post(`${API}/signin`)
                 .set('authorization', `Basic ${encodedUser}`);
             console.log("response.body: ", response.body);
-            JWToken(response.body.token);
-            cookie.save('user',response.body.user)
+            return JWToken(response.body.token);
+                
+               
             // history.push("/")
             
         } catch (error) {
@@ -74,6 +76,7 @@ export default function LoginProvider(props) {
     const handleLogin = (loggedIn, user) => {
         setLoggedIn(loggedIn);
         setUser(user);
+        cookie.save('user',user)
     }
     const logout = () => {
         handleLogin(false, {});

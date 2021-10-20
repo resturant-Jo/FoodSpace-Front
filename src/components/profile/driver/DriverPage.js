@@ -1,21 +1,14 @@
-import React, { useContext, useState } from "react";
+
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import "./driver.css";
 import PersonalInfo from "./PersonalInfo";
-// import FavWorker from "./FavWorker";
-// import FavImg from "./FavImg";
-// import Recently from "./Recently";
-// import ManWorks from "./ManWorks";
-// import Tools from "./Tools";
-// import Reviews from "./Reviews";
-// import Resever from "../../chats/Resever"
 import cookie from "react-cookies"
 import Orders from "../../Order/Orders";
 import FavFood from "./FavFood";
-// import { ProfileContext } from "../user/user";
+import RecievedOrders from "./RecievedOrders";
 function DriverPage() {
   const userData=cookie.load("user")
-//   const context=useContext(ProfileContext)
+
   const Api = "http://localhost:3001";
 
   return (
@@ -23,7 +16,7 @@ function DriverPage() {
     <svg
             id="wave"
             style={{transform:"rotate(180deg)",transition:"0.3s"}}
-            // style="transform:rotate(180deg); transition: 0.3s"
+            
             viewBox="0 0 1440 490"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
@@ -132,6 +125,12 @@ function DriverPage() {
                 </Tab.Pane>
                 <Tab.Pane eventKey="T3">
                   <FavFood/>
+                </Tab.Pane>
+                {/* <Tab.Pane eventKey="T3">
+                  <FavFood/>
+                </Tab.Pane> */}
+                <Tab.Pane eventKey="T5">
+                  <RecievedOrders/>
                 </Tab.Pane>
                 {/* <Tab.Pane eventKey="T10">
                   <Resever/>

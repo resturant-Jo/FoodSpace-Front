@@ -21,7 +21,7 @@ function TheClients() {
         console.log(res.data);
       });
 
-  }, []);
+  }, [token]);
 
   // ::::::: handleDeleteUser::::::
   const handleDeleteUser = async (id) => {

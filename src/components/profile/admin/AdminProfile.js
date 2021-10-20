@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Container, Row, Col, Tab, Nav, Card } from "react-bootstrap";
-import ChartistGraph from "react-chartist";
+import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import "../driver/driver.css";
 import "./admin.css";
 // import images
@@ -63,7 +62,7 @@ function AdminProfile(props) {
           <Row>
             <Col xs={1}>
               <div class="profile-top-img">
-                <img src="https://spng.pngfind.com/pngs/s/39-398349_computer-icons-user-profile-facebook-instagram-instagram-profile.png" />
+                <img alt="img" src="https://spng.pngfind.com/pngs/s/39-398349_computer-icons-user-profile-facebook-instagram-instagram-profile.png" />
               </div>
             </Col>
           </Row>

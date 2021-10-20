@@ -7,7 +7,7 @@ import "./cart.css";
 function Cart() {
   let history = useHistory();
   const loginContext = useContext(LoginContext)
-  const userId = loginContext.user.userId
+  // const userId = loginContext.user.userId
   const [cart, setCart] = useState([]);
   const [cartData, setCartData] = useState([]);
   useEffect(() => {
@@ -104,7 +104,7 @@ function Cart() {
                   <div class="text-large"><strong>$20</strong></div>
                 </div>
                 <div class="text-right mt-4">
-                  <label class="text-muted font-weight-normal m-0">{`Total price ${cart.totalPrice}`}</label>
+                  <label class="text-muted font-weight-normal m-0">{`Total price ${cart?cart.totalPrice:0}`}</label>
                   <div class="text-large"><strong>$1164.65</strong></div>
                 </div>
               </div>

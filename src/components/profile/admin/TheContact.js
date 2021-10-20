@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import cookie from "react-cookies";
-import { Table ,Button} from "react-bootstrap";
+import { Table } from "react-bootstrap";
 function TheContact() {
     const [adminList, setAdminList] = useState({});
     const token = cookie.load("token");
@@ -21,7 +21,7 @@ function TheContact() {
                 console.log("contactUs=====>", res.data);
             });
 
-    }, []);
+    }, [token]);
 
 
 
@@ -41,18 +41,18 @@ function TheContact() {
           </tr>
         </thead>
         <tbody>
-        {adminList.support  && adminList.support.map(item => {
-            return(
+        {/* {adminList.support  && adminList.support.map(item => { */}
+            {/* return( */}
                 <>
                   <tr>
-                    <td>{item.name}</td>
-                    <td>{item.Subject}</td>
-                    <td>{item.message}</td>
-                    <td>{item.email}</td>
+                    <td>dena</td>
+                    <td>help</td>
+                    <td>order food</td>
+                    <td>dena@gmail.com</td>
                   </tr>
                 </>
-              );
-            })}
+              {/* );
+            })} */}
         </tbody>
       </Table>
 

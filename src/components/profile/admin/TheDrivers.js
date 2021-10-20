@@ -20,7 +20,7 @@ function TheDrivers() {
       .then(async (res) => {
         await setAllUsers(res.data);
       });
-  }, []);
+  }, [token]);
 
   // ::::::: handleDeleteUser::::::
   const handleDeleteUser = async (id) => {

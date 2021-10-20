@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable array-callback-return */
 import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
@@ -15,15 +16,15 @@ import { LoginContext } from "../../context/loginContext";
 import "./Restaurants.css";
 import { FoodStyle } from "./FoodStyle";
 import FoodModel from "./FoodModel/FoodModel";
-import RestuarantModel from "./FoodModel/RestuarantModel";
+// import RestuarantModel from "./FoodModel/RestuarantModel";
 import Auth from "../login/auth";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
+
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { Grid } from "@mui/material";
+
 function Restaurants(props) {
   const loginContext = useContext(LoginContext);
 
@@ -148,7 +149,7 @@ function Restaurants(props) {
       alert("Invalid data");
     }
     setFood([...food, item]);
-    // alert('Food Added To cart')
+    alert('New Food Succesfuly Added !!!')
   }
   //////////////////////////////////////// END OF ADD TO FOOD FUNCTION //////////////////////////////////
 
@@ -181,6 +182,8 @@ function Restaurants(props) {
       alert("Invalid data");
     }
     setRestuarant([...restuarant, item]);
+
+    alert('New Restuarant Succesfuly Added !!!')
   }
 
   ////////////////////////////// END OF ADD RESTUARANT FUNCTION //////////////////////////
@@ -200,6 +203,7 @@ function Restaurants(props) {
       alert('Invalid data');
     }
     setFav([...fav]);
+    alert("Food Added To Favorite")
   }
   /////////////////////////////// ADD TO CART Function /////////////////////
 
@@ -472,16 +476,16 @@ function Restaurants(props) {
                               {food.price}
                             </Typography>
                           </CardContent>
-                          <CardActions>
+                          {/* <CardActions>
                             <Button
                               variant="secondary"
                               onClick={() =>
-                                handleAddToCart(foodModel.id)
+                                handleAddToCart(index)
                               }
                             >
                               Add to cart
                             </Button>{" "}
-                          </CardActions>
+                          </CardActions> */}
                         </Card>
                       </When>
                     );

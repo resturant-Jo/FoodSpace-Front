@@ -2,7 +2,9 @@ import React from 'react'
 import { useEffect,useState,useContext } from 'react'
 import { LoginContext } from '../../../context/loginContext';
 import  superagent  from 'superagent';
-import { Card } from 'react-bootstrap';
+// import { Card } from 'react-bootstrap';
+import { Button, Card, Elevation } from "@blueprintjs/core";
+
 
 function RecievedOrders() {
     const loginContext = useContext(LoginContext)
@@ -25,29 +27,45 @@ function RecievedOrders() {
         console.log(userId);
       }, [loginContext])
 
+      async function removeOrder(id,cartId) {
+        console.log(id);
+        const obj = {
+          cartId: cartId
+        }
+        try {
+          await superagent.delete(`http://localhost:3001/v3/order/${id}`)
+            .send(obj)
+            .set('Authorization', 'Bearer ' + loginContext.token)
+            // .then(res => {
+            //   setOrders(res.body)
+            //   console.log(res.body);
+    
+            // })
+          // setShow(false)
+          
+        } catch (error) {
+          alert(error);
+        }
+      }
+      console.log(recievedOrders);
+
 
     return (
         <div>
             {recievedOrders.map((ele,index) => {
+              console.log("ele >>>>>>>>>>>>>> ",ele);
         return (
 
           <>
             
-            <Card
-                        key={index}
-                        style={{ width: "18rem" }}
-                        className="slider-card"
-                      >
-                        <Card.Img
-                          variant="top"
-                          className="card-image"
-                        //   onClick={() => handleFoodModel(index)}
-                          src={ele.image} />
-                        <div className="details">
-                          <h2>Name : {ele.name}</h2>
-                          <h2>Price : {ele.price}</h2>
-                        </div>
-                      </Card>
+            <Card interactive={true} elevation={Elevation.TWO}style={{display:"inline-block" }}>
+                <h3>{ele.username}</h3>
+                <h5 style={{ color: "black" }}>{` User Email : ${ele.email} `}</h5>
+                <h5 style={{ color: "black" }}>{` User Number Phone : ${ele.phone} `}</h5>
+                <img alt='' src={ele.profilePicture} />
+                <p>{ele.userId}</p>
+                <Button onClick={() => removeOrder(ele.orderId,ele.cartId)}>Remove Order</Button>
+              </Card>
             
           </>
 

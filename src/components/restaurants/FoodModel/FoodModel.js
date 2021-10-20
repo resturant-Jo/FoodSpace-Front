@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./model.css";
-
+import Auth from "../../login/auth";
 import {
   Modal,
   Button,
@@ -10,6 +10,7 @@ import {
   Tabs,
   Card,
 } from "react-bootstrap";
+
 
 
 
@@ -59,9 +60,12 @@ function FoodModel(props) {
               Close
             </Button>
             <br/>
+
+            <Auth capability="delete">
             <Button variant="secondary" onClick={() => props.deleteFood(props.foodModel.id)}>
               Delete
             </Button>
+            </Auth>
             <br/>
             <Button  variant="secondary" onClick={() => props.handleAddToCart(props.foodModel.id)}>
               Add to cart
