@@ -1,13 +1,4 @@
 import { useContext, useState } from "react";
-import { When } from "react-if";
-import {
-  Card,
-  Elevation,
-  H2,
-  InputGroup,
-  Button,
-  Label,
-} from "@blueprintjs/core";
 import { LoginContext } from "../../context/loginContext";
 import "./login.css";
 import { useHistory } from "react-router-dom";
@@ -81,6 +72,9 @@ export default function Login(props) {
                       <div class="row">
                         <div class="col-6">
                           <button
+                          // onClick={() => {
+                          //   history.push("/");
+                          // }}
                             style={{
                               color: "white",
                               backgroundColor: "#e63946",

@@ -37,6 +37,7 @@ function Restaurants(props) {
   const [show, setShow] = useState(false);
   const { handleChange, handleSubmit } = useForm(addFood);
   const { handleChange2, handleSubmit2 } = useForm2(addRestuarant);
+  const { counter, setCounter } = useState(0);
 
 
 
@@ -140,6 +141,7 @@ function Restaurants(props) {
         .post(`http://localhost:3001/v4/food`)
         .send(obj)
         .set("Authorization", "Bearer " + loginContext.token);
+        setCounter(counter+1)
       console.log(res);
       console.log(food);
     } catch (error) {
@@ -324,35 +326,57 @@ function Restaurants(props) {
 
   //////////////////////////////////////// START OF useEFFECT FUNCTIONS /////////////////////////
 
+  // useEffect(() => {
+  //   // axios.get(`http://localhost:3001/v4/food`)
+  //   //   .then(res => {
+  //   //     console.log(res);
+  //   //     setFood(res.data)
+
+  //   //   }).get(`http://localhost:3001/v4/restuarant`)
+  //   //   .then(res => {
+  //   //     console.log(res);
+  //   //     setRestuarant(res.data)
+
+  //   //   })
+  //   axios.all([
+  //     axios.get('http://localhost:3001/v4/food'), 
+  //     axios.get('http://localhost:3001/v4/restuarant')
+  //   ])
+  //   .then(axios.spread((obj1, obj2) => {
+  //     // Both requests are now complete
+  //          setFood(obj1.data)
+  //           setRestuarant(obj2.data)
+  //     console.log(obj1.data);
+  //     console.log(obj2.data);
+  //   }))
+
+  //     .catch(error => {
+  //       console.log(error);
+  //     })
+
+  // }, [loginContext, counter, setCounter])
   useEffect(() => {
-    // axios.get(`http://localhost:3001/v4/food`)
-    //   .then(res => {
-    //     console.log(res);
-    //     setFood(res.data)
+    axios.get(`http://localhost:3001/v4/food`)
+      .then(res => {
+        console.log(res);
+        setFood(res.data)
 
-    //   }).get(`http://localhost:3001/v4/restuarant`)
-    //   .then(res => {
-    //     console.log(res);
-    //     setRestuarant(res.data)
-
-    //   })
-    axios.all([
-      axios.get('http://localhost:3001/v4/food'), 
-      axios.get('http://localhost:3001/v4/restuarant')
-    ])
-    .then(axios.spread((obj1, obj2) => {
-      // Both requests are now complete
-           setFood(obj1.data)
-            setRestuarant(obj2.data)
-      console.log(obj1.data);
-      console.log(obj2.data);
-    }))
-
+      })
       .catch(error => {
         console.log(error);
       })
+  }, [counter])
+  useEffect(() => {
+    axios.get(`http://localhost:3001/v4/restuarant`)
+      .then(res => {
+        console.log(res);
+        setRestuarant(res.data)
 
-  }, [loginContext])
+      })
+      .catch(error => {
+        console.log(error);
+      })
+  }, [counter])
  
   console.log(loginContext);
 
@@ -372,7 +396,7 @@ function Restaurants(props) {
         {restuarant.map((restuarant, idx) => {
           return (
             <>
-              <div class="container bootstrap snippets bootdey">
+              <div  class="container bootstrap snippets bootdey">
                 <div class="row">
                   <div class="resInfo">
                     <div class="col-sm-10" key={restuarant.name}>
@@ -382,15 +406,15 @@ function Restaurants(props) {
                     <div class="col-sm-10">{restuarant.description}</div>
                   </div>
                   <div class="resImg" s>
-                    <a href="/users" class="pull-right">
-                      <img
+                    
+                      <img alt='img'
                         style={{ width: "250px", height: "250px" }}
                         key={restuarant.image}
                         src={restuarant.image}
                         title="profile image"
                         class="img-circle img-responsive"
                       />
-                    </a>
+                    
                   </div>
                   <Auth capability="delete">
                     <Button
