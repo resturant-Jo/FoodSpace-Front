@@ -1,0 +1,197 @@
+body {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    font-family: cursive;
+    position: relative;
+    background: #201e23;
+    color: white;
+  }
+/* .sc-bdfBQB{
+} */
+  .slider-card {
+    width: 100%;
+    height: 450px;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    margin-top: 20px;
+    background-color: #b14c4c;
+  }
+  
+  .slider-card .card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: #000;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    border: #d57932 2px solid;
+  }
+  
+  .slider-card:hover img {
+    opacity: 0.4;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  
+  .slider-card:hover .card-image {
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
+    -webkit-transition: all 0.9s;
+    transition: all 0.9s;
+  }
+  
+  .details {
+    position: absolute;
+    bottom: 400px;
+    left: 0;
+    /* background: #fff; */
+    width: 100%;
+    height: 120px;
+    z-index: 1;
+    padding: 10px;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+  }
+  
+  .details h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 30px 0;
+    padding: 0;
+    text-align: center;
+    color: white;
+  }
+  
+  .slider-card:hover .details {
+    bottom: 0;
+  }
+  
+  .searchDiv {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-basis: 33.333333%;
+    margin: 100px;
+    padding: 20px;
+  }
+  
+  .slider-div {
+    width: 85%;
+    margin: auto;
+  }
+  
+  .overview {
+    color: #201e23;
+  }
+
+  @import url('https://fonts.googleapis.com/css?family=Montserrat');
+/* body {
+background-color: rgb(153, 3, 3);
+} */
+.title22 {
+/* font-family: "Montserrat";
+text-align: center;
+color: #FFF;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 50vh;
+letter-spacing: 1px; */
+font-family: "Montserrat";
+text-align: center;
+color: #fff;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 50vh;
+letter-spacing: 1px;
+margin-top: -200px;
+position: absolute;
+right: 350px;
+top: 300px;
+}
+.title22 h1 {
+  background-image: url(https://thumbs.gfycat.com/DesertedEthicalBlackfootedferret-max-1mb.gif);
+  background-size: cover;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  font-size: 70px;
+  line-height: .75;
+  margin: 10px 0;
+}
+/* animation */
+@keyframes headerAnimation23 {
+0% {
+  background-image: url(https://media-cldnry.s-nbcnews.com/image/upload/newscms/2020_25/1582425/restaurant-dress-code-mc-main1-200619.jpg);
+  background-size: cover;
+}
+50% {
+  background-image: url("https://crystalplazagroup.com/wp-content/uploads/2018/05/P40B-fine-dining-Michelin-chef.jpg");
+  background-size: cover;
+}
+100% {
+  background-image: url("https://media-cldnry.s-nbcnews.com/image/upload/newscms/2020_25/1582425/restaurant-dress-code-mc-main1-200619.jpg");
+  background-size: cover;
+}
+}
+.image10 {
+  clear: both;
+  position: relative;
+  width: 100%;
+  height: 450px;
+  animation: headerAnimation23 ease-in 30s infinite;
+}
+  /* .text1 {
+      text-align: center;
+      position: relative;
+      top: 400px;
+      left: 350px;
+      font-size: 80px;
+      font-family: "Reggae One", cursive;
+      color: rgb(255, 255, 255);
+    } *
+  :before,
+  *:after {
+    box-sizing: inherit;} */
+
+    .fjgQkC .slick-arrow {
+      background-color: #ce6c54;
+      height: 90px;
+      width: 35px;
+      border-radius: 40px;
+      margin: -40px;
+      margin-top: 10px;
+  }
+  @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+ .col-sm-10{
+   color: black;
+   font-family: monospace;
+ }
+ .resImg{
+  border-radius: 50%;
+
+ }
+ .resInfo{
+   margin-top: 40px;
+   margin-left: 250px;
+   margin-bottom: -90px;
+
+ }
+ #butttton{
+   width: 185px;;
+ }
+ .tab-content{
+   background-color: white;
+ }

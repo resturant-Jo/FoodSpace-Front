@@ -1,0 +1,167 @@
+.admin-section {
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+  }
+  
+  .admin-information-section .row:nth-child(1) {
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .chart-section{}
+
+  @import url("https://fonts.googleapis.com/css2?family=Ephesis&family=Titillium+Web:wght@200&family=Yaldevi:wght@300&display=swap");
+
+.profile-top-nameadmin{
+  margin-top: 3rem;
+  margin-left: 15rem;
+}
+
+:root {
+  --Ephesis: "Ephesis", cursive;
+  --Titillium: "Titillium Web", sans-serif;
+  --Yaldevi: "Yaldevi", sans-serif;
+}
+.profile-top-section{
+  background-color: #ffffff;
+}
+.container{
+  color:rgb(0, 0, 0);
+  margin-left: 8rem;
+}
+.profile-top-identity{
+  margin-left: -6rem;
+  margin-top: 3rem;
+}
+.personal-section{
+  margin-left: 10rem;
+  width: 45rem;
+  height: 43rem;
+  text-align: center;
+}
+.profile-top-jopadmin h3{
+  color: rgb(14, 13, 13) !important;
+  margin-left: 15rem;
+}
+.profile-about-section{
+  padding-bottom: 1rem;
+}
+.personal-section{
+  background-color: cornflowerblue;
+}
+.btn {
+width: 9rem;
+height: 4rem;
+}
+.slider-card {
+  width: 17rem;
+  height: 15rem;
+}
+.profile-top-section {
+  height: 23rem;
+  display: grid;
+  font-family: var(--Yaldevi);
+  font-weight: bolder;
+}
+.profile-svg {
+  position: absolute;
+  left: 0;
+  top: -5rem;
+  height: 35rem;
+  z-index: -1;
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.548));
+}
+
+.profile-top-section .container .row:nth-child(1) {
+  margin-top: 6rem;
+}
+.profile-top-identity {
+  position: absolute;
+  top: 9rem;
+}
+
+.profile-top-img,
+.profile-top-name,
+.profile-top-jop,
+.profile-top-about {
+  display: flex;
+  justify-content: center;
+  text-align: justify;
+}
+.profile-top-img img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.39);
+}
+
+.profile-contant-section {
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.39);
+  border-radius: 20px;
+  background-image: linear-gradient(
+    to right bottom,
+    #d4e1ee38,
+    #dfe6f12c,
+    #e9ecf4,
+    #f2f2f6a1,
+    #f9f9f94f
+  );
+}
+
+.profile-contant-left {
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.39);
+  border-radius: 20px;
+  background-image: url(https://images.unsplash.com/photo-1517167685284-96a27681ad75?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGFyayUyMGNvbG9yfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80);
+  width: 11rem;
+}
+.profile-contant-right {
+  border-radius: 20px;
+  padding: 1rem;
+}
+.profile-contant-left .nav-item {
+  box-shadow: 0 0 4px rgb(151, 157, 245) inset;
+  margin: 3px;
+  transition: 0.5s;
+  border-radius: 10px;
+}
+.profile-contant-left .nav-item a {
+  color: rgb(5, 1, 1);
+  text-shadow: 0 0 2px black;
+}
+.profile-contant-left .nav-item:hover {
+  border-radius: 5px;
+  transform: scale(1.1);
+}
+
+.view-personal-info-img img{
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+}
+
+.nav{
+  background-color: #eceef4;
+width: 9rem;
+}
+.nav-item{
+  background-color: black;
+text-align: center;
+}
+.delete-account-btn{
+  margin-left: 29.4rem;
+}
+.edit-btn{
+  margin-right:30rem ;
+}
+.profile-top-section {
+  height: 23rem;
+  display: grid;
+  font-family: var(--Yaldevi);
+  font-weight: bolder;  background-image: url(https://images.squarespace-cdn.com/content/v1/5c5c3833840b161566b02a76/1573133725500-Y5PCN0V04I86HDAT8AT0/WBC_7095.jpg?format=2500w)
+
+  ;
+}
