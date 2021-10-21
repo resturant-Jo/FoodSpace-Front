@@ -10,10 +10,14 @@ function Cart() {
   // const userId = loginContext.user.userId
   const [cart, setCart] = useState([]);
   const [cartData, setCartData] = useState([]);
+  const API = 'https://spacefood.herokuapp.com'
+
+
+
   useEffect(() => {
     const userId = loginContext.user.userId
     console.log('userId >>>>>>>>>> ', userId);
-    superagent.get(`http://localhost:3001/v2/cart/${userId}`)
+    superagent.get(`${API}/v2/cart/${userId}`)
       .set('Authorization', 'Bearer ' + loginContext.token)
       .then(res => {
         // const filteredData=(res.body).filter(item=>{return item.userId === userId})
@@ -28,18 +32,24 @@ function Cart() {
       })
     console.log(userId);
   }, [loginContext])
+
+
   async function deleteFoodFromCart(id) {
     console.log(id);
     try {
-      await superagent.delete(`http://localhost:3001/v2/cart/items/${id}`)
+      await superagent.delete(`${API}/v2/cart/items/${id}`)
         .set('Authorization', 'Bearer ' + loginContext.token);
     } catch (error) {
       alert(error);
     }
   }
+
+
   console.log(cart);
   console.log(cartData);
   console.log(loginContext);
+
+
   return (
     <div class="carCont">
       <div class="image4">
@@ -66,16 +76,16 @@ function Cart() {
                     return (
 
 
-                          <tr key={index}>
-                            
-                            <td class="p-4">
-                              <div class="media align-items-center">
-                                <img src={item.image} class="d-block ui-w-40 ui-bordered mr-4" alt="" />
-                                <div key={index} class="media-body">
-                                  <a  href="#" class="d-block text-dark">{item.name}</a>
-                                  <small>
-                                    <span class="text-muted">{item.description}</span>
-                                    {/* <span class="ui-product-color ui-product-color-sm align-text-bottom" style={{ Background: "#e81e2c" }}></span> &nbsp;
+                      <tr key={index}>
+
+                        <td class="p-4">
+                          <div class="media align-items-center">
+                            <img src={item.image} class="d-block ui-w-40 ui-bordered mr-4" alt="" />
+                            <div key={index} class="media-body">
+                              <a href="#" class="d-block text-dark">{item.name}</a>
+                              <small>
+                                <span class="text-muted">{item.description}</span>
+                                {/* <span class="ui-product-color ui-product-color-sm align-text-bottom" style={{ Background: "#e81e2c" }}></span> &nbsp;
                                     <span class="text-muted">Size: </span> EU 37 &nbsp;
                                     <span class="text-muted">Ships from: </span> China */}
                               </small>
@@ -99,13 +109,13 @@ function Cart() {
                 <input type="text" placeholder="ABC" class="form-control" /> */}
               </div>
               <div class="d-flex">
-                <div class="text-right mt-4 mr-5">
+                {/* <div class="text-right mt-4 mr-5">
                   <label class="text-muted font-weight-normal m-0"></label>
                   <div class="text-large"><strong>$20</strong></div>
-                </div>
+                </div> */}
                 <div class="text-right mt-4">
-                  <label class="text-muted font-weight-normal m-0">{`Total price ${cart?cart.totalPrice:0}`}</label>
-                  <div class="text-large"><strong>$1164.65</strong></div>
+                  <label class="text-muted font-weight-normal m-0">{`Total price ${cart ? cart.totalPrice : 0}`}</label>
+                  <div class="text-large"><strong></strong></div>
                 </div>
               </div>
             </div>

@@ -8,7 +8,7 @@ import cookie from 'react-cookies';
 
 
 export const LoginContext = React.createContext();
-const API = 'http://localhost:3001';
+const API = 'https://spacefood.herokuapp.com'
 export default function LoginProvider(props) {
     const [loggedIn, setLoggedIn] = useState(false);
     const [user, setUser] = useState({});
@@ -21,7 +21,7 @@ export default function LoginProvider(props) {
         JWToken(cookieToken);
         setToken(cookieToken)
         console.log(cookieToken);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
     const login = async (username, password) => {
         try {
@@ -30,10 +30,10 @@ export default function LoginProvider(props) {
                 .set('authorization', `Basic ${encodedUser}`);
             console.log("response.body: ", response.body);
             return JWToken(response.body.token);
-                
-               
+
+
             // history.push("/")
-            
+
         } catch (error) {
             alert('Invalid username or password');
             return false
@@ -76,13 +76,13 @@ export default function LoginProvider(props) {
     const handleLogin = (loggedIn, user) => {
         setLoggedIn(loggedIn);
         setUser(user);
-        cookie.save('user',user)
+        cookie.save('user', user)
     }
     const logout = () => {
         handleLogin(false, {});
         // cookie.remove('token');
         cookie.remove('token', { path: '/' })
-    cookie.remove('user', { path: '/' })
+        cookie.remove('user', { path: '/' })
     }
 
 

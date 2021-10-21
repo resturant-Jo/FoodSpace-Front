@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 function TheDrivers() {
   const [allUsers, setAllUsers] = useState([]);
   const token = cookie.load("token");
-  const Api = "http://localhost:3001";
+  const Api = 'https://spacefood.herokuapp.com'
 
 
   useEffect(async () => {
@@ -33,7 +33,7 @@ function TheDrivers() {
       },
       buttonsStyling: false
     })
-    
+
     swalWithBootstrapButtons.fire({
       title: 'Are you sure?',
       text: "You won't be able to revert this!",
@@ -42,7 +42,7 @@ function TheDrivers() {
       confirmButtonText: 'Yes, delete it!',
       cancelButtonText: 'No, cancel!',
       reverseButtons: true
-    }).then(async(result) => {
+    }).then(async (result) => {
       if (result.isConfirmed) {
         let res = await axios.delete(`${Api}/v4/user/${id}`, {
           headers: {
@@ -67,7 +67,7 @@ function TheDrivers() {
       }
     })
 
-  
+
   };
 
   return (

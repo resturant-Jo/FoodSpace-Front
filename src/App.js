@@ -25,64 +25,69 @@ import AdminProfile from './components/profile/admin/AdminProfile';
 
 
 function App() {
-  const userData=cookie.load('user')
+  const userData = cookie.load('user')
   const loginContext = useContext(LoginContext)
   return (
     <>
       <BrowserRouter>
         <Header />
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/restaurants">
-              <Restaurants />
-            </Route>
-            <Route path="/aboutus">
-              <AboutUs/>
-            </Route>
-            <Route path="/login">
-              <Login />
-            </Route>
-            <Route path="/signup">
-              <Signup />
-            </Route>
-            <Route path="/cart">
-              <Cart />
-            </Route>
-            <Route path="/checkout">
-              <Checkout />
-            </Route>
-            <Route path="/orders">
-              <Orders />
-            </Route>
-{loginContext.token ?
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/restaurants">
+            <Restaurants />
+          </Route>
+          <Route path="/aboutus">
+            <AboutUs />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/signup">
+            <Signup />
+          </Route>
+          <Route path="/cart">
+            <Cart />
+          </Route>
+          <Route path="/checkout">
+            <Checkout />
+          </Route>
+          <Route path="/orders">
+            <Orders />
+          </Route>
+          {loginContext.token ?
             <Route path="/profile">
-              {loginContext.user.role === 'driver' ? <DriverPage />:''}
-              {loginContext.user.role === 'user' ? <ClientProfile/>:''}
-              {loginContext.user.role === 'admin' ? <AdminProfile/>:''}
-              {userData.role === 'driver' ? <DriverPage />:''}
-              {userData.role === 'user' ? <ClientProfile/>:''}
-              {userData.role === 'admin' ? <AdminProfile/>:''}
+              {loginContext.user.role === 'driver' ? <DriverPage /> : ''}
+              {loginContext.user.role === 'user' ? <ClientProfile /> : ''}
+              {loginContext.user.role === 'admin' ? <AdminProfile /> : ''}
+              {userData.role === 'driver' ? <DriverPage /> : ''}
+              {userData.role === 'user' ? <ClientProfile /> : ''}
+              {userData.role === 'admin' ? <AdminProfile /> : ''}
               {/* <DriverPage />
               <ClientProfile/>
             <AdminProfile/> */}
             </Route>
             :
             <Route path="/profile">
-             <DriverPage />
-              <ClientProfile/>
-            <AdminProfile/>
+              <DriverPage />
+              <ClientProfile />
+              <AdminProfile />
             </Route>
           }
 
-          
-          </Switch>
+
+        </Switch>
         <Footer />
-        </BrowserRouter>
+      </BrowserRouter>
 
     </>
   );
 }
 
 export default App;
+
+
+//mohmoud2 driver
+//mahmoud10 user
+//admin 

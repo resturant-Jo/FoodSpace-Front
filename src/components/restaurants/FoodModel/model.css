@@ -7,21 +7,39 @@
     height: 300px;
   }
   
-  .modal-body,
-  .body-modal {
+  
+  .modal-body, .body-modal {
     padding: 0rem;
     background-color: #d0d0d0;
-    width: 650px;
+    width: 302px;
+    height: 0px;
     transform: translate(-12%, 0%);
-  }
+}
+.mb-3.nav.nav-tabs{
+  width: 93px;
+}
   .footer-modal {
     background-color: #d0d0d0;
+    width: 499px;
   }
+  .modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 54%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+}
   
   .movie-title {
     padding: 5px 10px;
     font-family: Georgia, "Times New Roman", Times, serif;
     color: #201e23;
+    font-size: 0px;
   }
   .tap {
     background-color: #d0d0d0;
@@ -39,33 +57,41 @@
   .nav {
     background-color: #201e23;
   }
-  
+  [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+    background-color: #DA291C;
+    width: 100px;
+    margin-right: 32px;
+    font-size: 14px;
+    
+}
   .nav-tabs .nav-link {
     margin-bottom: -1px;
     background: 0 0;
     border: 0px solid transparent;
     border-top-left-radius: 0rem;
     border-top-right-radius: 0rem;
-    color: #d57932;
+    color: #DA291C;
     font-weight: 700;
   }
-  
   .btn-secondary,
   .btn {
     color: rgb(255, 255, 255);
-    background-color: #f3be5d;
+    background-color: #DA291C;
     border: none;
     font-weight: 700;
+    width: 120px;
   }
   .btn:hover {
     color: #ffffff;
-    background-color: #eb822d;
-    border-color: #f0812c;
+    background-color: #DA291C;
+    border-color: #fffaf6;
   }
   
   .nav-tabs .nav-item.show .nav-link,
   .nav-tabs .nav-link.active {
     color: #ffffff;
-    background-color: #d0d0d0;
+    background-color: #DA291C;
+    
     border-color: #ffffff #dee2e6 #fff;
   }

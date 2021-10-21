@@ -19,6 +19,8 @@ function Users(props) {
     // console.log(userId);
     console.log(loginContext);
 
+    const API = 'https://spacefood.herokuapp.com'
+
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [firstname, setFirstname] = useState('');
@@ -42,12 +44,12 @@ function Users(props) {
     // )
     // console.log(accessToken);
 
-    useEffect( async () => {
+    useEffect(async () => {
         // get information personal
         try {
-          await   superagent.get(`http://localhost:3001/profile`)
+            await superagent.get(`${API}/profile`)
                 .set('Authorization', `Bearer ${loginContext.token}`)
-                .then(res=>{
+                .then(res => {
 
                     console.log(res);
                     setUser(res.body);
@@ -73,19 +75,19 @@ function Users(props) {
             age: age || user.age,
             adress: adress || user.adress,
             profilePicture: profilePicture || user.profilePicture,
-            password: password ,
+            password: password,
             // role: role || user.role,
             phone: phone || user.phone,
         }
         try {
             console.log(obj);
-            const res = await superagent.put(`http://localhost:3001/updateaccount`)
+            const res = await superagent.put(`${API}/updateaccount`)
                 .set('Authorization', 'Bearer ' + loginContext.token)
                 .send(obj)
-                // .then(async (res) => {
-                //     await setUser(res);
-                // });
-                // setUser(res.body)
+            // .then(async (res) => {
+            //     await setUser(res);
+            // });
+            // setUser(res.body)
             console.log(res);
             console.log(user);
         } catch (error) {
@@ -108,7 +110,7 @@ function Users(props) {
         }
 
     }
-    let state={
+    let state = {
         user,
         setUser,
         userId
@@ -118,11 +120,11 @@ function Users(props) {
     // console.log(user.username);
     return (
         <>
-         
-      <ProfileContext.Provider value={state}>
-        {props.children}
-      </ProfileContext.Provider>
-    
+
+            <ProfileContext.Provider value={state}>
+                {props.children}
+            </ProfileContext.Provider>
+
             {/* <h2>Profile page</h2>
             <Table striped bordered hover variant="dark">
                 <tbody>
@@ -224,7 +226,7 @@ function Users(props) {
                             <Form.Label>Role</Form.Label>
                             <Form.Control onChange={(e) => setRole(e.target.value)} placeholder="role" type="text" name="role" defaultValue={user.role} />
                         </Form.Group> */}
-                        {/* <Form.Group className="mb-3" controlId="formBasicEmail">
+            {/* <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Phone</Form.Label>
                             <Form.Control onChange={(e) => setPhone(e.target.value)} placeholder="phone" type="text" name="phone" defaultValue={user.phone} />
                         </Form.Group>
@@ -241,7 +243,7 @@ function Users(props) {
                         Save Changes
                     </Button>
                 </Modal.Footer>
-            </Modal> */} 
+            </Modal> */}
         </>
     )
 

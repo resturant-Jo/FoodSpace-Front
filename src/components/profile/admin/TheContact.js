@@ -3,35 +3,35 @@ import axios from "axios";
 import cookie from "react-cookies";
 import { Table } from "react-bootstrap";
 function TheContact() {
-    const [adminList, setAdminList] = useState({});
-    const token = cookie.load("token");
-    const Api = "http://localhost:3001";
+  const [adminList, setAdminList] = useState({});
+  const token = cookie.load("token");
+  const Api = 'https://spacefood.herokuapp.com'
 
-    useEffect( () => {
+  useEffect(() => {
 
-        // get admin
-         axios
-            .get(`${Api}/adminData`, {
-                headers: {
-                    authorization: `Bearer ${token}`,
-                },
-            })
-            .then((res) => {
-                setAdminList(res.data);
-                console.log("contactUs=====>", res.data);
-            });
+    // get admin
+    axios
+      .get(`${Api}/adminData`, {
+        headers: {
+          authorization: `Bearer ${token}`,
+        },
+      })
+      .then((res) => {
+        setAdminList(res.data);
+        console.log("contactUs=====>", res.data);
+      });
 
-    }, [token]);
-
-
+  }, [token]);
 
 
 
-    return (
-        <div>
 
 
-<Table striped bordered hover>
+  return (
+    <div>
+
+
+      <Table striped bordered hover>
         <thead>
           <tr>
             <th>Name</th>
@@ -41,25 +41,25 @@ function TheContact() {
           </tr>
         </thead>
         <tbody>
-        {/* {adminList.support  && adminList.support.map(item => { */}
-            {/* return( */}
-                <>
-                  <tr>
-                    <td>dena</td>
-                    <td>help</td>
-                    <td>order food</td>
-                    <td>dena@gmail.com</td>
-                  </tr>
-                </>
-              {/* );
+          {/* {adminList.support  && adminList.support.map(item => { */}
+          {/* return( */}
+          <>
+            <tr>
+              <td>dena</td>
+              <td>help</td>
+              <td>order food</td>
+              <td>dena@gmail.com</td>
+            </tr>
+          </>
+          {/* );
             })} */}
         </tbody>
       </Table>
 
 
-        </div>
+    </div>
 
-    )
+  )
 }
 
 export default TheContact

@@ -77,6 +77,9 @@ border-right: 0;
 display: block;
 padding: 20px 12px;
 transition: all .2s ease-in-out;
+height: 110px;
+width: 50px;
+margin-right: 0px;
 }
 
 #feedback a:hover {

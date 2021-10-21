@@ -14,11 +14,11 @@ import TheDrivers from "./TheDrivers";
 function AdminProfile(props) {
   const [allUsers, setAllUsers] = useState([]);
   const token = cookie.load("token");
-  const Api = "http://localhost:3001";
+  const Api = 'https://spacefood.herokuapp.com'
 
-  useEffect( () => {
+  useEffect(() => {
     // get users form admin
-     axios
+    axios
       .get(`${Api}/users`, {
         headers: {
           authorization: `Bearer ${token}`,
@@ -27,8 +27,8 @@ function AdminProfile(props) {
       .then(async (res) => {
         await setAllUsers(res.data);
       });
-    }, []);
-      
+  }, []);
+
   return (
     <>
       <svg
@@ -68,10 +68,10 @@ function AdminProfile(props) {
           </Row>
           <Row>
             <Col xs={6} className="profile-top-identity">
-              <div className="profile-top-name">
+              <div className="profile-top-nameadmin">
                 <h1>Admin</h1>
               </div>
-              <div className="profile-top-jop">
+              <div className="profile-top-jopadmin">
                 <h3>Admin</h3>
               </div>
             </Col>
@@ -80,7 +80,7 @@ function AdminProfile(props) {
       </section>
       {/* ========== end top section ============== */}
 
-       
+
       {/* ========== contant section ============== */}
       <div className="admin-section">
         <section className="profile-contant-section">

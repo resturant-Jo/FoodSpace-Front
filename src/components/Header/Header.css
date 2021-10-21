@@ -2,7 +2,8 @@
   border-radius: 0.2rem;
   font-size: 25px;
   color: rgb(255, 255, 255);
-  font-family: "Oswald", sans-serif;
+  font-family: 'IM Fell English SC', serif;
+
 }
 .navbar-header .login-btn:hover,
 .logout-btn:hover {
@@ -22,9 +23,12 @@
       /* text-shadow: 0 0 4px rgb(0, 0, 0); */
   border-radius: 20px;
   font-weight: 400;
+  font-family: 'Poiret One', cursive;
 }
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
 .foood {
   font-family: "Oswald", sans-serif;
+  color: #cdc6c6 ;
 }
 /* .carticon{
   float: left;

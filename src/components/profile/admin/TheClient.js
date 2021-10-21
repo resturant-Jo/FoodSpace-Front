@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import cookie from "react-cookies";
-import { Table,Button } from "react-bootstrap";
+import { Table, Button } from "react-bootstrap";
 import Swal from "sweetalert2";
 function TheClients() {
   const [allUsers, setAllUsers] = useState([]);
   const token = cookie.load("token");
-  const Api = "http://localhost:3001";
+  const Api = 'https://spacefood.herokuapp.com'
 
   useEffect(async () => {
     // get users form admin
@@ -34,7 +34,7 @@ function TheClients() {
       },
       buttonsStyling: false
     })
-    
+
     swalWithBootstrapButtons.fire({
       title: 'Are you sure?',
       text: "You won't be able to revert this!",
@@ -43,7 +43,7 @@ function TheClients() {
       confirmButtonText: 'Yes, delete it!',
       cancelButtonText: 'No, cancel!',
       reverseButtons: true
-    }).then(async(result) => {
+    }).then(async (result) => {
       if (result.isConfirmed) {
         let res = await axios.delete(`${Api}/v4/user/${id}`, {
           headers: {
@@ -106,7 +106,7 @@ function TheClients() {
                     <td>{item.location}</td>
                     <td>
                       {" "}
-                      <Button 
+                      <Button
                         variant="danger"
                         onClick={() => {
                           handleDeleteUser(item.id);

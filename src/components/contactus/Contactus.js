@@ -29,7 +29,8 @@ export default function ContactUs() {
     setShow(!show);
   };
   let [values, setValues] = useState({});
-  const Api = "http://localhost:3001";
+  const Api = 'https://spacefood.herokuapp.com'
+
 
 
   function handleChange(e) {

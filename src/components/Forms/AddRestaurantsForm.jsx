@@ -5,14 +5,14 @@ import './AddResturant.css'
 export default function AddRestaurantsForm({ handleSubmit, handleChange }) {
   return (
     <Card className="mainItem" >
-      <form  class="formRes" onSubmit={handleSubmit}>
-      <h3>Add New Restuarant</h3>
+      <form class="formRes" onSubmit={handleSubmit}>
+        <h3>Add New Restuarant</h3>
         <FormGroup labelFor="text-input" labelInfo="(required)">
-        <input  onChange={handleChange} type="text" name="name" class="inputform" placeholder="Restuarant Name"/>
-          <input class="inputform"   onChange={handleChange}
+          <input onChange={handleChange} type="text" name="name" class="inputform" placeholder="Restuarant Name" />
+          <input class="inputform" onChange={handleChange}
             name="image"
             id="text-input"
-            placeholder="Restuarant Image"  />
+            placeholder="Restuarant Image" />
           <input
             onChange={handleChange}
             name="foodType"
@@ -31,8 +31,8 @@ export default function AddRestaurantsForm({ handleSubmit, handleChange }) {
             id="text-input"
             placeholder="Description"
           />
-<div >
-          <button  class="buttonadd" type="submit">Add Restuarant</button>
+          <div >
+            <button class="buttonadd" type="submit">Add Restuarant</button>
           </div>
         </FormGroup>
       </form>

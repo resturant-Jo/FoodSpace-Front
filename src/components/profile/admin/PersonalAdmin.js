@@ -4,7 +4,7 @@ function PersonalAdmin() {
   return (
     <>
       <PersonalInfo />
-     
+
     </>
   );
 }

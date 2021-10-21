@@ -2,25 +2,24 @@ import { useContext, useState } from "react";
 import { LoginContext } from "../../context/loginContext";
 import "./login.css";
 import { useHistory } from "react-router-dom";
-export default function Login(props) {
+export default function Login() {
   //login
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
- 
+
   let history = useHistory();
- 
+
   const context = useContext(LoginContext);
   const handleLoginSubmit = (event) => {
     event.preventDefault();
-    
-   context.login(username, password).then((res)=>{
 
-     if (res) history.push("/")
-   });
+    context.login(username, password).then((res) => (res ? history.push("/") : null));
+    // context.login(username, password).then((res) => alert(res));
+
   };
- 
+
   return (
-    <>
+    <div class="one">
       <div class="image222"></div>
 
       {/* <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"> */}
@@ -28,7 +27,7 @@ export default function Login(props) {
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-md-8">
-              <div class="card-group mb-0">
+              <div class="card-group mb-0" style={{ marginTop: "86px" }}>
                 <div class="card p-4">
                   <div class="card-body">
                     <h1>Login</h1>
@@ -72,9 +71,9 @@ export default function Login(props) {
                       <div class="row">
                         <div class="col-6">
                           <button
-                          // onClick={() => {
-                          //   history.push("/");
-                          // }}
+                            // onClick={() => {
+                            //   history.push("/");
+                            // }}
                             style={{
                               color: "white",
                               backgroundColor: "#e63946",
@@ -102,7 +101,7 @@ export default function Login(props) {
                         onClick={() => {
                           history.push("/signup");
                         }}
-                        style={{ backgroundColor: "#582" }}
+                        style={{ backgroundColor: "#e63946" }}
                         type="button"
                         class="btn btn-primary active mt-3"
                       >
@@ -117,6 +116,6 @@ export default function Login(props) {
         </div>
       </div>
       <br />
-    </>
+    </div>
   );
 }
