@@ -1,0 +1,72 @@
+body {
+    margin-top: -16px;
+    background: #eee;
+}
+@keyframes HeaderAnimation3 {
+    0% {
+      background-image: url(https://www.invoicera.com/blog/wp-content/uploads/2017/02/purchase-order-management-best-practicesmn.jpg);
+      background-size: cover;
+    }
+    50% {
+      background-image: url(https://g.foolcdn.com/editorial/images/488566/man-holding-a-bunch-of-100-dollar-bills_gettyimages-810584478.jpg);
+      background-size: cover;
+    }
+    100% {
+      background-image: url(https://www.invoicera.com/blog/wp-content/uploads/2017/02/purchase-order-management-best-practicesmn.jpg);
+      background-size: cover;
+    }
+  }
+  .image5{
+    clear: both;
+    position: relative;
+    width: 100%;
+    height: 380px;
+    animation: HeaderAnimation3 ease-in 20s infinite;
+  }
+  .leftcard{
+    width: 350px;
+  }
+  .card1Pu{
+    width: 387px;
+    background-color: white;
+    margin-left: 230px;
+    padding-left: 19px;
+    color: black;
+    height: 495px;
+    padding-top: 20px;
+
+  }
+  
+  .col-lg-4 {
+    /* flex: 0 0 auto; */
+    width: 45.333333%;
+    margin-left: 652px;
+    height: 50px;
+    /* float: right; */
+    margin-top: -456px;
+    padding-right: 63px;
+}
+  .text1 {
+      text-align: center;
+      position: relative;
+      top: 400px;
+      left: 350px;
+      font-size: 50px;
+      font-family: "Reggae One", cursive;
+      color: rgb(255, 255, 255);
+    } *
+  :before,
+  *:after {
+    box-sizing: inherit;
+  }
+  .purchaseDiv {
+    height: 600px;
+    margin-top: 48px;
+    width: 1301px;
+}
+.ul{
+  font-size: 20px;
+}
+.purchase{
+background-image: url(https://static.onecms.io/wp-content/uploads/sites/9/2021/08/17/mad-for-mushrooms-FT-MAG0921.jpg);
+}

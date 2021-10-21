@@ -1,38 +1,133 @@
-import React, { useContext } from 'react';
-import { Navbar, Button, Alignment } from "@blueprintjs/core";
-import { Link } from 'react-router-dom';
-import { LoginContext } from '../../context/loginContext';
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import React, { Component } from "react";
+import cookie from "react-cookies";
+import { LoginContext } from "../../context/loginContext";
+import { Navbar, Container, Nav } from "react-bootstrap";
+import { useContext, useState } from "react";
+import loggedIn from "../../context/loginContext"
+import { Link, BrowserRouter } from "react-router-dom";
+import "./Header.css";
 
-export default function Header() {
-    const loginContext = useContext(LoginContext)
+class Header extends Component {
+  constructor(props) {
+    super(props);
+    this.listener = null;
+    this.token = cookie.load("token");
+    this.state = {
+      status: "top",
+    };
+  }
+
+  static contextType = LoginContext;
+  async handleLogOut() {
+    await this.context.logout();
+  }
+  componentDidMount() {
+    // const context = useContext(LoginContext);
+    console.log(loggedIn);
+
+    this.listener = document.addEventListener("scroll", (e) => {
+      var scrolled = document.scrollingElement.scrollTop;
+      if (scrolled >= 120) {
+        if (this.state.status !== "") {
+          this.setState({ status: "" });
+        }
+      } else {
+        if (this.state.status !== "top") {
+          this.setState({ status: "top" });
+        }
+      }
+    });
+  }
+  componentDidUpdate() {
+    document.removeEventListener("scroll", this.listener);
+  }
+  render() {
     return (
-        <>
-            
-                <Navbar className="header" style={{ backgroundColor: "#c64756" }}>
-                    <Navbar.Group align={Alignment.LEFT}>
-                        <Navbar.Heading className="title"><h2>Food Space</h2></Navbar.Heading>
-                        <Navbar.Divider />
-                        <Link to='/'>
-                            <Button className="bp4-minimal" icon="home" text="Home" />
-                        </Link>
-                        <Link to='/AboutUs'>
-                            <Button className="bp4-minimal"  text="AboutUs" />
-                        </Link>
-                        <Link to='/restaurants'>
-                            <Button className="bp4-minimal"  text="Restaurants" />
-                        </Link>
-                        <Link to='/profile'>
-                            <Button className="bp4-minimal"  text="Profile" />
-                        </Link>
-                        <Link to='/sign'>
-                            {/* <Button className='bp3-minimal' icon='settings' text='Settings' /> */}
-                        <Button onClick={loginContext.logout} className='bp3-minimal' icon={loginContext.loggedin ? 'log-out' : 'log-in'}>
-                            {loginContext.loggedin ? 'Logout' : 'Login'}
-                        </Button>
-                        </Link>
-                    </Navbar.Group>
-                </Navbar>
-            
-        </>
+      <>
+        <Navbar
+          fixed="top"
+          variant="dark"
+          className="navbar-header"
+          id="mynav"
+          style={{
+            backgroundColor:
+              this.state.status === "top"
+                ? "rgba(0, 0, 0, 0.5)"
+                : "rgb(2 0 1)",
+            height: "80px",
+            color: this.state.status === "top" ? "black" : "black",
+            boxShadow:
+              this.state.status === "top"
+                ? "0 8px 4px rgba(0, 0, 0, 0.0)"
+                : "0 3px 2px rgba(0, 0, 0, 0.1)",
+            transition: "1s",
+            textShadow:
+              this.state.status === "top"
+                ? "0 0 1px #fff, 0 0 1px #fff"
+                : "0 0 1px #FFF, 0 0 1px #FFF",
+          }}
+        >
+          <BrowserRouter>
+            <Container>
+              <Navbar.Brand href="/">
+                {/* liquid spacefood */}
+                <p className="foood" style={{}}> SPACE FOOD</p>
+              </Navbar.Brand>
+              <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+              <Navbar.Collapse id="responsive-navbar-nav">
+                <Nav className="me-auto"></Nav>
+                <Nav className="me-2">
+                  {/* <Nav.Link href="/">
+                    Home
+                    <Link to="/"></Link>
+                  </Nav.Link> */}
+                  <Nav.Link href="/restaurants">
+                    Restaurants
+                    <Link to="/restaurants"></Link>
+                  </Nav.Link>
+                  <Nav.Link href="/aboutus#meetourteam">
+                    About-Us
+                    <Link to="/aboutus#meetourteam"></Link>
+                  </Nav.Link>
+                  {/* <Nav.Link href="/orders">
+                    Orders
+                    <Link to="/orders"></Link>
+                  </Nav.Link> */}
+
+                  {this.token ? (
+                    <>
+                      <Nav.Link href="/profile">
+                        Profile
+                        <Link to="/profile"></Link>
+                      </Nav.Link>
+                      <Nav.Link
+                        href="/"
+                        onClick={() => {
+                          this.handleLogOut();
+                        }}
+                      >
+                        Sign-Out
+                        <Link to="/"></Link>
+                      </Nav.Link>
+                    </>
+                  ) : (
+                    <Nav.Link eventKey={2} href="/login">
+                      Sign-In
+                      <Link to="/login"></Link>
+                    </Nav.Link>
+                  )}
+                  <Nav.Link className="carticon" href="/cart">
+                    <ShoppingCartIcon />
+                  </Nav.Link>
+                </Nav>
+              </Navbar.Collapse>
+            </Container>
+          </BrowserRouter>
+        </Navbar>
+      </>
     );
+  }
 }
+
+export default Header;
