@@ -4,17 +4,10 @@
   "private": true,
   "dependencies": {
     "@blueprintjs/core": "^3.47.0",
-<<<<<<< HEAD
     "@emotion/react": "^11.5.0",
     "@emotion/styled": "^11.3.0",
     "@mui/icons-material": "^5.0.4",
     "@mui/material": "^5.0.4",
-=======
-    "@emotion/react": "^11.4.1",
-    "@emotion/styled": "^11.3.0",
-    "@mui/icons-material": "^5.0.3",
-    "@mui/material": "^5.0.2",
->>>>>>> f3da0c041c8de102f61aec082247f68701181351
     "axios": "^0.23.0",
     "base-64": "^1.0.0",
     "bootstrap": "^5.1.0",
