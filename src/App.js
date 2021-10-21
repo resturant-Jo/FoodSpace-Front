@@ -1,5 +1,6 @@
 
-
+// import React, { useContext } from 'react';
+// import ToDo from './components/todo/todo';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header/Header';
 import '@blueprintjs/core/lib/css/blueprint.css'
@@ -24,6 +25,7 @@ import cookie from 'react-cookies'
 import AdminProfile from './components/profile/admin/AdminProfile';
 
 
+// import SettingsContext from './context/context';
 function App() {
   const userData = cookie.load('user')
   const loginContext = useContext(LoginContext)
