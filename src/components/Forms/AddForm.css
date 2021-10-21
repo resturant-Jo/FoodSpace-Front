@@ -29,12 +29,12 @@ body, input, select {
     background-size: cover;
     }
     .formfood {
-        width: 80%;
+        width: 52%;
         padding: 25px;
         margin-bottom: 20px;
         background-image: url(https://ak.picdn.net/shutterstock/videos/18755474/thumb/5.jpg);
-        margin-right: 238px;
-        margin-top: -516.5px;
+        margin-top: -930.5px;
+        margin-left: 566px;
     }
     input, select {
     padding: 5px;
@@ -125,7 +125,7 @@ body, input, select {
     }
     .bp3-card {
         background-color: #FFFFFF;
-        padding: 20px;
+       padding: 217px;;
     }
     .inputform{
         color: rgb(46, 36, 36);
