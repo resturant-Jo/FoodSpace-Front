@@ -459,6 +459,7 @@ function Restaurants(props) {
                             pb: 1,
                           }}
                         >
+                          <Auth  capability="delete">
                           <Chip
                             label=" delete restaurant"
                             // id="button123"
@@ -468,6 +469,7 @@ function Restaurants(props) {
                             variant="outlined"
                             onClick={() => deleteRestuarant(restuarant.id)}
                           />
+                          </Auth>
                         </Box>
                       </Box>
                       <CardMedia

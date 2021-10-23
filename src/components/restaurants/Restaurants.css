@@ -164,6 +164,24 @@ top: 300px;
   :before,
   *:after {
     box-sizing: inherit;} */
+    .css-gwq19d-MuiPaper-root-MuiCard-root {
+      background-color: #fff;
+      color: rgba(0, 0, 0, 0.87);
+      -webkit-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      border-radius: 4px;
+      box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+      overflow: hidden;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      width: 361px;
+      height: 191px;
+      margin-left: 5px;
+      margin-top: 100px;
+      margin-bottom: 20px;
+  }
 
     .fjgQkC .slick-arrow {
       background-color: #ce6c54;
